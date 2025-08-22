@@ -6,13 +6,17 @@
 " 
 " Сохранить файл hello.vim в папку:
 " ~/.vim/
-" ├── plugin/
-" │   └── hello.vim
+" ├── pack/
+" │   └── my-plugins/
+" │       └── start/
+" │           └── vim-hello-plugin/
+" │               └── plugin/
+" │                   └── hello.vim
 "
 " 2 Использование 
 "
 " После перезагрузки или команды:
-" :source ~/.vim/plugin/hello.vim
+" :source ~/.vim/pack/my-plugins/start/vim-hello-plugin/plugin/hello.vim
 "
 " ...можно использовать команду:
 " :Hello
