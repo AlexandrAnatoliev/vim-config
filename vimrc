@@ -12,6 +12,8 @@ set smartindent
 set colorcolumn=70
 highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 
+set scrolloff=8
+
 " Java settings
 let java_highlight_all = 1
 let java_highlight_debug = 1
