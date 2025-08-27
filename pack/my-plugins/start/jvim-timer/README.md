@@ -1,8 +1,8 @@
 <div align="center">
 
   <a id="english"></a>
-  <h1>Simple echo plugin for Vim</h1>
-  <p>Designed to test interaction between Vim and Java</p>
+  <h1>Simple Vim Working Time Measurement Plugin</h1>
+  <p>Designed for self-monitoring and productivity</p>
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
@@ -17,45 +17,54 @@
   <h4>Installation</h4>
 </div>
  
-* Save the plugin folder `jvim-echo/` to `~/.vim/pack/my-plugins/start/`:
+* Save the plugin folder `jvim-timer/` to the directory  
+`~/.vim/pack/my-plugins/start/`:
+
 ```
 ~/.vim/
 └── pack/
     └── my-plugins/
         └── start/
-            └── jvim-hello/
+            └── jvim-timer/
                 ├── plugin/
-                │   └── jvim_echo.vim
+                │   └── jvim_timer.vim
                 └── java/
-                    └── JvimEcho.java
+                    └── JvimTimer.java
 ```
 
 * Compile the Java file:
 ```
-cd ~/.vim/pack/my-plugins/start/java/
-javac JvimEcho.java
+cd ~/.vim/pack/my-plugins/start/jvim-timer/java/
+javac JvimTimer.java
 ```
 
 * Reload Vim or execute the command:
 
 ```
-:source ~/.vim/pack/my-plugins/start/jvim-echo/plugin/jvim_echo.vim
+:source ~/.vim/pack/my-plugins/start/jvim-timer/plugin/jvim_timer.vim
 ```
 
 <div align="center">
   <h4>Usage</h4>
 </div>
- 
-On command: `:Jvim Hello!!!`
 
-...Vim will respond in the command line: `Hello!!!`
+* Use Vim to edit a file:
+```
+$ vim example.md
+```
+
+* After finishing work and closing Vim, 
+the following will be displayed:
+```
+$ Время работы Vim: 310,4 секунд
+```
 
 <div align="center">
   <h4>Requirements</h4>
 </div>
  
-* Java installed
-* Compilled JvimEcho.class file in the specified directory
+* Installed Java
+* Compiled JvimTimer.class in the specified directory
 
 <div align="center">
   <h4>Compatibility</h4>
@@ -65,32 +74,10 @@ On command: `:Jvim Hello!!!`
 * Java 8 and above
 
 <div align="center">
-  <h4>Usage Example</h4>
-</div>
-
-```
-:Jvim Hello world!
-:Jvim testing 123
-:Jvim "text with spaces"
-```
- 
-<div align="center">
-  <h4>Debugging</h4>
-</div>
-
-If the plugin doesn't work, 
-test the Java command manually in terminal:
-
-```
-cd ~/.vim/pack/my-plugins/start/jvim-echo/java
-java JvimEcho "test message"
-```
-
-<div align="center">
 
   <a id="russian"></a>
-  <h1>Простой эхо-плагин для Vim</h1>
-  <p>Нужен для проверки взаимодействия Vim и Java</p>
+  <h1>Простой плагин для измерения времени работы Vim</h1>
+  <p>Нужен для самоконтроля и производительности</p>
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
@@ -105,45 +92,52 @@ java JvimEcho "test message"
   <h4>Установка</h4>
 </div>
  
-* Сохранить папку с плагином `jvim-echo/` в папку `~/.vim/pack/my-plugins/start/`:
+* Сохранить папку с плагином `jvim-timer/` в папку 
+`~/.vim/pack/my-plugins/start/`:
 ```
 ~/.vim/
 └── pack/
     └── my-plugins/
         └── start/
-            └── jvim-hello/
+            └── jvim-timer/
                 ├── plugin/
-                │   └── jvim_echo.vim
+                │   └── jvim_timer.vim
                 └── java/
-                    └── JvimEcho.java
+                    └── JvimTimer.java
 ```
 
 * Скомпилировать Java файл:
 ```
-cd ~/.vim/pack/my-plugins/start/java/
-javac JvimEcho.java
+cd ~/.vim/pack/my-plugins/start/jvim-timer/java/
+javac JvimTimer.java
 ```
 
 * Перезагрузить Vim или выполнить команду:
 
 ```
-:source ~/.vim/pack/my-plugins/start/jvim-echo/plugin/jvim_echo.vim
+:source ~/.vim/pack/my-plugins/start/jvim-timer/plugin/jvim_timer.vim
 ```
 
 <div align="center">
   <h4>Использование</h4>
 </div>
- 
-На команду: `:Jvim Hello!!!`
 
-...Vim ответит в командной строке: `Hello!!!`
+* Воспользоваться Vim для редактирования файла:
+```
+$ vim example.md
+```
+
+* По окончании работы и закрытия Vim будет выведено:
+```
+$ Время работы Vim: 310,4 секунд
+```
 
 <div align="center">
   <h4>Требования</h4>
 </div>
  
 * Установленная Java
-* Скомпилированный файл JvimEcho.class в указанной директории
+* Скомпилированный файл JvimTimer.class в указанной директории
 
 <div align="center">
   <h4>Совместимость</h4>
@@ -151,25 +145,3 @@ javac JvimEcho.java
  
 * Vim 7.0 и выше
 * Java 8 и выше
-
-<div align="center">
-  <h4>Примеры использования</h4>
-</div>
-
-```
-:Jvim Hello world!
-:Jvim testing 123
-:Jvim "text with spaces"
-```
- 
-<div align="center">
-  <h4>Дебаг</h4>
-</div>
-
-Если плагин не работает, 
-проверьте работу Java файла вручную в термаинале:
-
-```
-cd ~/.vim/pack/my-plugins/start/jvim-echo/java
-java JvimEcho "test message"
-```
