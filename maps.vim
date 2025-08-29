@@ -12,16 +12,31 @@ let mapleader=" "
 " ------------------------------------------------------------------  
 " Function: VimOpenTerminal()
 " Description: Function to open a terminal on the left side and
-" set its width to 70 columns
+" set its width to 50 columns
 " Parameters: None
 " Returns: None
 " ------------------------------------------------------------------  
 function! VimOpenTerminal()
   vertical terminal
-  vertical resize 70
+  vertical resize 50
 endfunction
 
-map <leader>t :call VimOpenTerminal()<CR>
+map <leader>e :call VimOpenTerminal()<CR>
+
+" ------------------------------------------------------------------  
+" Function: VimOpenTodo()
+" Description: Function to open a todo list on the right side and
+" set its width to 50 columns
+" Parameters: None
+" Returns: None
+" ------------------------------------------------------------------  
+function! VimOpenTodo()
+  rightbelow vertical split
+  vertical resize 50
+  e ~/.vim/.todo
+endfunction
+
+map <leader>w :call VimOpenTodo()<CR>
 
 " window navigation mappings
 map <leader>h :wincmd h<CR> 
