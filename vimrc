@@ -9,10 +9,13 @@ set expandtab
 set autoindent
 set smartindent
 
+" серая полоса 
 set colorcolumn=70
 highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 
 set scrolloff=8
+
+set showmatch
 
 " Java settings
 let java_highlight_all = 1
@@ -20,3 +23,12 @@ let java_highlight_debug = 1
 let java_ignore_javadoc = 0
 let java_mark_braces_in_parens_as_errors = 1
 
+" mappings
+let mapleader=" "
+
+function! VimOpenTerminal()
+  vertical terminal
+  vertical resize 70
+endfunction
+
+map <leader>t :call VimOpenTerminal()<cr>
