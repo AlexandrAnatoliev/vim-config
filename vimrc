@@ -23,12 +23,7 @@ let java_highlight_debug = 1
 let java_ignore_javadoc = 0
 let java_mark_braces_in_parens_as_errors = 1
 
-" mappings
-let mapleader=" "
-
-function! VimOpenTerminal()
-  vertical terminal
-  vertical resize 70
-endfunction
-
-map <leader>t :call VimOpenTerminal()<cr>
+" Подключение файла с маппингами
+if filereadable(expand("~/.vim/maps.vim"))
+  source ~/.vim/maps.vim
+endif
