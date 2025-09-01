@@ -6,7 +6,7 @@
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.1](https://img.shields.io/badge/Version-0.1.1-orange.svg)
+  ![Version 0.1.3](https://img.shields.io/badge/Version-0.1.3-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/jvim-plugins.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/jvim-plugins.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/jvim-plugins)
@@ -30,7 +30,7 @@
                 │   └── jvim_timer.vim
                 ├── java/
                 │   └── JvimTimer.java
-                └── data/
+                └── data
 ```
 
 * Compile the Java file:
@@ -57,7 +57,12 @@ $ vim example.md
 * After finishing work and closing Vim, 
 the following will be displayed:
 ```
-$ Время работы Vim: ... ч ... мин ... сек
+  =====================================
+            Время работы Vim:           
+  -------------------------------------
+  - за сеанс:  0 ч  0 мин  2 сек
+  - за день:   0 ч 50 мин  3 сек
+  =====================================
 ```
 
 <div align="center">
@@ -75,6 +80,39 @@ $ Время работы Vim: ... ч ... мин ... сек
 * Java 8 and above
 
 <div align="center">
+  <h4>jvim-timer class call structure</h4>
+</div>
+
+```mermaid
+classDiagram
+  direction LR
+  
+  class jvim_timer.vim {
+    +StartTimer()
+    +StopTimer()
+  }
+
+  class JvimTimer {
+    +start()
+    +stop()
+    +checkFileDate(String pathToFile)
+    +printDayTime(long duration, String pathToFile)
+  }
+
+  class jvim_start_time.txt {
+    +Long startTime
+  }
+
+  class jvim_day_time.txt {
+    +Long dayTime
+  }
+
+  jvim_timer.vim --|> JvimTimer : calls
+  JvimTimer --|> jvim_start_time.txt : reads/writes
+  JvimTimer --|> jvim_day_time.txt : reads/writes
+```
+
+<div align="center">
 
   <a id="russian"></a>
   <h1>Простой плагин для измерения времени работы Vim</h1>
@@ -82,7 +120,7 @@ $ Время работы Vim: ... ч ... мин ... сек
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.1](https://img.shields.io/badge/Version-0.1.1-orange.svg)
+  ![Version 0.1.3](https://img.shields.io/badge/Version-0.1.3-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/jvim-plugins.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/jvim-plugins.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/jvim-plugins)
@@ -105,7 +143,7 @@ $ Время работы Vim: ... ч ... мин ... сек
                 │   └── jvim_timer.vim
                 ├── java/
                 │   └── JvimTimer.java
-                └── data/
+                └── data
 ```
 
 * Скомпилировать Java файл:
@@ -131,7 +169,12 @@ $ vim example.md
 
 * По окончании работы и закрытия Vim будет выведено:
 ```
-$ Время работы Vim: ... ч ... мин ... сек
+  =====================================
+            Время работы Vim:           
+  -------------------------------------
+  - за сеанс:  0 ч  0 мин  2 сек
+  - за день:   0 ч 50 мин  3 сек
+  =====================================
 ```
 
 <div align="center">
@@ -147,3 +190,36 @@ $ Время работы Vim: ... ч ... мин ... сек
  
 * Vim 7.0 и выше
 * Java 8 и выше
+
+<div align="center">
+  <h4>Структура вызовов классов</h4>
+</div>
+
+```mermaid
+classDiagram
+  direction LR
+  
+  class jvim_timer.vim {
+    +StartTimer()
+    +StopTimer()
+  }
+
+  class JvimTimer {
+    +start()
+    +stop()
+    +checkFileDate(String pathToFile)
+    +printDayTime(long duration, String pathToFile)
+  }
+
+  class jvim_start_time.txt {
+    +Long startTime
+  }
+
+  class jvim_day_time.txt {
+    +Long dayTime
+  }
+
+  jvim_timer.vim --|> JvimTimer : calls
+  JvimTimer --|> jvim_start_time.txt : reads/writes
+  JvimTimer --|> jvim_day_time.txt : reads/writes
+```
