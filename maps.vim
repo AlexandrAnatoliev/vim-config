@@ -49,3 +49,6 @@ map <leader>o :wincmd o<CR>
 
 " terminal to normal mode 
 tnoremap <leader><Esc> <C-\><C-n>
+
+" comments
+map <leader>/ 0i// 0 
