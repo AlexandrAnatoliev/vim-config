@@ -21,6 +21,13 @@ set showmatch
 
 set incsearch
 
+set laststatus=2
+
+set mouse=a
+
+set winwidth=100
+set winminwidth=50
+
 " Java settings
 let java_highlight_all = 1
 let java_highlight_debug = 1
