@@ -13,9 +13,13 @@ set smartindent
 set colorcolumn=70
 highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 
+set nowrap
+set sidescroll=8
 set scrolloff=8
 
 set showmatch
+
+set incsearch
 
 " Java settings
 let java_highlight_all = 1

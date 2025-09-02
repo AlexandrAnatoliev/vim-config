@@ -2,4 +2,4 @@
 *.swp
 *.class
 .todo
-jvim_day_time.txt
+pack/my-plugins/start/jvim-timer/data/*
