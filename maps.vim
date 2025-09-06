@@ -39,10 +39,10 @@ endfunction
 map <leader>w :call VimOpenTodo()<CR>
 
 " window navigation mappings
-map <leader>h :wincmd h<CR> 
-map <leader>l :wincmd l<CR> 
-map <leader>j :wincmd j<CR> 
-map <leader>k :wincmd k<CR> 
+map <leader>h :wincmd h<CR><Esc> 
+map <leader>l :wincmd l<CR><Esc>
+map <leader>j :wincmd j<CR><Esc>   
+map <leader>k :wincmd k<CR><Esc> 
 
 "close other windows
 map <leader>o :wincmd o<CR> 

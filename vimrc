@@ -26,6 +26,19 @@ set laststatus=2
 set winwidth=100
 set winminwidth=50
 
+set foldcolumn=5
+set foldmethod=indent
+set foldlevel=1
+filetype indent on
+set indentexpr
+
+set dictionary=.mydict
+set thesaurus=.thesaurus
+set complete+=k,s
+
+syntax enable
+syntax on
+
 " Java settings
 let java_highlight_all = 1
 let java_highlight_debug = 1

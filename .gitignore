@@ -3,3 +3,5 @@
 *.class
 .todo
 pack/my-plugins/start/jvim-timer/data/*
+.mydict
+.thesaurus
