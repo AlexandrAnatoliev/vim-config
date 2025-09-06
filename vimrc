@@ -23,8 +23,6 @@ set incsearch
 
 set laststatus=2
 
-set mouse=a
-
 set winwidth=100
 set winminwidth=50
 
