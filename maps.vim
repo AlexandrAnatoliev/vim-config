@@ -19,6 +19,8 @@ let mapleader=" "
 function! VimOpenTerminal()
   vertical terminal
   vertical resize 50
+  call feedkeys("ls --level=6\<CR>")
+  call feedkeys("jshell -v\<CR>")
 endfunction
 
 map <leader>e :call VimOpenTerminal()<CR>
@@ -49,6 +51,9 @@ map <leader>o :wincmd o<CR>
 
 " terminal to normal mode 
 tnoremap <leader><Esc> <C-\><C-n>
+
+" buffer navigation mappings
+map <leader><Tab> :bNext<CR> 
 
 " comments
 map <leader>/ 0i// 0 

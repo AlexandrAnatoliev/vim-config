@@ -1,5 +1,4 @@
-" Basic settings
-set number
+" Basic settings set number
 set relativenumber
 
 set tabstop=2
@@ -38,6 +37,16 @@ set complete+=k,s
 
 syntax enable
 syntax on
+
+function SetTimeOfDayColors()
+  " change colorscheme to evening
+  let time = str2nr(strftime('%H'))
+  if time > 22
+    colorscheme quiet
+  endif
+endfunction
+
+autocmd BufReadPre * call SetTimeOfDayColors()
 
 " Java settings
 let java_highlight_all = 1
