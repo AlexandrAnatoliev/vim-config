@@ -6,7 +6,7 @@
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.4](https://img.shields.io/badge/Version-0.1.4-orange.svg)
+  ![Version 0.1.6](https://img.shields.io/badge/Version-0.1.6-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/jvim-plugins.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/jvim-plugins.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/jvim-plugins)
@@ -26,18 +26,21 @@
     └── my-plugins/
         └── start/
             └── jvim-timer/
+                ├── bin/
+                ├── data/
                 ├── plugin/
                 │   └── jvim_timer.vim
-                ├── java/
-                │   ├── JvimTimer.java
-                │   └── Session.java
-                └── data
+                └── src/
+                    └── java/
+                       ├── DayTimer.java
+                       ├── Main.java
+                       └── SessionTimer.java
 ```
 
 * Compile the Java file:
 ```
-cd ~/.vim/pack/my-plugins/start/jvim-timer/java/
-javac JvimTimer.java Session.java
+cd ~/.vim/pack/my-plugins/start/jvim-timer/
+javac -d bin/ src/java/*
 ```
 
 * Reload Vim or execute the command:
@@ -71,7 +74,7 @@ the following will be displayed:
 </div>
  
 * Installed Java
-* Compiled JvimTimer.class in the specified directory
+* Compiled .class files in the specified directory
 
 <div align="center">
   <h4>Compatibility</h4>
@@ -93,20 +96,31 @@ classDiagram
     + StopTimer()
   }
 
-  class JvimTimer {
+  class Main {
+    - SESSION_FILE_PATH: String 
+      = "/.vim/pack/my-plugins/start/jvim-timer/data/jvim_session_time.txt"
+    - DAY_FILE_PATH: String 
+      = "/.vim/pack/my-plugins/start/jvim-timer/data/jvim_day_time.txt"
     + start(): void
     + stop(): void
-    + checkFileDate(pathToFile: String): void
-    + printDayTime(duration: long, pathToFile: String): void
   }
 
-  class Session {
+  class SessionTimer {
     - pathToFile: String
-    + Session(pathToFile: String)
+    + SessionTimer(pathToFile: String)
     + getSessionTime(): long
     + writeToFile(value: Long): void
     + readFromFile(): long
     + deleteFile(): void
+  }
+
+  class DayTimer {
+    - pathToFile: String
+    + DayTimer(pathToFile: String)
+    + fileIsNotExist(): boolean
+    + getFileDate(): LocalDate
+    + writeToFile(value: Long): void
+    + readFromFile(): long
   }
 
   class jvim_start_time.txt {
@@ -117,10 +131,11 @@ classDiagram
     + dayTime: String
   }
 
-  jvim_timer.vim --|> JvimTimer : calls
-  JvimTimer --|> Session : calls
-  Session --|> jvim_start_time.txt : reads/writes
-  JvimTimer --|> jvim_day_time.txt : reads/writes
+  jvim_timer.vim --|> Main : calls
+  Main --|> SessionTimer : calls
+  Main --|> DayTimer : calls
+  SessionTimer --|> jvim_start_time.txt : reads/writes
+  DayTimer --|> jvim_day_time.txt : reads/writes
 ```
 
 <div align="center">
@@ -131,7 +146,7 @@ classDiagram
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.4](https://img.shields.io/badge/Version-0.1.4-orange.svg)
+  ![Version 0.1.6](https://img.shields.io/badge/Version-0.1.6-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/jvim-plugins.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/jvim-plugins.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/jvim-plugins)
@@ -150,18 +165,21 @@ classDiagram
     └── my-plugins/
         └── start/
             └── jvim-timer/
+                ├── bin/
+                ├── data/
                 ├── plugin/
                 │   └── jvim_timer.vim
-                ├── java/
-                │   ├── JvimTimer.java
-                │   └── Session.java
-                └── data
+                └── src/
+                    └── java/
+                       ├── DayTimer.java
+                       ├── Main.java
+                       └── SessionTimer.java
 ```
 
 * Скомпилировать Java файлы:
 ```
-cd ~/.vim/pack/my-plugins/start/jvim-timer/java/
-javac JvimTimer.java Session.java
+cd ~/.vim/pack/my-plugins/start/jvim-timer/
+javac -d bin/ src/java/*
 ```
 
 * Перезагрузить Vim или выполнить команду:
@@ -194,7 +212,7 @@ $ vim example.md
 </div>
  
 * Установленная Java
-* Скомпилированный файл JvimTimer.class в указанной директории
+* Скомпилированные .class файлы в указанной директории
 
 <div align="center">
   <h4>Совместимость</h4>
@@ -216,20 +234,31 @@ classDiagram
     + StopTimer()
   }
 
-  class JvimTimer {
+  class Main {
+    - SESSION_FILE_PATH: String 
+      = "/.vim/pack/my-plugins/start/jvim-timer/data/jvim_session_time.txt"
+    - DAY_FILE_PATH: String 
+      = "/.vim/pack/my-plugins/start/jvim-timer/data/jvim_day_time.txt"
     + start(): void
     + stop(): void
-    + checkFileDate(pathToFile: String): void
-    + printDayTime(duration: long, pathToFile: String): void
   }
 
-  class Session {
+  class SessionTimer {
     - pathToFile: String
-    + Session(pathToFile: String)
+    + SessionTimer(pathToFile: String)
     + getSessionTime(): long
     + writeToFile(value: Long): void
     + readFromFile(): long
     + deleteFile(): void
+  }
+
+  class DayTimer {
+    - pathToFile: String
+    + DayTimer(pathToFile: String)
+    + fileIsNotExist(): boolean
+    + getFileDate(): LocalDate
+    + writeToFile(value: Long): void
+    + readFromFile(): long
   }
 
   class jvim_start_time.txt {
@@ -240,8 +269,9 @@ classDiagram
     + dayTime: String
   }
 
-  jvim_timer.vim --|> JvimTimer : calls
-  JvimTimer --|> Session : calls
-  Session --|> jvim_start_time.txt : reads/writes
-  JvimTimer --|> jvim_day_time.txt : reads/writes
+  jvim_timer.vim --|> Main : calls
+  Main --|> SessionTimer : calls
+  Main --|> DayTimer : calls
+  SessionTimer --|> jvim_start_time.txt : reads/writes
+  DayTimer --|> jvim_day_time.txt : reads/writes
 ```
