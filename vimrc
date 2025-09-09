@@ -14,6 +14,7 @@ highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 
 set nowrap
 set sidescroll=8
+set sidescrolloff=8
 set scrolloff=8
 
 set showmatch
@@ -34,6 +35,8 @@ set indentexpr
 set dictionary=.mydict
 set thesaurus=.thesaurus
 set complete+=k,s
+
+setlocal spell
 
 syntax enable
 syntax on
