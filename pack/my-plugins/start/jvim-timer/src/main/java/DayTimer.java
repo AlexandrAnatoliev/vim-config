@@ -10,8 +10,8 @@ import java.nio.file.attribute.*;
 * file existence check, date validation, 
 * and time value storage / retrieval 
 *
-* @version  0.1.5 
-* @since    07.09.2025
+* @version  0.1.9 
+* @since    23.09.2025
 * @author   AlexandrAnatoliev
 */
 public class DayTimer {
@@ -22,7 +22,7 @@ public class DayTimer {
   *
   * @param  pathToFile - path to temporary file for storing time values
   */
-  DayTimer(String pathToFile) {
+  public DayTimer(String pathToFile) {
     this.pathToFile = pathToFile;
   }
 
@@ -78,7 +78,7 @@ public class DayTimer {
   * @param  value - tlme value in seconds to write to file
   * @throws Exception if unexpected error 
   */
-  void writeToFile(Long value) {
+  public void writeToFile(Long value) {
     try {
       FileWriter writer = new FileWriter(pathToFile);
       writer.write(value.toString());
@@ -97,7 +97,7 @@ public class DayTimer {
   * or 0 if file does not exist or contains invalid data
   * @throws Exception if unexpected error 
   */
-  long readFromFile() {
+  public long readFromFile() {
     try {
       BufferedReader reader = new BufferedReader(
                           new FileReader(this.pathToFile));
