@@ -32,7 +32,7 @@ set foldlevel=1
 filetype indent on
 set indentexpr
 
-set dictionary=.mydict
+set dictionary=~/.vim/.mydict
 set thesaurus=.thesaurus
 set complete+=k,s
 
