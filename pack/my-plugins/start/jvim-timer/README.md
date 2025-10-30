@@ -6,7 +6,7 @@
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.9](https://img.shields.io/badge/Version-0.1.9-orange.svg)
+  ![Version 0.1.11](https://img.shields.io/badge/Version-0.1.11-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/jvim-plugins.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/jvim-plugins.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/jvim-plugins)
@@ -30,9 +30,11 @@
                 │   ├── main/
                 │   │   ├── DayTimer.class
                 │   │   ├── Main.java.class
-                │   │   └── SessionTimer.class
+                │   │   ├── SessionTimer.class
+                │   │   └── Timer.class
                 │   └── test/
-                │       └── DayTimerTest.class
+                │       ├── DayTimerTest.class
+                │       └── SessionTimerTest.class
                 ├── data/
                 │   ├── jvim_day_time.txt
                 │   └── jvim_session_time.txt
@@ -43,10 +45,12 @@
                 │   │   └── java/
                 │   │       ├── DayTimer.java
                 │   │       ├── Main.java
-                │   │       └── SessionTimer.java
+                │   │       ├── SessionTimer.java
+                │   │       └── Timer.java
                 │   └── test/
                 │       └── java/
-                │           └── DayTimerTest.java
+                │           ├── DayTimerTest.java
+                │           └── SessionTimerTest.java
                 └── test/
                        └── test_jvim_timer.vim
 ```
@@ -124,6 +128,35 @@ the following will be displayed:
 * Java 8 and above
 
 <div align="center">
+  <h4>Classes structure</h4>
+</div>
+
+```mermaid
+classDiagram
+  
+  class Timer {
+    - pathToFile: String
+    + SessionTimer(pathToFile: String)
+    + writeToFile(value: Long): void
+    + readFromFile(): long
+  }
+
+  class SessionTimer {
+    + SessionTimer(pathToFile: String)
+    + getSessionTime(): long
+    + deleteFile(): void
+  }
+
+  class DayTimer {
+    + DayTimer(pathToFile: String)
+    + fileIsNotExist(): boolean
+    + getFileDate(): LocalDate
+  }
+
+  Timer <|-- SessionTimer  
+  Timer <|-- DayTimer
+```
+<div align="center">
   <h4>jvim-timer class call structure</h4>
 </div>
 
@@ -146,21 +179,9 @@ classDiagram
   }
 
   class SessionTimer {
-    - pathToFile: String
-    + SessionTimer(pathToFile: String)
-    + getSessionTime(): long
-    + writeToFile(value: Long): void
-    + readFromFile(): long
-    + deleteFile(): void
   }
 
   class DayTimer {
-    - pathToFile: String
-    + DayTimer(pathToFile: String)
-    + fileIsNotExist(): boolean
-    + getFileDate(): LocalDate
-    + writeToFile(value: Long): void
-    + readFromFile(): long
   }
 
   class jvim_start_time.txt {
@@ -186,7 +207,7 @@ classDiagram
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.9](https://img.shields.io/badge/Version-0.1.9-orange.svg)
+  ![Version 0.1.11](https://img.shields.io/badge/Version-0.1.11-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/jvim-plugins.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/jvim-plugins.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/jvim-plugins)
@@ -210,9 +231,11 @@ classDiagram
                 │   ├── main/
                 │   │   ├── DayTimer.class
                 │   │   ├── Main.java.class
-                │   │   └── SessionTimer.class
+                │   │   ├── SessionTimer.class
+                │   │   └── Timer.class
                 │   └── test/
-                │       └── DayTimerTest.class
+                │       ├── DayTimerTest.class
+                │       └── SessionTimerTest.class
                 ├── data/
                 │   ├── jvim_day_time.txt
                 │   └── jvim_session_time.txt
@@ -223,10 +246,12 @@ classDiagram
                 │   │   └── java/
                 │   │       ├── DayTimer.java
                 │   │       ├── Main.java
-                │   │       └── SessionTimer.java
+                │   │       ├── SessionTimer.java
+                │   │       └── Timer.java
                 │   └── test/
                 │       └── java/
-                │           └── DayTimerTest.java
+                │           ├── DayTimerTest.java
+                │           └── SessionTimerTest.java
                 └── test/
                        └── test_jvim_timer.vim
 ```
@@ -303,6 +328,36 @@ $ vim example.md
 * Java 8 и выше
 
 <div align="center">
+  <h4>Структура классов</h4>
+</div>
+
+```mermaid
+classDiagram
+  
+  class Timer {
+    - pathToFile: String
+    + SessionTimer(pathToFile: String)
+    + writeToFile(value: Long): void
+    + readFromFile(): long
+  }
+
+  class SessionTimer {
+    + SessionTimer(pathToFile: String)
+    + getSessionTime(): long
+    + deleteFile(): void
+  }
+
+  class DayTimer {
+    + DayTimer(pathToFile: String)
+    + fileIsNotExist(): boolean
+    + getFileDate(): LocalDate
+  }
+
+  Timer <|-- SessionTimer  
+  Timer <|-- DayTimer
+```
+
+<div align="center">
   <h4>Структура вызовов классов</h4>
 </div>
 
@@ -325,21 +380,9 @@ classDiagram
   }
 
   class SessionTimer {
-    - pathToFile: String
-    + SessionTimer(pathToFile: String)
-    + getSessionTime(): long
-    + writeToFile(value: Long): void
-    + readFromFile(): long
-    + deleteFile(): void
   }
 
   class DayTimer {
-    - pathToFile: String
-    + DayTimer(pathToFile: String)
-    + fileIsNotExist(): boolean
-    + getFileDate(): LocalDate
-    + writeToFile(value: Long): void
-    + readFromFile(): long
   }
 
   class jvim_start_time.txt {
