@@ -26,7 +26,7 @@ set laststatus=2
 set winwidth=100
 set winminwidth=50
 
-" set foldcolumn=5
+" set foldcolumn=1
 set foldmethod=indent
 set foldlevel=1
 filetype indent on
