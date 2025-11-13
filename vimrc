@@ -1,9 +1,9 @@
 " Basic settings set number
 set relativenumber
 
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set expandtab
 set autoindent
 set smartindent
@@ -26,7 +26,7 @@ set laststatus=2
 set winwidth=100
 set winminwidth=50
 
-set foldcolumn=5
+" set foldcolumn=5
 set foldmethod=indent
 set foldlevel=1
 filetype indent on
