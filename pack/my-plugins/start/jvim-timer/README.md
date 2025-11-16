@@ -6,7 +6,7 @@
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.2.9](https://img.shields.io/badge/Version-0.2.9-orange.svg)
+  ![Version 0.2.10](https://img.shields.io/badge/Version-0.2.10-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/jvim-plugins.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/jvim-plugins.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/jvim-plugins)
@@ -24,7 +24,7 @@
             └── jvim-timer/
                 ├── bin/
                 │   ├── main/
-                │   │   ├── Main.java.class
+                │   │   ├── Main.class
                 │   │   └── Timer.class
                 │   └── test/
                 │       └── TimerTest.class
@@ -35,6 +35,9 @@
                 ├── plugin/
                 │   └── jvim_timer.vim
                 ├── scripts/
+                │   ├── build.sh        
+                │   ├── check_jdk.sh
+                │   ├── check_vim.sh
                 │   └── compile.sh
                 └── src/
                     ├── main/
@@ -54,12 +57,24 @@
 ```
 cd ~/.vim/pack/my-plugins/start/jvim-timer/
 ```
-
-* Make the script executable:
+* Make the scripts executable:
 ```
-chmod +x scripts/compile.sh
+chmod +x scripts/*.sh
+```
+* Run the script for automatic plugin build and installation
+```
+./scripts/build.sh
 ```
 
+This script runs the following scripts:
+* Check if Vim is installed on the system
+```
+./scripts/check_vim.sh
+```
+* Check if JDK is installed on the system
+```
+./scripts/check_jdk.sh
+```
 * Compile Java files:
 ```
 ./scripts/compile.sh
@@ -192,7 +207,7 @@ classDiagram
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.2.9](https://img.shields.io/badge/Version-0.2.9-orange.svg)
+  ![Version 0.2.10](https://img.shields.io/badge/Version-0.2.10-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/jvim-plugins.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/jvim-plugins.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/jvim-plugins)
@@ -210,7 +225,7 @@ classDiagram
             └── jvim-timer/
                 ├── bin/
                 │   ├── main/
-                │   │   ├── Main.java.class
+                │   │   ├── Main.class
                 │   │   └── Timer.class
                 │   └── test/
                 │       └── TimerTest.class
@@ -221,6 +236,9 @@ classDiagram
                 ├── plugin/
                 │   └── jvim_timer.vim
                 ├── scripts/
+                │   ├── build.sh        
+                │   ├── check_jdk.sh
+                │   ├── check_vim.sh
                 │   └── compile.sh
                 └── src/
                     ├── main/
@@ -241,11 +259,25 @@ classDiagram
 cd ~/.vim/pack/my-plugins/start/jvim-timer/
 ```
 
-* Сделать скрипт исполняемым:
+* Сделать скрипты исполняемыми:
 ```
-chmod +x scripts/compile.sh
+chmod +x scripts/*.sh
 ```
 
+* Запустить скрипт для автоматической сборки и установки плагина:
+```
+./scripts/build.sh
+```
+
+Этот скрипт запускает следующие скрипты:
+* Проверить, установлен ли Vim в системе
+```
+./scripts/check_vim.sh
+```
+* Проверить, установлен ли JDK в системе
+```
+./scripts/check_jdk.sh
+```
 * Компиляция Java файлов 
 ```
 ./scripts/compile.sh
