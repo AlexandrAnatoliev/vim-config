@@ -6,15 +6,57 @@
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.2.11](https://img.shields.io/badge/Version-0.2.11-orange.svg)
+  ![Version 0.2.13](https://img.shields.io/badge/Version-0.2.13-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/jvim-plugins.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/jvim-plugins.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/jvim-plugins)
 
 </div>
 
-* Save the plugin folder `jvim-timer/` to the directory  
-`~/.vim/pack/my-plugins/start/`:
+<div align="center">
+  <h4>Plugin installation</h4>
+</div>
+
+* Clone the plugins repository:
+```
+git clone https://github.com/AlexandrAnatoliev/jvim-plugins 
+```
+
+* Navigate to the plugin's root repository:
+```
+cd jvim-plugins/jvim-timer/
+```
+
+* Make the scripts executable:
+```
+chmod +x scripts/*.sh
+```
+
+Install the plugin using the script:
+* with test execution:
+```
+./scripts/install_plugin.sh
+```
+* without running tests:
+```
+./scripts/install_plugin_without_testing.sh
+```
+
+<div align="center">
+  <h4>Plugin uninstallation</h4>
+</div>
+
+* To uninstall the plugin, delete its folder:
+```
+rm -r ~/.vim/pack/my-plugins/start/jvim-timer/
+```
+
+<div align="center">
+  <h4>Plugin file structure</h4>
+</div>
+
+* The plugin installs into the relevant directory of the `.vim/`
+folder and creates the following file structure:
 
 ```
 ~/.vim/
@@ -30,7 +72,7 @@
                 │       └── TimerTest.class
                 ├── data/
                 │   ├── jvim_day_time.txt
-                │   ├── jvim_mouth_time.txt
+                │   ├── jvim_month_time.txt
                 │   └── jvim_session_time.txt
                 ├── plugin/
                 │   └── jvim_timer.vim
@@ -41,6 +83,9 @@
                 │   ├── check_vim.sh
                 │   ├── compile.sh
                 │   ├── compile_tests.sh
+                │   ├── copy_to_vim.sh
+                │   ├── install_plugin.sh
+                │   ├── install_plugin_without_testing.sh
                 │   ├── run_tests.sh
                 │   └── testing.sh
                 └── src/
@@ -57,48 +102,55 @@
   <h4>Script usage</h4>
 </div>
 
-* Navigate to the plugin's root directory:
-```
-cd ~/.vim/pack/my-plugins/start/jvim-timer/
-```
-* Make the scripts executable:
-```
-chmod +x scripts/*.sh
-```
-* Run the script for automatic plugin build and installation
+The `install_plugin.sh` script runs the scripts sequentially:
+* `build.sh` - building plugin Java files;
+* `testing.sh` - running JUnit tests;
+* `copy_to_vim.sh` - copies the build plugin to the appropriate Vim
+                    directory;
+
+The `install_plugin_without_testing.sh` script runs the scripts 
+sequentially without testing:
+* `build.sh`
+* `copy_to_vim.sh`
+
+* Run the script for automatic plugin build:
 ```
 ./scripts/build.sh
 ```
 
-This script runs the following scripts:
+This script runs the scripts listed below:
 * Check if Vim is installed on the system
 ```
 ./scripts/check_vim.sh
 ```
+
 * Check if JDK is installed on the system
 ```
 ./scripts/check_jdk.sh
 ```
-* Compile Java files:
+
+* Compiling Java files 
 ```
 ./scripts/compile.sh
 ```
 
-* Run the script for automatic tests compiling and running
+* Run the script for automatic compilation and test execution
 ```
 ./scripts/testing.sh
 ```
 
-This script runs the following scripts:
+This script runs the scripts listed below:
 * Check if JUnit is installed on the system
 ```
 ./scripts/check_junit.sh
 ```
-* Compile JUnit test classes
+
+* Compiling JUnit classes 
 ```
 ./scripts/compile_tests.sh
 ```
-* Run JUnit tests:
+
+* Run tests:
 ```
 ./scripts/run_tests.sh
 ```
@@ -106,15 +158,23 @@ This script runs the following scripts:
 <div align="center">
   <h4>Manual installation</h4>
 </div>
- 
-* Compile the Java file:
+
+* Copy the plugin to the  `.vim/` folder:
+```
+cp -r jvim-timer/ ~/.vim/pack/my-plugins/start/
+```
+
+* Navigate to the plugin's root directory:
 ```
 cd ~/.vim/pack/my-plugins/start/jvim-timer/
+```
+
+* Compile Java files:
+```
 javac -d bin/main/ src/main/java/*
 ```
 
-* Reload Vim or execute the command:
-
+* Reload Vim or run the command:
 ```
 :source ~/.vim/pack/my-plugins/start/jvim-timer/plugin/jvim_timer.vim
 ```
@@ -123,34 +183,33 @@ javac -d bin/main/ src/main/java/*
   <h4>Testing</h4>
 </div>
 
-* Compile tests with JUnit dependencies:
+* Building tests with JUnit dependencies:
 ```
 javac -d bin/test/ -cp "bin/main:/usr/share/java/junit-jupiter-api-5.10.1.jar:/usr/share/java/junit-platform-console-standalone-1.9.1.jar" src/test/java/*.java
 ```
 
-* Run all JUnit tests 
+* Running all unit tests
 ```
 java -cp "bin/main:bin/test:/usr/share/java/junit-jupiter-api-5.10.1.jar:/usr/share/java/junit-platform-console-standalone-1.9.1.jar" org.junit.platform.console.ConsoleLauncher --scan-classpath --class-path bin/test
 ```
 
 <div align="center">
-  <h4>Usage</h4>
+  <h4>Using</h4>
 </div>
 
-* Use Vim to edit a file:
+* Use Vim to edit the file:
 ```
 $ vim example.md
 ```
 
-* After finishing work and closing Vim, 
-the following will be displayed:
+* After closing Vim, you will see:
 ```
   =========================================
-            Время работы Vim:           
+                Vim uptime:
   -----------------------------------------
-  - за сеанс:             0 ч  0 мин  2 сек
-  - за день:              0 ч 50 мин  3 сек
-  - за месяц (среднее):   0 ч 50 мин  3 сек
+  - per session:         0 h  0 min  8 sec
+  - per day:             0 h 19 min 59 sec
+  - average per month:   0 h 57 min 14 sec
   =========================================
 ```
 
@@ -158,8 +217,10 @@ the following will be displayed:
   <h4>Requirements</h4>
 </div>
  
-* Installed Java
-* Compiled .class files in the specified directory
+* Java installed
+* Vim installed
+* .class files built into designated folder
+* JUnit 5 installed (optional)
 
 <div align="center">
   <h4>Compatibility</h4>
@@ -169,7 +230,7 @@ the following will be displayed:
 * Java 8 and above
 
 <div align="center">
-  <h4>jvim-timer class call structure</h4>
+  <h4>Class call hierarchy</h4>
 </div>
 
 ```mermaid
@@ -230,15 +291,57 @@ classDiagram
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.2.11](https://img.shields.io/badge/Version-0.2.11-orange.svg)
+  ![Version 0.2.13](https://img.shields.io/badge/Version-0.2.13-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/jvim-plugins.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/jvim-plugins.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/jvim-plugins)
 
 </div>
 
-* Сохранить папку с плагином `jvim-timer/` в папку 
-`~/.vim/pack/my-plugins/start/`:
+<div align="center">
+  <h4>Установка плагина</h4>
+</div>
+
+* Клонировать репозиторий с плагинами:
+```
+git clone https://github.com/AlexandrAnatoliev/jvim-plugins 
+```
+
+* Перейти в корневой каталог плагина:
+```
+cd jvim-plugins/jvim-timer/
+```
+
+* Сделать скрипты исполняемыми:
+```
+chmod +x scripts/*.sh
+```
+
+Установить плагин с помощью скрипта:
+* с запуском тестов:
+```
+./scripts/install_plugin.sh
+```
+* без запуска тестов:
+```
+./scripts/install_plugin_without_testing.sh
+```
+
+<div align="center">
+  <h4>Удаление плагина</h4>
+</div>
+
+* Чтобы удалить плагин, удалите директорию с плагином:
+```
+rm -r ~/.vim/pack/my-plugins/start/jvim-timer/
+```
+
+<div align="center">
+  <h4>Файловая структура плагина</h4>
+</div>
+
+* Плагин устанавливается в соответствующую директорию папки `.vim/`
+и образует следующую файловую структуру:
 
 ```
 ~/.vim/
@@ -254,7 +357,7 @@ classDiagram
                 │       └── TimerTest.class
                 ├── data/
                 │   ├── jvim_day_time.txt
-                │   ├── jvim_mouth_time.txt
+                │   ├── jvim_month_time.txt
                 │   └── jvim_session_time.txt
                 ├── plugin/
                 │   └── jvim_timer.vim
@@ -265,6 +368,9 @@ classDiagram
                 │   ├── check_vim.sh
                 │   ├── compile.sh
                 │   ├── compile_tests.sh
+                │   ├── copy_to_vim.sh
+                │   ├── install_plugin.sh
+                │   ├── install_plugin_without_testing.sh
                 │   ├── run_tests.sh
                 │   └── testing.sh
                 └── src/
@@ -281,17 +387,18 @@ classDiagram
   <h4>Использование скриптов</h4>
 </div>
 
-* Перейти в корневой каталог плагина:
-```
-cd ~/.vim/pack/my-plugins/start/jvim-timer/
-```
+Скрипт `install_plugin.sh` последовательно запускает скрипты:
+* `build.sh` - сборка Java файлов плагина;
+* `testing.sh` - запуск JUnit тестов;
+* `copy_to_vim.sh` - копирует собранный плагин в соответствующую Vim
+                    директорию;
 
-* Сделать скрипты исполняемыми:
-```
-chmod +x scripts/*.sh
-```
+Скрипт `install_plugin_without_testing.sh` последовательно запускает 
+скрипты, пропуская тестирование:
+* `build.sh`
+* `copy_to_vim.sh`
 
-* Запустить скрипт для автоматической сборки и установки плагина:
+* Запустить скрипт для автоматической сборки:
 ```
 ./scripts/build.sh
 ```
@@ -301,14 +408,17 @@ chmod +x scripts/*.sh
 ```
 ./scripts/check_vim.sh
 ```
+
 * Проверить, установлен ли JDK в системе
 ```
 ./scripts/check_jdk.sh
 ```
+
 * Компиляция Java файлов 
 ```
 ./scripts/compile.sh
 ```
+
 * Запустить скрипт для автоматической компиляции и запуска тестов
 ```
 ./scripts/testing.sh
@@ -319,10 +429,12 @@ chmod +x scripts/*.sh
 ```
 ./scripts/check_junit.sh
 ```
+
 * Компилирует JUnit классы 
 ```
 ./scripts/compile_tests.sh
 ```
+
 * Запуск тестов:
 ```
 ./scripts/run_tests.sh
@@ -331,15 +443,23 @@ chmod +x scripts/*.sh
 <div align="center">
   <h4>Установка вручную</h4>
 </div>
- 
-* Скомпилировать Java файлы:
+
+* Скопировать плагин в .vim/ директорию:
+```
+cp -r jvim-timer/ ~/.vim/pack/my-plugins/start/
+```
+
+* Перейти в корневой каталог плагина:
 ```
 cd ~/.vim/pack/my-plugins/start/jvim-timer/
+```
+
+* Скомпилировать Java файлы:
+```
 javac -d bin/main/ src/main/java/*
 ```
 
 * Перезагрузить Vim или выполнить команду:
-
 ```
 :source ~/.vim/pack/my-plugins/start/jvim-timer/plugin/jvim_timer.vim
 ```
@@ -370,11 +490,11 @@ $ vim example.md
 * По окончании работы и закрытия Vim будет выведено:
 ```
   =========================================
-            Время работы Vim:           
+                Vim uptime:
   -----------------------------------------
-  - за сеанс:             0 ч  0 мин  2 сек
-  - за день:              0 ч 50 мин  3 сек
-  - за месяц (среднее):   0 ч 50 мин  3 сек
+  - per session:         0 h  0 min  8 sec
+  - per day:             0 h 19 min 59 sec
+  - average per month:   0 h 57 min 14 sec
   =========================================
 ```
 
@@ -383,6 +503,8 @@ $ vim example.md
 </div>
  
 * Установленная Java
+* Установленный Vim
+* Установленный JUnit 5 (опционально)
 * Скомпилированные .class файлы в указанной директории
 
 <div align="center">
