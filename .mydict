@@ -15,4 +15,4 @@ Test
 byte short int long float double char boolean
 String Integer Long 
 
-System out println
+System out println format
