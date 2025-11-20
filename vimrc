@@ -9,7 +9,7 @@ set autoindent
 set smartindent
 
 " серая полоса 
-set colorcolumn=70
+set colorcolumn=80
 highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 
 set nowrap
