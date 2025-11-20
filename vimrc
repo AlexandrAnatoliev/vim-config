@@ -8,6 +8,10 @@ set expandtab
 set autoindent
 set smartindent
 
+autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType markdown setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType jsp setlocal tabstop=2 softtabstop=2 shiftwidth=2
+
 " серая полоса 
 set colorcolumn=80
 highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
