@@ -2,8 +2,8 @@
 " File: maps.vim
 " Description: Vim mappings 
 " Autor: AlexandAnatoliev
-" Version: 0.1.0
-" Last Modified: 29.08.2025
+" Version: 0.1.1
+" Last Modified: 22.11.2025
 " ==================================================================
 
 " В качестве leader - пробел
@@ -20,7 +20,7 @@ function! VimOpenTerminal()
   vertical terminal
   vertical resize 50
   call feedkeys("ls --level=6\<CR>")
-  call feedkeys("jshell -v\<CR>")
+  " call feedkeys("jshell -v\<CR>")
 endfunction
 
 map <leader>e :call VimOpenTerminal()<CR>
