@@ -28,7 +28,7 @@ set incsearch
 set laststatus=2
 
 set winwidth=100
-set winminwidth=50
+set winminwidth=45
 
 " set foldcolumn=1
 set foldmethod=indent
