@@ -18,7 +18,7 @@ let mapleader=" "
 " ------------------------------------------------------------------  
 function! VimOpenTerminal()
   vertical terminal
-  vertical resize 50
+  vertical resize 45
   call feedkeys("ls --level=6\<CR>")
   " call feedkeys("jshell -v\<CR>")
 endfunction
@@ -34,7 +34,7 @@ map <leader>e :call VimOpenTerminal()<CR>
 " ------------------------------------------------------------------  
 function! VimOpenTodo()
   rightbelow vertical split
-  vertical resize 50
+  vertical resize 45
   e ~/.vim/.todo
 endfunction
 

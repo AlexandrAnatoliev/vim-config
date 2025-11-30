@@ -8,6 +8,10 @@ set expandtab
 set autoindent
 set smartindent
 
+set encoding=utf-8
+set fileencoding=utf-8
+set termencoding=utf-8
+
 autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType markdown setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType jsp setlocal tabstop=2 softtabstop=2 shiftwidth=2
@@ -28,7 +32,7 @@ set incsearch
 set laststatus=2
 
 set winwidth=100
-set winminwidth=50
+set winminwidth=45
 
 " set foldcolumn=1
 set foldmethod=indent
@@ -44,6 +48,8 @@ setlocal spell
 
 syntax enable
 syntax on
+
+colorscheme habamax
 
 function SetTimeOfDayColors()
   " change colorscheme to evening
