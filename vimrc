@@ -49,7 +49,7 @@ setlocal spell
 syntax enable
 syntax on
 
-colorscheme habamax
+colorscheme desert
 
 function SetTimeOfDayColors()
   " change colorscheme to evening
