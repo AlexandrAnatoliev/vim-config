@@ -2,4 +2,4 @@
 *.swp
 *.class
 .todo
-pack/my-plugins/start/jvim-timer/data/*
+pack/my-plugins/start/*/data/*

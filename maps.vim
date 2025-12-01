@@ -19,6 +19,7 @@ let mapleader=" "
 function! VimOpenTerminal()
   vertical terminal
   vertical resize 45
+  call feedkeys("pwd\<CR>")
   call feedkeys("ls --level=6\<CR>")
   " call feedkeys("jshell -v\<CR>")
 endfunction
