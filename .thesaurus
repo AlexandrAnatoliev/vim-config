@@ -1,2 +1,20 @@
-Math,Math.sqrt(
-Math,Math.pow(
+String|length, isEmpty, isBlank, charAt, codePointAt, codePointBefore, codePointCount, getChars, getBytes, substring, subSequence, indexOf, lastIndexOf, contains, startsWith, endsWith, matches, equals, equalsIgnoreCase, compareTo, compareToIgnoreCase, contentEquals, regionMatches, toLowerCase, toUpperCase, trim, strip, stripLeading, stripTrailing, indent, formatted, format, concat, join, split, lines, replace, replaceFirst, replaceAll, repeat, valueOf, copyValueOf, toCharArray, intern, transform, describeConstable, resolveConstantDesc, translateEscapes
+
+Integer|parseInt, valueOf, toString, toBinaryString, toHexString, toOctalString, compare, compareTo, sum, max, min, bitCount, highestOneBit, lowestOneBit, numberOfLeadingZeros, numberOfTrailingZeros, reverse, reverseBytes, rotateLeft, rotateRight, signum, decode, getInteger, intValue, byteValue, shortValue, longValue, floatValue, doubleValue
+
+ArrayList|add, addAll, get, set, remove, removeAll, retainAll, clear, size, isEmpty, contains, containsAll, indexOf, lastIndexOf, toArray, subList, iterator, listIterator, forEach, removeIf, replaceAll, sort, clone, ensureCapacity, trimToSize, spliterator
+
+HashMap|put, get, remove, containsKey, containsValue, size, isEmpty, clear, keySet, values, entrySet, putAll, getOrDefault, putIfAbsent, remove, replace, replaceAll, compute, computeIfAbsent, computeIfPresent, merge, forEach, clone, hashCode, toString
+
+System|out, in, err, currentTimeMillis, nanoTime, arraycopy, exit, gc, runFinalization, load, loadLibrary, getProperty, getProperties, setProperties, getenv, getSecurityManager, setSecurityManager, console, lineSeparator, setOut, setIn, setErr, identityHashCode, mapLibraryName
+
+Math|abs, max, min, sqrt, pow, exp, log, log10, sin, cos, tan, asin, acos, atan, atan2, toRadians, toDegrees, ceil, floor, round, rint, random, addExact, subtractExact, multiplyExact, incrementExact, decrementExact, negateExact, toIntExact, floorDiv, floorMod, nextUp, nextDown, scalb, hypot, cbrt, signum, copySign, getExponent, IEEEremainder, ulp
+
+Arrays|sort, parallelSort, binarySearch, equals, deepEquals, fill, copyOf, copyOfRange, asList, toString, deepToString, hashCode, deepHashCode, compare, mismatch, parallelPrefix, setAll, parallelSetAll, spliterator, stream
+
+Object|equals, hashCode, toString, getClass, notify, notifyAll, wait, clone, finalize
+
+LocalDate|now, of, parse, getYear, getMonthValue, getMonth, getDayOfMonth, getDayOfWeek, getDayOfYear, isLeapYear, lengthOfMonth, lengthOfYear, withYear, withMonth, withDayOfMonth, plusYears, plusMonths, plusWeeks, plusDays, minusYears, minusMonths, minusWeeks, minusDays, atTime, atStartOfDay, until, isAfter, isBefore, isEqual, compareTo, format, getChronology, from, toEpochDay
+
+Optional|empty, of, ofNullable, get, isPresent, ifPresent, orElse, orElseGet, orElseThrow, filter, map, flatMap, stream, hashCode, equals, toString
+

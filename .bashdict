@@ -1,0 +1,57 @@
+if then else elif fi case esac for while until do done
+function select time coproc [[]] [] test
+alias bg fg jobs kill wait trap
+break continue return exit shift
+echo printf read eval exec
+export local readonly typeset declare
+set unset shopt enable
+
+ls cd pwd cp mv rm mkdir rmdir touch
+cat more less head tail grep awk sed
+find locate which whereis file stat
+chmod chown chgrp ln symlink
+tar gzip gunzip zip unzip
+
+> >> < << 2> 2>> &> &>>
+| || && ; & () {} $
+stdin stdout stderr /dev/null /dev/zero
+tee xargs paste
+
+ps top killall pkill nice renice
+df du mount umount fsck
+useradd userdel usermod groupadd
+service systemctl journalctl cron
+ping ssh scp rsync wget curl
+apt yum dnf pacman dpkg rpm
+
+$0 $1 $# $@ $* $$ $? $! $-
+${var} ${var:-default} ${var:=default}
+${var:?error} ${var:+repl} ${#var}
+${var%pattern} ${var%%pattern}
+${var#pattern} ${var##pattern}
+${var/old/new} ${var//old/new}
+${var^} ${var^^} ${var,} ${var,,}
+
+-e -f -d -L -r -w -x -s -z -n
+-nt -ot -ef == != =~ < >
+-eq -ne -lt -le -gt -ge
+-a -o ! -o -v -R
+
+* ? [ ] { } ~ - . ..
+$( ) ` ` $(( )) [[ ]]
+<( ) >( ) <<< <<-
+* ? [^ ] [! ] {a,b} {1..10}
+
+awk sed grep cut sort uniq wc
+tr rev fold fmt column
+date sleep timeout
+basename dirname realpath
+tee sponge parallel
+jq yq
+
+set -e set -u set -o pipefail set -x
+set -E set -T set -C set -f
+shopt -s extglob shopt -s globstar
+shopt -s nullglob shopt -s dotglob
+
+ 

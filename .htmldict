@@ -1,0 +1,63 @@
+html head body title meta link
+style script noscript div span
+p h1 h2 h3 h4 h5 h6
+a img br hr
+ul ol li dl dt dd
+table thead tbody tfoot tr th td
+form input textarea button select option optgroup
+label fieldset legend output
+section article aside nav header footer main
+figure figcaption time mark
+
+id class style title lang dir
+href src alt width height
+type name value placeholder required disabled readonly checked selected
+maxlength min max step size multiple pattern autocomplete autofocus
+target rel media download
+colspan rowspan headers scope
+data- aria- role tabindex accesskey
+content charset http-equiv
+async defer crossorigin integrity
+
+text password email tel url number
+search date datetime datetime-local time month week
+color range file checkbox radio submit reset button image hidden
+
+header footer nav main article section aside
+figure figcaption mark time summary details
+b strong i em small sub sup
+code pre samp kbd var
+abbr address blockquote cite q
+del ins dfn ruby rt rp
+wbr bdi bdo
+
+charset viewport author description keywords
+robots generator referrer refresh
+icon shortcut apple-touch-icon manifest
+preconnect prefetch preload stylesheet
+canonical alternate
+
+id class style title lang dir
+hidden tabindex accesskey contenteditable spellcheck draggable
+data- aria- role
+itemid itemprop itemref itemscope itemtype
+translate
+
+caption colgroup col
+method action enctype target
+get post multipart text plain
+autocomplete novalidate formaction formenctype formmethod formtarget
+formenctype
+
+audio video source track embed object param
+canvas svg picture
+controls autoplay loop muted poster preload
+playsinline crossorigin
+
+onclick onsubmit onchange onfocus onblur
+onload onerror onmouseover onmouseout
+onkeydown onkeyup onscroll onresize
+
+localstorage sessionstorage geolocation
+websocket webworker serviceworker
+canvas svg webgl
