@@ -1,3 +1,11 @@
+" ==================================================================
+" File: vimrc
+" Description: my vim config 
+" Autor: AlexandAnatoliev
+" Version: 0.1.0
+" Last Modified: 3.12.2025
+" ==================================================================
+
 " Basic settings set number
 set relativenumber
 
@@ -49,7 +57,7 @@ setlocal spell
 syntax enable
 syntax on
 
-colorscheme desert
+colorscheme habamax
 
 function SetTimeOfDayColors()
   " change colorscheme to evening
