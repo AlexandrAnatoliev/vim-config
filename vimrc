@@ -2,12 +2,13 @@
 " File: vimrc
 " Description: my vim config 
 " Autor: AlexandAnatoliev
-" Version: 0.1.1
+" Version: 0.1.2
 " Last Modified: 3.12.2025
 " ==================================================================
 
 " Basic settings set number
-set relativenumber
+" set relativenumber
+set number
 
 set tabstop=4
 set softtabstop=4
@@ -44,10 +45,6 @@ set foldlevel=1
 filetype indent on
 set indentexpr
 
-set dictionary=~/.vim/.mydict
-set thesaurus=.thesaurus
-set complete+=k,s
-
 setlocal spell
 
 syntax enable
@@ -67,4 +64,9 @@ endif
 " Color scheme settings
 if filereadable(expand("~/.vim/colorscheme.vim"))
   source ~/.vim/colorscheme.vim
+endif
+
+" Autocomplete setting  
+if filereadable(expand("~/.vim/autocomplete.vim"))
+  source ~/.vim/autocomplete.vim
 endif

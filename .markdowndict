@@ -1,0 +1,43 @@
+# ## ### #### ##### ######
+** __ * _ ~~ ` ```
+> --- *** ---
+[ ] ( ) ! [ ] ( )
+| --- :--- :---: ---: |
+
+h1 h2 h3 h4 h5 h6
+heading title subtitle
+hr horizontal-rule separator
+
+link url reference ref
+image img alt title
+![ ]( ) [ ]( )
+footnote [^1] [^1]:
+
+- * + 1. 1) a. A.
+unordered ordered task
+[ ] [x] checkbox todo
+
+``` ````` code block fence
+inline-code backtick
+syntax-highlighting lang
+preformatted indent
+
+table column row header
+alignment align left center right
+| --- :--- :---: ---:
+colspan rowspan
+
+mermaid plantuml graphviz
+flowchart sequence-diagram
+gantt pie-chart class-diagram
+state-diagram er-diagram
+
+frontmatter --- ---
+YAML yml metadata
+tags categories date
+title author description
+
+README CHANGELOG CONTRIBUTING
+LICENSE TODO FIXME NOTE
+IMPORTANT WARNING TIP
+FAQ Q&A API

@@ -1,0 +1,67 @@
+let unlet const function endfunction funcref
+range string list dict blob float
+execute echo echomsg echoerr throw try
+catch finally finish endif endif else elseif
+if else elseif while endwhile for endfor in
+break continue return abort
+
+type() bool() float2nr() str2nr() str2float()
+strftime() strptime() nr2char() char2nr()
+string() list() dict() copy() deepcopy()
+len() empty() exists() has() index() count()
+match() matchend() matchlist() matchstr()
+split() join() reverse() sort() uniq()
+range() repeat() eval() printf()
+
+strpart() stridx() strridx() strlen()
+strchars() strwidth() strdisplaywidth()
+substitute() submatch() trim() escape()
+shellescape() fnameescape() tolower() toupper()
+tr() strtrans() byteidx() byteidxcomp()
+
+add() extend() insert() remove() filter()
+map() reduce() keys() values() items()
+get() set() has_key() remove() min() max()
+slice() concat() uniq() range() repeat()
+
+bufnr() bufname() buflisted() bufloaded()
+bufadd() bufload() bufdelete() getbufline()
+setbufline() append() setline() getline()
+line() col() virtcol() winheight() winwidth()
+winnr() tabpagenr() tabpagewinnr() gettabinfo()
+
+expand() fnamemodify() glob() globpath()
+findfile() finddir() resolve() simplify()
+pathshorten() filereadable() filewritable()
+getfsize() getftime() isdirectory() mkdir()
+delete() rename() readfile() writefile()
+tempname() stdpath()
+
+map noremap unmap mapclear noremaphore
+nmap imap vmap xmap smap omap
+nnoremap inoremap vnoremap xnoremap
+snoremap onoremap
+autocmd augroup doautocmd
+
+set setlocal setglobal option opt
+&g: &l: & v: g: b: w: t:
+register environment getreg() setreg()
+getpos() setpos() getcurpos() cursor()
+
+highlight hi clear link conceal cterm
+gui term ctermfg guifg ctermbg guibg
+ctermul guisp bold italic underline
+undercurl strikethrough reverse
+synID() synstack() hlID()
+
+mode() visualmode() getcmdline() getcmdtype()
+getchar() input() inputsecret() inputlist()
+confirm() getcharmod() getmousepos() getregtype()
+undotree() diff_filler() diff_hlID()
+
+runtime packadd packloadall islocked()
+exists() has_key() get() filter() map()
+sort() uniq() keys() values() items()
+
+debuggreedy breakadd breakdel breaklist
+profstart profstop profile pause continue

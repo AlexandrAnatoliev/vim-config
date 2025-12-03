@@ -1,0 +1,53 @@
+abstract assert boolean break byte case catch
+char class const continue default do double
+else enum extends final finally float for
+goto if implements import instanceof int
+interface long module native new non-sealed
+open opens package permits private protected
+provides public record requires return sealed
+short static strictfp super switch synchronized
+this throw throws to transitive transient
+try uses var void volatile while with yield
+
+String Integer Long Double Float Boolean
+Byte Short Character BigInteger BigDecimal
+Object Number Math System Runtime Class
+Throwable Exception Error RuntimeException
+IOException NullPointerException
+ArrayList LinkedList HashMap HashSet
+TreeMap TreeSet Arrays Collections
+Optional Stream List Map Set Queue Deque
+
+public protected private abstract static
+final synchronized volatile transient native
+@Override @Deprecated @SuppressWarnings @SafeVarargs
+@FunctionalInterface @Retention @Target @Documented
+@Inherited @Repeatable @Service @Component @Autowired
+@Getter @Setter @Data @Builder @NoArgsConstructor
+
+true false null this super
+MAX_VALUE MIN_VALUE SIZE BYTES
+PI E NaN NEGATIVE_INFINITY POSITIVE_INFINITY
+
+new instanceof return throw throws try catch finally
+get set is hashCode equals toString compareTo clone
+wait notify notifyAll join sleep interrupt yield
+add remove contains size isEmpty clear iterator
+stream parallelStream filter map reduce collect forEach
+main run start stop init destroy
+
+Builder Factory Singleton Adapter Decorator Observer
+Strategy Command Iterator Template Method Proxy
+DAO DTO VO POJO Entity Repository Service Controller
+
+Spring Boot MVC Data Security Cloud
+JPA Hibernate JDBC Transactional
+JUnit Test Mockito Assertions Before After
+Jakarta Servlet JSP JSTL EL
+Jackson Gson Lombok Slf4j Log4j
+
+Stream Optional CompletableFuture Path Files
+LocalDate LocalTime LocalDateTime DateTimeFormatter
+Pattern Matcher Scanner BufferedReader
+InputStream OutputStream Reader Writer
+Thread Runnable ExecutorService Future
