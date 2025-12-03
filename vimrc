@@ -2,7 +2,7 @@
 " File: vimrc
 " Description: my vim config 
 " Autor: AlexandAnatoliev
-" Version: 0.1.0
+" Version: 0.1.1
 " Last Modified: 3.12.2025
 " ==================================================================
 
@@ -23,10 +23,6 @@ set termencoding=utf-8
 autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType markdown setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType jsp setlocal tabstop=2 softtabstop=2 shiftwidth=2
-
-" серая полоса 
-set colorcolumn=80
-highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 
 set nowrap
 set sidescroll=8
@@ -57,27 +53,18 @@ setlocal spell
 syntax enable
 syntax on
 
-colorscheme habamax
-
-function SetTimeOfDayColors()
-  " change colorscheme to evening
-  let time = str2nr(strftime('%H'))
-  if time > 22
-    colorscheme quiet
-  endif
-endfunction
-
-autocmd BufReadPre * call SetTimeOfDayColors()
-
 " Java settings
 let java_highlight_all = 1
 let java_highlight_debug = 1
 let java_ignore_javadoc = 0
 let java_mark_braces_in_parens_as_errors = 1
 
-" Подключение файла с маппингами
+" Set mappings
 if filereadable(expand("~/.vim/maps.vim"))
   source ~/.vim/maps.vim
 endif
 
-
+" Color scheme settings
+if filereadable(expand("~/.vim/colorscheme.vim"))
+  source ~/.vim/colorscheme.vim
+endif
