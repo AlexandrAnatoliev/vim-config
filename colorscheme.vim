@@ -2,13 +2,13 @@
 " File: colorscheme.vim
 " Description: Vim mappings 
 " Autor: AlexandAnatoliev
-" Version: 0.1.2
-" Last Modified: 3.12.2025
+" Version: 0.1.4
+" Last Modified: 4.12.2025
 " ==================================================================
 
 " ------------------------------------------------------------------  
 " Function: SetColorscheme()
-" Description: Function to change colorscheme evening to remaind me 
+" Description: Function to change colorscheme evening to remind me 
 " to end work and go to bed
 " Parameters: None
 " Returns: None

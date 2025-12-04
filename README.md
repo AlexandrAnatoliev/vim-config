@@ -88,10 +88,10 @@ rm -rf .vim
 └── vimrc
 ```
  
-[autocomplete.vim](autocomplete.vim) - Simple Vim autocomplete set with hint.
+[autocomplete.vim](autocomplete.vim) - Simple Vim autocomplete with hint.
 
 During word input, a suggestion menu appears. Autocomplete words are organized 
-into language specific dictionaries:
+into language-specific dictionaries:
 
 ```
 .vim/ 
@@ -110,8 +110,8 @@ into language specific dictionaries:
 ```
 
 [colorscheme.vim](colorscheme.vim) 
-* Changes color scheme evening to remaind me to end work and go to bed.
-* Sets a gray bar at the 80th character, limiting line lenght.
+* Changes color scheme evening to remind me to end work and go to bed.
+* Sets a gray bar at the 80th character, limiting line length.
 
 [maps.vim](maps.vim) - Vim mappings
 * Space is used as \<leader\> 
@@ -120,12 +120,12 @@ into language specific dictionaries:
 * Window navigation mappings:
   - \<leader\>h - to left 
   - \<leader\>l - to right 
-  - \<leader\>j - upward   
-  - \<leader\>k - downward
+  - \<leader\>j - down
+  - \<leader\>k - up
 * \<leader\>o - close other windows  
 * \<leader\>\<Esc\> - terminal to normal mode
 * \<leader\>\<Tab\> - buffer navigation mappings 
-* \<leader\>\/ - to comment line 
+* \<leader\>\/ - to comment a line 
 
 ---
 
@@ -149,7 +149,6 @@ into language specific dictionaries:
 
   <a id="russian"></a>
   <h1>Мой Vim конфиг</h1>
-  <p>Пишу их учебных целях для проверки взаимодействия Vim и Java</p>
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
@@ -264,7 +263,7 @@ rm -rf .vim
 * Также устанавливает серую полосу на 80 символе, ограничивая длину строки.
 
 [maps.vim](maps.vim) - Vim mappings
-* В качестве \<leader\> ипользуется пробел
+* В качестве \<leader\> используется пробел
 * \<leader\>e - открыть терминал с левой стороны
 * \<leader\>w - открыть **todo** лист с правой стороны
 * Перемещение между окнами:

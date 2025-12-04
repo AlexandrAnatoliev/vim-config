@@ -1,6 +1,6 @@
 " ==================================================================
 " File: autocomplete.vim
-" Description: Simple Vim autocomplete set with hint 
+" Description: Simple Vim autocomplete with hint 
 " Autor: AlexandAnatoliev
 " Version: 0.1.4
 " Last Modified: 04.12.2025
