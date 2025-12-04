@@ -25,8 +25,6 @@ autocmd FileType css setlocal dictionary+=~/.vim/.cssdict
 autocmd FileType jsp setlocal dictionary+=~/.vim/.jspdict, ~/.vim/.htmldict
 autocmd FileType sql setlocal dictionary+=~/.vim/.postgresqldict
 
-set thesaurus=.thesaurus
+set thesaurus=~/.vim/.thesaurus
 set complete+=k,s
-
-
 
