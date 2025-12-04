@@ -1,20 +1,20 @@
-String|length, isEmpty, isBlank, charAt, codePointAt, codePointBefore, codePointCount, getChars, getBytes, substring, subSequence, indexOf, lastIndexOf, contains, startsWith, endsWith, matches, equals, equalsIgnoreCase, compareTo, compareToIgnoreCase, contentEquals, regionMatches, toLowerCase, toUpperCase, trim, strip, stripLeading, stripTrailing, indent, formatted, format, concat, join, split, lines, replace, replaceFirst, replaceAll, repeat, valueOf, copyValueOf, toCharArray, intern, transform, describeConstable, resolveConstantDesc, translateEscapes
+String length isEmpty isBlank charAt codePointAt codePointBefore codePointCount getChars getBytes substring subSequence indexOf lastIndexOf contains startsWith endsWith concat matches split replace replaceFirst replaceAll join toLowerCase toUpperCase trim strip stripLeading stripTrailing indent translateEscapes lines hashCode equals compareTo compareToIgnoreCase format formatted valueOf copyValueOf repeat substring codePointCount offsetByCodePoints toCharArray intern
 
-Integer|parseInt, valueOf, toString, toBinaryString, toHexString, toOctalString, compare, compareTo, sum, max, min, bitCount, highestOneBit, lowestOneBit, numberOfLeadingZeros, numberOfTrailingZeros, reverse, reverseBytes, rotateLeft, rotateRight, signum, decode, getInteger, intValue, byteValue, shortValue, longValue, floatValue, doubleValue
+Integer parseInt valueOf toString toHexString toOctalString toBinaryString compare hashCode equals getInteger decode compareUnsigned divideUnsigned remainderUnsigned sum max min signum reverse reverseBytes rotateLeft rotateRight bitCount highestOneBit lowestOneBit numberOfLeadingZeros numberOfTrailingZeros byteValue shortValue intValue longValue floatValue doubleValue
 
-ArrayList|add, addAll, get, set, remove, removeAll, retainAll, clear, size, isEmpty, contains, containsAll, indexOf, lastIndexOf, toArray, subList, iterator, listIterator, forEach, removeIf, replaceAll, sort, clone, ensureCapacity, trimToSize, spliterator
+ArrayList add addAll clear clone contains ensureCapacity get indexOf isEmpty iterator lastIndexOf listIterator remove removeAll removeIf removeRange replaceAll retainAll set size sort spliterator subList toArray trimToSize forEach
 
-HashMap|put, get, remove, containsKey, containsValue, size, isEmpty, clear, keySet, values, entrySet, putAll, getOrDefault, putIfAbsent, remove, replace, replaceAll, compute, computeIfAbsent, computeIfPresent, merge, forEach, clone, hashCode, toString
+HashMap clear clone compute computeIfAbsent computeIfPresent containsKey containsValue entrySet equals forEach get getOrDefault hashCode isEmpty keySet merge put putAll putIfAbsent remove remove replace replaceAll size toString values computeIfAbsent computeIfPresent entrySet keySet values
 
-System|out, in, err, currentTimeMillis, nanoTime, arraycopy, exit, gc, runFinalization, load, loadLibrary, getProperty, getProperties, setProperties, getenv, getSecurityManager, setSecurityManager, console, lineSeparator, setOut, setIn, setErr, identityHashCode, mapLibraryName
+System arraycopy clearProperty console err exit gc getProperties getProperty getSecurityManager getenv identityHashCode inheritedChannel load loadLibrary mapLibraryName nanoTime runFinalization setErr setIn setOut setProperties setProperty setSecurityManager currentTimeMillis lineSeparator setIn setOut getLogger
 
-Math|abs, max, min, sqrt, pow, exp, log, log10, sin, cos, tan, asin, acos, atan, atan2, toRadians, toDegrees, ceil, floor, round, rint, random, addExact, subtractExact, multiplyExact, incrementExact, decrementExact, negateExact, toIntExact, floorDiv, floorMod, nextUp, nextDown, scalb, hypot, cbrt, signum, copySign, getExponent, IEEEremainder, ulp
+Math abs acos addExact asin atan atan2 cbrt ceil copySign cos cosh decrementExact exp expm1 floor floorDiv floorMod fma getExponent hypot IEEEremainder incrementExact log log10 log1p max min multiplyExact multiplyFull multiplyHigh negateExact nextAfter nextDown nextUp pow random rint round scalb signum sin sinh sqrt subtractExact tan tanh toDegrees toIntExact toRadians ulp
 
-Arrays|sort, parallelSort, binarySearch, equals, deepEquals, fill, copyOf, copyOfRange, asList, toString, deepToString, hashCode, deepHashCode, compare, mismatch, parallelPrefix, setAll, parallelSetAll, spliterator, stream
+Arrays asList binarySearch compare compareUnsigned copyOf copyOfRange deepEquals deepHashCode deepToString equals fill hashCode mismatch parallelPrefix parallelSetAll parallelSort setAll sort spliterator stream toString
 
-Object|equals, hashCode, toString, getClass, notify, notifyAll, wait, clone, finalize
+Object clone equals finalize getClass hashCode notify notifyAll toString wait
 
-LocalDate|now, of, parse, getYear, getMonthValue, getMonth, getDayOfMonth, getDayOfWeek, getDayOfYear, isLeapYear, lengthOfMonth, lengthOfYear, withYear, withMonth, withDayOfMonth, plusYears, plusMonths, plusWeeks, plusDays, minusYears, minusMonths, minusWeeks, minusDays, atTime, atStartOfDay, until, isAfter, isBefore, isEqual, compareTo, format, getChronology, from, toEpochDay
+LocalDate atStartOfDay atTime equals from get getChronology getDayOfMonth getDayOfWeek getDayOfYear getEra getLong getMonth getMonthValue getYear hashCode isAfter isBefore isEqual isLeapYear isSupported lengthOfMonth lengthOfYear minus minusDays minusMonths minusWeeks minusYears now of ofEpochDay ofInstant ofYearDay parse plus plusDays plusMonths plusWeeks plusYears range toEpochDay until with withDayOfMonth withDayOfYear withMonth withYear adjustInto format get chronology
 
-Optional|empty, of, ofNullable, get, isPresent, ifPresent, orElse, orElseGet, orElseThrow, filter, map, flatMap, stream, hashCode, equals, toString
+Optional empty filter flatMap get ifPresent ifPresentOrElse isEmpty map of ofNullable or orElse orElseGet orElseThrow stream equals hashCode toString
 

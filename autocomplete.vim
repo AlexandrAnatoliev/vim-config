@@ -2,8 +2,8 @@
 " File: autocomplete.vim
 " Description: Simple Vim autocomplete set with hint 
 " Autor: AlexandAnatoliev
-" Version: 0.1.2
-" Last Modified: 03.12.2025
+" Version: 0.1.3
+" Last Modified: 04.12.2025
 " ==================================================================
 
 " autocomplete if typing
@@ -27,3 +27,6 @@ autocmd FileType sql setlocal dictionary+=~/.vim/.postgresqldict
 
 set thesaurus=.thesaurus
 set complete+=k,s
+
+
+
