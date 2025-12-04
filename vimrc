@@ -2,8 +2,8 @@
 " File: vimrc
 " Description: my vim config 
 " Autor: AlexandAnatoliev
-" Version: 0.1.2
-" Last Modified: 3.12.2025
+" Version: 0.1.3
+" Last Modified: 4.12.2025
 " ==================================================================
 
 " Basic settings set number
