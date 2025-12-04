@@ -2,8 +2,8 @@
 " File: maps.vim
 " Description: Vim mappings 
 " Autor: AlexandAnatoliev
-" Version: 0.1.1
-" Last Modified: 22.11.2025
+" Version: 0.1.4
+" Last Modified: 4.12.2025
 " ==================================================================
 
 " В качестве leader - пробел
@@ -12,7 +12,7 @@ let mapleader=" "
 " ------------------------------------------------------------------  
 " Function: VimOpenTerminal()
 " Description: Function to open a terminal on the left side and
-" set its width to 50 columns
+" set its width to 45 columns
 " Parameters: None
 " Returns: None
 " ------------------------------------------------------------------  
@@ -29,7 +29,7 @@ map <leader>e :call VimOpenTerminal()<CR>
 " ------------------------------------------------------------------  
 " Function: VimOpenTodo()
 " Description: Function to open a todo list on the right side and
-" set its width to 50 columns
+" set its width to 45 columns
 " Parameters: None
 " Returns: None
 " ------------------------------------------------------------------  
