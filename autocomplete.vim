@@ -2,7 +2,7 @@
 " File: autocomplete.vim
 " Description: Simple Vim autocomplete set with hint 
 " Autor: AlexandAnatoliev
-" Version: 0.1.3
+" Version: 0.1.4
 " Last Modified: 04.12.2025
 " ==================================================================
 
@@ -16,7 +16,8 @@ for char in range(char2nr('A'), char2nr('Z'))
 endfor
 
 " set dictionaries 
-set dictionary=~/.vim/.javadict
+set dictionary=~/.vim/.semverdict
+autocmd FileType java setlocal dictionary+=~/.vim/.javadict
 autocmd FileType vim setlocal dictionary+=~/.vim/.vimscriptdict
 autocmd FileType sh setlocal dictionary+=~/.vim/.bashdict
 autocmd FileType md setlocal dictionary+=~/.vim/.markdowndict
@@ -25,6 +26,7 @@ autocmd FileType css setlocal dictionary+=~/.vim/.cssdict
 autocmd FileType jsp setlocal dictionary+=~/.vim/.jspdict, ~/.vim/.htmldict
 autocmd FileType sql setlocal dictionary+=~/.vim/.postgresqldict
 
-set thesaurus=~/.vim/.thesaurus
+autocmd FileType java setlocal thesaurus=~/.vim/.thesaurus
+
 set complete+=k,s
 
