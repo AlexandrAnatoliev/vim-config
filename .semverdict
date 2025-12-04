@@ -1,0 +1,7 @@
+major minor patch pre-release build breaking_change api
+backward_compatible versioning changelog deprecated stable alpha
+beta rc semantic increment tag release hotfix maintenance
+prerelease metadata compatibility version_spec caret tilde range
+exact latest snapshot nightly canary version_lock pinning
+
+version feat fix docs bag
