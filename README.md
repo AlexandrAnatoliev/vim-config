@@ -22,6 +22,8 @@
 </div>
 
 * [Features](#features)
+* [Installation](#installation)
+* [Uninstallation](#uninstallation)
 
 ---
 
@@ -30,52 +32,43 @@
   <h2>Features</h2>
 </div>
 
+* Code completion using dictionary sources
+* Java-written plugin modules
+
 ---
 
 <div align="center">
-  <h2>Plugin Installation</h2>
+  <a id="installation"></a>
+  <h2>Installation</h2>
 </div>
 
-* Clone the plugins repository:
+* Clone the repository:
 ```
-git clone https://github.com/AlexandrAnatoliev/jvim-plugins 
-```
-
-* Navigate to the root:
-```
-cd jvim-plugins/
+git clone https://github.com/AlexandrAnatoliev/vim-config 
 ```
 
-* Make the scripts executable:
+* Rename the configuration folder:
 ```
-chmod +x scripts/*.sh
-```
-
-Install the plugin using the script:
-* with test execution:
-```
-./scripts/install_plugin.sh [plugin]
-```
-* without running tests:
-```
-./scripts/install_plugin.sh [plugin] --no-test
+mv vim-config .vim
 ```
 
-* When installing a plugin, it is installed in appropriate Vim directory. 
-```
-~/.vim/
-└── pack/
-    └── my-plugins/
-        └── start/
-            └── jvim-example-plugin/
-```
-
-* Reload Vim or execute the command:
+* Reload Vim or execute command:
 
 ```
-:source ~/.vim/pack/my-plugins/start/jvim-example-plugin/plugin/jvim_example_plugin.vim
+:source ~/.vim/vimrc
 ```
 
+---
+
+<div align="center">
+  <a id="installation"></a>
+  <h2>Uninstallation</h2>
+</div>
+
+* Delete the `.vim/` folder:
+```
+rm -rf .vim
+```
 ---
 
 <div align="center">
@@ -254,6 +247,8 @@ Designed for self-monitoring and productivity.
 </div>
 
 * [Особенности](#ru-features)
+* [Установка](#ru-installation)
+* [Удаление](#ru-uninstallation)
 
 ---
 
@@ -262,60 +257,41 @@ Designed for self-monitoring and productivity.
   <h2>Особенности</h2>
 </div>
 
+* Автодополнение кода с использованием словарей
+* Подключаемые плагины, написанные на Java
+
 ---
 <div align="center">
+  <a id="ru-installation"></a>
   <h2>Установка</h2>
 </div>
 
 * Клонируйте репозиторий:
 ```
-git clone https://github.com/AlexandrAnatoliev/jvim-plugins 
+git clone https://github.com/AlexandrAnatoliev/vim-config 
 ```
 
-* Перейдите в корневую директорию:
+* Переименуйте папку с конфигом:
 ```
-cd jvim-plugins/
-```
-
-* Сделайте скрипты исполняемыми:
-```
-chmod +x scripts/*.sh
-```
-
-Установите плагин с помощью скрипта:
-* с выполнением тестов:
-```
-./scripts/install_plugin.sh [plugin]
-```
-* без запуска тестов:
-```
-./scripts/install_plugin.sh [plugin] --no-test
-```
-
-* При установке плагин помещается в соответствующую директорию Vim. 
-```
-~/.vim/
-└── pack/
-    └── my-plugins/
-        └── start/
-            └── jvim-example-plugin/
+mv vim-config .vim
 ```
 
 * Перезагрузите Vim или выполните команду:
 
 ```
-:source ~/.vim/pack/my-plugins/start/jvim-example-plugin/plugin/jvim_example_plugin.vim
+:source ~/.vim/vimrc
 ```
 
 ---
 
 <div align="center">
-  <h2>Удаление плагина</h2>
+  <a id="ru-uninstallation"></a>
+  <h2>Удаление</h2>
 </div>
 
-* Для удаления плагина используйте скрипт:
+* Удалите папку `.vim/`:
 ```
-./scripts/uninstall_plugin.sh [plugin]
+rm -rf .vim
 ```
 
 ---
