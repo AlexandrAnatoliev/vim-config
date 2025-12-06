@@ -19,7 +19,7 @@ function SetColorscheme()
     endif
 
     let time = str2nr(strftime('%H'))
-    if time > 22
+    if time > 21
         if filereadable(expand($VIMRUNTIME . "/colors/blue.vim"))
             colorscheme blue
         endif
