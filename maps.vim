@@ -2,7 +2,7 @@
 " File: maps.vim
 " Description: Vim mappings 
 " Autor: AlexandAnatoliev
-" Version: 0.1.6
+" Version: 0.1.7
 " Last Modified: 7.12.2025
 " ==================================================================
 
@@ -24,7 +24,7 @@ function! VimOpenTerminal()
   " call feedkeys("jshell -v\<CR>")
 endfunction
 
-map <leader>e :call VimOpenTerminal()<CR>
+noremap <leader>e :call VimOpenTerminal()<CR>
 
 " ------------------------------------------------------------------  
 " Function: VimOpenTodo()
@@ -39,26 +39,26 @@ function! VimOpenTodo()
   e ~/.vim/.todo
 endfunction
 
-map <leader>w :call VimOpenTodo()<CR>
+noremap <leader>w :call VimOpenTodo()<CR>
 
 " window navigation mappings
-map <leader>h :wincmd h<CR><Esc> 
-map <leader>l :wincmd l<CR><Esc>
-map <leader>j :wincmd j<CR><Esc>   
-map <leader>k :wincmd k<CR><Esc> 
+noremap <leader>h :wincmd h<CR><Esc> 
+noremap <leader>l :wincmd l<CR><Esc>
+noremap <leader>j :wincmd j<CR><Esc>   
+noremap <leader>k :wincmd k<CR><Esc> 
 
 "close other windows
-map <leader>o :wincmd o<CR> 
+noremap <leader>o :wincmd o<CR> 
 
 " terminal to normal mode 
 tnoremap <leader><Esc> <C-\><C-n>
 
 " buffer navigation mappings
-map <leader><Tab> :bNext<CR> 
+noremap <leader><Tab> :bNext<CR> 
 
 " comments
 map <leader>/ 0i// 0 
 
 " word to upper case
-imap <c-u> <esc>viwU<esc>i
-nmap <c-u> viwU<esc>
+inoremap <c-u> <esc>viwU<esc>i
+nnoremap <c-u> viwU<esc>
