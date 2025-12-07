@@ -2,7 +2,7 @@
 " File: vimrc
 " Description: my Vim configuration
 " Author: AlexandAnatoliev
-" Version: 0.1.6
+" Version: 0.1.7
 " Last Modified: 7.12.2025
 " ==================================================================
 
