@@ -18,3 +18,4 @@ LocalDate atStartOfDay atTime equals from get getChronology getDayOfMonth getDay
 
 Optional empty filter flatMap get ifPresent ifPresentOrElse isEmpty map of ofNullable or orElse orElseGet orElseThrow stream equals hashCode toString
 
+StringBuilder Append AppendFormat AppendJoin Insert Remove Replace Clear CopyTo EnsureCapacity Equals ToString get_Length get_Capacity get_Chars set_Length set_Capacity
