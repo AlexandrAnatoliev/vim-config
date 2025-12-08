@@ -1,7 +1,3 @@
-String length isEmpty isBlank charAt codePointAt codePointBefore codePointCount getChars getBytes substring subSequence indexOf lastIndexOf contains startsWith endsWith concat matches split replace replaceFirst replaceAll join toLowerCase toUpperCase trim strip stripLeading stripTrailing indent translateEscapes lines hashCode equals compareTo compareToIgnoreCase format formatted valueOf copyValueOf repeat substring codePointCount offsetByCodePoints toCharArray intern
-
-Integer parseInt valueOf toString toHexString toOctalString toBinaryString compare hashCode equals getInteger decode compareUnsigned divideUnsigned remainderUnsigned sum max min signum reverse reverseBytes rotateLeft rotateRight bitCount highestOneBit lowestOneBit numberOfLeadingZeros numberOfTrailingZeros byteValue shortValue intValue longValue floatValue doubleValue
-
 ArrayList add addAll clear clone contains ensureCapacity get indexOf isEmpty iterator lastIndexOf listIterator remove removeAll removeIf removeRange replaceAll retainAll set size sort spliterator subList toArray trimToSize forEach
 
 HashMap clear clone compute computeIfAbsent computeIfPresent containsKey containsValue entrySet equals forEach get getOrDefault hashCode isEmpty keySet merge put putAll putIfAbsent remove remove replace replaceAll size toString values computeIfAbsent computeIfPresent entrySet keySet values
@@ -18,4 +14,12 @@ LocalDate atStartOfDay atTime equals from get getChronology getDayOfMonth getDay
 
 Optional empty filter flatMap get ifPresent ifPresentOrElse isEmpty map of ofNullable or orElse orElseGet orElseThrow stream equals hashCode toString
 
+String length isEmpty isBlank charAt codePointAt codePointBefore codePointCount getChars getBytes substring subSequence indexOf lastIndexOf contains startsWith endsWith concat matches split replace replaceFirst replaceAll join toLowerCase toUpperCase trim strip stripLeading stripTrailing indent translateEscapes lines hashCode equals compareTo compareToIgnoreCase format formatted valueOf copyValueOf repeat substring codePointCount offsetByCodePoints toCharArray intern
+
 StringBuilder Append AppendFormat AppendJoin Insert Remove Replace Clear CopyTo EnsureCapacity Equals ToString get_Length get_Capacity get_Chars set_Length set_Capacity
+
+Integer parseInt valueOf toString toHexString toOctalString toBinaryString compare hashCode equals getInteger decode compareUnsigned divideUnsigned remainderUnsigned sum max min signum reverse reverseBytes rotateLeft rotateRight bitCount highestOneBit lowestOneBit numberOfLeadingZeros numberOfTrailingZeros byteValue shortValue intValue longValue floatValue doubleValue
+
+Long parseLong parseLong parseLong valueOf valueOf valueOf decode getLong getLong getLong compare compareUnsigned divideUnsigned remainderUnsigned highestOneBit lowestOneBit numberOfLeadingZeros numberOfTrailingZeros bitCount rotateLeft rotateRight reverse reverseBytes signum toUnsignedString toUnsignedString toHexString toOctalString toBinaryString toString toString toString toUnsignedString sum max min describeConstable byteValue shortValue intValue longValue floatValue doubleValue
+
+Double byteValue compare compareTo describeConstable doubleValue equals floatValue hashCode intValue isFinite isInfinite isNaN longValue shortValue doubleToLongBits doubleToRawLongBits hexStringToDouble isFinite longBitsToDouble max min parseDouble sum toHexString toString valueOf valueOf
