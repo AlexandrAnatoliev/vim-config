@@ -2,8 +2,8 @@
 " File: autocomplete.vim
 " Description: Simple Vim autocomplete with hint 
 " Autor: AlexandAnatoliev
-" Version: 0.1.4
-" Last Modified: 04.12.2025
+" Version: 0.1.8
+" Last Modified: 08.12.2025
 " ==================================================================
 
 " autocomplete if typing
