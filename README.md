@@ -128,6 +128,12 @@ into language-specific dictionaries:
 * \<leader\>\/ - to comment a line 
 * \<c-u\> - word to upper case
 
+[autocomplete.vim](autocomplete.vim) - Simple Vim autocomplete with hint
+* set dictionaries 
+* autocomplete if typing (from dictionaries)
+* autocomplete class methods (from thesaurus)
+  - \<leader\>n - add method after Java class
+
 ---
 
 <div align="center">
@@ -277,6 +283,12 @@ rm -rf .vim
 * \<leader\>\<Tab\> - переключение между буферами 
 * \<leader\>\/ - закомментировать строку 
 * \<c-u\> - перевести слово в верхний регистр
+
+[autocomplete.vim](autocomplete.vim) - Простое Vim автодополнение с подсказаками
+* устанавливает словари 
+* автодополняет слова при вводе (из сдоварей)
+* автодополняет методы класса (из тезариуса)
+  - \<leader\>n - добавить метод к Java классу
 
 ---
 
