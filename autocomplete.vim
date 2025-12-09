@@ -2,8 +2,8 @@
 " File: autocomplete.vim
 " Description: Simple Vim autocomplete with hint 
 " Autor: AlexandAnatoliev
-" Version: 0.1.8
-" Last Modified: 08.12.2025
+" Version: 0.1.9
+" Last Modified: 09.12.2025
 " ==================================================================
 
 " autocomplete if typing
@@ -14,6 +14,26 @@ endfor
 for char in range(char2nr('A'), char2nr('Z'))
     execute "inoremap " . nr2char(char) . " " . nr2char(char) . "\<C-n>\<C-p>"
 endfor
+
+" autocomplete class methods
+inoremap <leader>n <c-r>=AddMethodToClass()<CR>
+
+" ------------------------------------------------------------------  
+" Function: AddMethodToClass()
+" Description: Function to add  methods after java classes 
+" Parameters: None
+" Returns: None
+" ------------------------------------------------------------------  
+function! AddMethodToClass()
+    let line_text = getline('.')[0:col('.')-2]
+    let last_word = matchstr(line_text, '\v\S+$')
+
+    if empty(last_word)
+        return '.'
+    else
+        return '.' . last_word . "\<C-n>\<C-p>"
+    endif
+endfunction
 
 " set dictionaries 
 set dictionary=~/.vim/.semverdict
@@ -26,7 +46,7 @@ autocmd FileType css setlocal dictionary+=~/.vim/.cssdict
 autocmd FileType jsp setlocal dictionary+=~/.vim/.jspdict, ~/.vim/.htmldict
 autocmd FileType sql setlocal dictionary+=~/.vim/.postgresqldict
 
-autocmd FileType java setlocal thesaurus=~/.vim/.thesaurus
+set thesaurus=~/.vim/.thesaurus
 
 set complete+=k,s
 

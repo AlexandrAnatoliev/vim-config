@@ -5,7 +5,7 @@
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.8](https://img.shields.io/badge/Version-0.1.8-orange.svg)
+  ![Version 0.1.9](https://img.shields.io/badge/Version-0.1.9-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -128,6 +128,12 @@ into language-specific dictionaries:
 * \<leader\>\/ - to comment a line 
 * \<c-u\> - word to upper case
 
+[autocomplete.vim](autocomplete.vim) - Simple Vim autocomplete with hint
+* set dictionaries 
+* autocomplete if typing (from dictionaries)
+* autocomplete class methods (from thesaurus)
+  - \<leader\>n - add method after Java class
+
 ---
 
 <div align="center">
@@ -153,7 +159,7 @@ into language-specific dictionaries:
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.8](https://img.shields.io/badge/Version-0.1.8-orange.svg)
+  ![Version 0.1.9](https://img.shields.io/badge/Version-0.1.9-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -277,6 +283,12 @@ rm -rf .vim
 * \<leader\>\<Tab\> - переключение между буферами 
 * \<leader\>\/ - закомментировать строку 
 * \<c-u\> - перевести слово в верхний регистр
+
+[autocomplete.vim](autocomplete.vim) - Простое Vim автодополнение с подсказаками
+* устанавливает словари 
+* автодополняет слова при вводе (из сдоварей)
+* автодополняет методы класса (из тезариуса)
+  - \<leader\>n - добавить метод к Java классу
 
 ---
 
