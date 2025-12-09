@@ -2,8 +2,8 @@
 " File: maps.vim
 " Description: Vim mappings 
 " Autor: AlexandAnatoliev
-" Version: 0.1.7
-" Last Modified: 7.12.2025
+" Version: 0.1.10
+" Last Modified: 9.12.2025
 " ==================================================================
 
 " В качестве leader - пробел
@@ -60,5 +60,5 @@ noremap <leader><Tab> :bNext<CR>
 map <leader>/ 0i// 0 
 
 " word to upper case
-inoremap <c-u> <esc>viwU<esc>i
-nnoremap <c-u> viwU<esc>
+inoremap <leader>u <esc>viwU<esc>i
+nnoremap <leader>u viwU<esc>
