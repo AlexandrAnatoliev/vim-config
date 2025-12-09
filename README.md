@@ -5,7 +5,7 @@
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.9](https://img.shields.io/badge/Version-0.1.9-orange.svg)
+  ![Version 0.1.10](https://img.shields.io/badge/Version-0.1.10-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -126,7 +126,9 @@ into language-specific dictionaries:
 * \<leader\>\<Esc\> - terminal to normal mode
 * \<leader\>\<Tab\> - buffer navigation mappings 
 * \<leader\>\/ - to comment a line 
-* \<c-u\> - word to upper case
+* \<leader\>u - word to upper case
+* \<leader\>ev - open vimrc file
+* \<leader\>sv - source change vimrc
 
 [autocomplete.vim](autocomplete.vim) - Simple Vim autocomplete with hint
 * set dictionaries 
@@ -159,7 +161,7 @@ into language-specific dictionaries:
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.9](https://img.shields.io/badge/Version-0.1.9-orange.svg)
+  ![Version 0.1.10](https://img.shields.io/badge/Version-0.1.10-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -282,7 +284,9 @@ rm -rf .vim
 * \<leader\>\<Esc\> - терминал в нормальный режим
 * \<leader\>\<Tab\> - переключение между буферами 
 * \<leader\>\/ - закомментировать строку 
-* \<c-u\> - перевести слово в верхний регистр
+* \<leader\>u - перевести слово в верхний регистр
+* \<leader\>ev - открыть vimrc
+* \<leader\>sv - загрузить измененый vimrc
 
 [autocomplete.vim](autocomplete.vim) - Простое Vim автодополнение с подсказаками
 * устанавливает словари 
