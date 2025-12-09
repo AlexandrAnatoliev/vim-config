@@ -4,7 +4,7 @@ HashMap clear clone compute computeIfAbsent computeIfPresent containsKey contain
 
 System arraycopy clearProperty console err exit gc getProperties getProperty getSecurityManager getenv identityHashCode inheritedChannel load loadLibrary mapLibraryName nanoTime runFinalization setErr setIn setOut setProperties setProperty setSecurityManager currentTimeMillis lineSeparator setIn setOut getLogger
 
-Math abs acos addExact asin atan atan2 cbrt ceil copySign cos cosh decrementExact exp expm1 floor floorDiv floorMod fma getExponent hypot IEEEremainder incrementExact log log10 log1p max min multiplyExact multiplyFull multiplyHigh negateExact nextAfter nextDown nextUp pow random rint round scalb signum sin sinh sqrt subtractExact tan tanh toDegrees toIntExact toRadians ulp
+Math abs acos addExact asin atan atan2 cbrt ceil copySign cos cosh decrementExact exp expm1 floor floorDiv floorMod fma getExponent hypot IEEEremainder incrementExact log log10 log1p max min multiplyExact multiplyFull multiplyHigh negateExact nextAfter nextDown nextUp pow random rint round scalb signum sin sinh sqrt subtractExact tan tanh toDegrees toIntExact toRadians ulp PI E
 
 Arrays asList binarySearch compare compareUnsigned copyOf copyOfRange deepEquals deepHashCode deepToString equals fill hashCode mismatch parallelPrefix parallelSetAll parallelSort setAll sort spliterator stream toString
 
@@ -14,12 +14,16 @@ LocalDate atStartOfDay atTime equals from get getChronology getDayOfMonth getDay
 
 Optional empty filter flatMap get ifPresent ifPresentOrElse isEmpty map of ofNullable or orElse orElseGet orElseThrow stream equals hashCode toString
 
-String length isEmpty isBlank charAt codePointAt codePointBefore codePointCount getChars getBytes substring subSequence indexOf lastIndexOf contains startsWith endsWith concat matches split replace replaceFirst replaceAll join toLowerCase toUpperCase trim strip stripLeading stripTrailing indent translateEscapes lines hashCode equals compareTo compareToIgnoreCase format formatted valueOf copyValueOf repeat substring codePointCount offsetByCodePoints toCharArray intern
+String length isEmpty isBlank charAt codePointAt codePointBefore codePointCount getChars getBytes substring subSequence indexOf lastIndexOf contains startsWith endsWith concat matches split replace replaceFirst replaceAll join toLowerCase toUpperCase trim strip stripLeading stripTrailing indent translateEscapes lines hashCode equals compareTo compareToIgnoreCase format formatted valueOf copyValueOf repeat substring codePointCount offsetByCodePoints toCharArray intern CASE_INSENSITIVE_ORDER
 
 StringBuilder Append AppendFormat AppendJoin Insert Remove Replace Clear CopyTo EnsureCapacity Equals ToString get_Length get_Capacity get_Chars set_Length set_Capacity
 
-Integer parseInt valueOf toString toHexString toOctalString toBinaryString compare hashCode equals getInteger decode compareUnsigned divideUnsigned remainderUnsigned sum max min signum reverse reverseBytes rotateLeft rotateRight bitCount highestOneBit lowestOneBit numberOfLeadingZeros numberOfTrailingZeros byteValue shortValue intValue longValue floatValue doubleValue
+Integer parseInt valueOf toString toHexString toOctalString toBinaryString compare hashCode equals getInteger decode compareUnsigned divideUnsigned remainderUnsigned sum max min signum reverse reverseBytes rotateLeft rotateRight bitCount highestOneBit lowestOneBit numberOfLeadingZeros numberOfTrailingZeros byteValue shortValue intValue longValue floatValue doubleValue MIN_VALUE MAX_VALUE SIZE BYTES TYPE
 
-Long parseLong parseLong parseLong valueOf valueOf valueOf decode getLong getLong getLong compare compareUnsigned divideUnsigned remainderUnsigned highestOneBit lowestOneBit numberOfLeadingZeros numberOfTrailingZeros bitCount rotateLeft rotateRight reverse reverseBytes signum toUnsignedString toUnsignedString toHexString toOctalString toBinaryString toString toString toString toUnsignedString sum max min describeConstable byteValue shortValue intValue longValue floatValue doubleValue
+Long parseLong parseLong parseLong valueOf valueOf valueOf decode getLong getLong getLong compare compareUnsigned divideUnsigned remainderUnsigned highestOneBit lowestOneBit numberOfLeadingZeros numberOfTrailingZeros bitCount rotateLeft rotateRight reverse reverseBytes signum toUnsignedString toUnsignedString toHexString toOctalString toBinaryString toString toString toString toUnsignedString sum max min describeConstable byteValue shortValue intValue longValue floatValue doubleValue MIN_VALUE MAX_VALUE SIZE BYTES TYPE
 
-Double byteValue compare compareTo describeConstable doubleValue equals floatValue hashCode intValue isFinite isInfinite isNaN longValue shortValue doubleToLongBits doubleToRawLongBits hexStringToDouble isFinite longBitsToDouble max min parseDouble sum toHexString toString valueOf valueOf
+Double byteValue compare compareTo describeConstable doubleValue equals floatValue hashCode intValue isFinite isInfinite isNaN longValue shortValue doubleToLongBits doubleToRawLongBits hexStringToDouble isFinite longBitsToDouble max min parseDouble sum toHexString toString valueOf valueOf POSITIVE_INFINITY NEGATIVE_INFINITY NaN MAX_VALUE MIN_NORMAL MIN_VALUE MAX_EXPONENT MIN_EXPONENT MIN_EXPONENT SIZE BYTES TYPE
+
+Float POSITIVE_INFINITY NEGATIVE_INFINITY NaN MAX_VALUE MIN_NORMAL MIN_VALUE MAX_EXPONENT MIN_EXPONENT BYTES SIZE byteValue shortValue intValue longValue floatValue doubleValue hashCode equals toString compareTo isNaN isInfinite isFinite
+
+
