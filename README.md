@@ -127,6 +127,8 @@ into language-specific dictionaries:
 * \<leader\>\<Tab\> - buffer navigation mappings 
 * \<leader\>\/ - to comment a line 
 * \<leader\>u - word to upper case
+* \<leader\>ev - open vimrc file
+* \<leader\>sv - source change vimrc
 
 [autocomplete.vim](autocomplete.vim) - Simple Vim autocomplete with hint
 * set dictionaries 
@@ -283,6 +285,8 @@ rm -rf .vim
 * \<leader\>\<Tab\> - переключение между буферами 
 * \<leader\>\/ - закомментировать строку 
 * \<leader\>u - перевести слово в верхний регистр
+* \<leader\>ev - открыть vimrc
+* \<leader\>sv - загрузить измененый vimrc
 
 [autocomplete.vim](autocomplete.vim) - Простое Vim автодополнение с подсказаками
 * устанавливает словари 

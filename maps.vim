@@ -62,3 +62,7 @@ map <leader>/ 0i// 0
 " word to upper case
 inoremap <leader>u <esc>viwU<esc>i
 nnoremap <leader>u viwU<esc>
+
+" open vimrc file and source change vimrc
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
