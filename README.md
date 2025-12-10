@@ -80,6 +80,7 @@ rm -rf .vim
 ```
 .vim/ 
 ├── autocomplete.vim
+├── boilerplates.vim
 ├── colorscheme.vim
 ├── maps.vim
 ├── pack
@@ -135,6 +136,12 @@ into language-specific dictionaries:
 * autocomplete if typing (from dictionaries)
 * autocomplete class methods (from thesaurus)
   - \<leader\>n - add method after Java class
+
+[boilerplates.vim](boilerplates.vim) - Simple Vim Java boilerplates
+* sout - System.out.println();
+* souf - System.out.printf();
+* psvm - public static void main(String[] args) { }
+* fori for (int i = 0; i < ; i++) { }
 
 ---
 
