@@ -2,8 +2,8 @@
 " File: vimrc
 " Description: my Vim configuration
 " Author: AlexandAnatoliev
-" Version: 0.1.10
-" Last Modified: 9.12.2025
+" Version: 0.1.11
+" Last Modified: 10.12.2025
 " ==================================================================
 
 " =======================BASIC SETTINGS========================================
@@ -93,3 +93,9 @@ endif
 if filereadable(expand("~/.vim/autocomplete.vim"))
   source ~/.vim/autocomplete.vim
 endif
+
+" Load boilerplates setting  
+if filereadable(expand("~/.vim/boilerplates.vim"))
+  source ~/.vim/boilerplates.vim
+endif
+
