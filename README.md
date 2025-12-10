@@ -141,7 +141,7 @@ into language-specific dictionaries:
 * sout - System.out.println();
 * souf - System.out.printf();
 * psvm - public static void main(String[] args) { }
-* fori for (int i = 0; i < ; i++) { }
+* fori - for (int i = 0; i < ; i++) { }
 
 ---
 
