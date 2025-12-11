@@ -5,7 +5,7 @@
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.10](https://img.shields.io/badge/Version-0.1.10-orange.svg)
+  ![Version 0.1.12](https://img.shields.io/badge/Version-0.1.12-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -116,20 +116,32 @@ into language-specific dictionaries:
 
 [maps.vim](maps.vim) - Vim mappings
 * Space is used as \<leader\> 
+
 * \<leader\>e - to open a terminal on the left side
 * \<leader\>w - to open a todo list on the right side
+
 * Window navigation mappings:
   - \<leader\>h - to left 
   - \<leader\>l - to right 
   - \<leader\>j - down
   - \<leader\>k - up
 * \<leader\>o - close other windows  
+
 * \<leader\>\<Esc\> - terminal to normal mode
 * \<leader\>\<Tab\> - buffer navigation mappings 
 * \<leader\>\/ - to comment a line 
 * \<leader\>u - word to upper case
+
 * \<leader\>ev - open vimrc file
 * \<leader\>sv - source change vimrc
+
+* \<leader\>" - wrap word by "quotes" 
+* \<leader\>' - wrap word by 'quotes'
+* \<leader\>" - wrap visually selected text by 'quotes'
+* \<leader\>' - wrap visually selected text by "quotes"
+
+* H - move to the begin current line
+* L - move to the end current line
 
 [autocomplete.vim](autocomplete.vim) - Simple Vim autocomplete with hint
 * set dictionaries 
@@ -168,7 +180,7 @@ into language-specific dictionaries:
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.10](https://img.shields.io/badge/Version-0.1.10-orange.svg)
+  ![Version 0.1.12](https://img.shields.io/badge/Version-0.1.12-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -280,20 +292,32 @@ rm -rf .vim
 
 [maps.vim](maps.vim) - Vim mappings
 * В качестве \<leader\> используется пробел
+
 * \<leader\>e - открыть терминал с левой стороны
 * \<leader\>w - открыть **todo** лист с правой стороны
+
 * Перемещение между окнами:
   - \<leader\>h - влево 
   - \<leader\>l - вправо 
   - \<leader\>j - вниз   
   - \<leader\>k - вверх 
 * \<leader\>o - закрыть другие окна  
+
 * \<leader\>\<Esc\> - терминал в нормальный режим
 * \<leader\>\<Tab\> - переключение между буферами 
 * \<leader\>\/ - закомментировать строку 
 * \<leader\>u - перевести слово в верхний регистр
+
 * \<leader\>ev - открыть vimrc
 * \<leader\>sv - загрузить измененый vimrc
+
+* \<leader\>" - обернуть слово в "кавычки" 
+* \<leader\>' - обернуть слово в 'кавычки' 
+* \<leader\>" - обернуть выделенный текст в "кавычки" 
+* \<leader\>' - обернуть выделенный текст в 'кавычки'
+
+* H - к началу строки
+* L - в конец строки
 
 [autocomplete.vim](autocomplete.vim) - Простое Vim автодополнение с подсказаками
 * устанавливает словари 

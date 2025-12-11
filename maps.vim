@@ -2,8 +2,8 @@
 " File: maps.vim
 " Description: Vim mappings 
 " Autor: AlexandAnatoliev
-" Version: 0.1.10
-" Last Modified: 9.12.2025
+" Version: 0.1.12
+" Last Modified: 11.12.2025
 " ==================================================================
 
 " В качестве leader - пробел
@@ -66,3 +66,17 @@ nnoremap <leader>u viwU<esc>
 " open vimrc file and source change vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" wrap word by "quotes" 
+nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+" wrap word by 'quotes' 
+nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
+" wrap visually selected text by 'quotes' 
+vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>lel
+" wrap visually selected text by "quotes" 
+vnoremap <leader>' <esc>`<i'<esc>`>la'<esc>lel
+
+" move to the begin current line
+nnoremap H 0
+" move to the end current line
+nnoremap L $
