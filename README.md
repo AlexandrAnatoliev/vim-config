@@ -5,7 +5,7 @@
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.12](https://img.shields.io/badge/Version-0.1.12-orange.svg)
+  ![Version 0.1.13](https://img.shields.io/badge/Version-0.1.13-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -117,7 +117,7 @@ into language-specific dictionaries:
 [maps.vim](maps.vim) - Vim mappings
 * Space is used as \<leader\> 
 
-* \<leader\>e - to open a terminal on the left side
+* \<leader\>e - to open a terminal below
 * \<leader\>w - to open a todo list on the right side
 
 * Window navigation mappings:
@@ -180,7 +180,7 @@ into language-specific dictionaries:
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.12](https://img.shields.io/badge/Version-0.1.12-orange.svg)
+  ![Version 0.1.13](https://img.shields.io/badge/Version-0.1.13-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -293,7 +293,7 @@ rm -rf .vim
 [maps.vim](maps.vim) - Vim mappings
 * В качестве \<leader\> используется пробел
 
-* \<leader\>e - открыть терминал с левой стороны
+* \<leader\>e - открыть терминал снизу
 * \<leader\>w - открыть **todo** лист с правой стороны
 
 * Перемещение между окнами:

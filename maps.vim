@@ -2,29 +2,12 @@
 " File: maps.vim
 " Description: Vim mappings 
 " Autor: AlexandAnatoliev
-" Version: 0.1.12
+" Version: 0.1.13
 " Last Modified: 11.12.2025
 " ==================================================================
 
 " В качестве leader - пробел
 let mapleader=" "
-
-" ------------------------------------------------------------------  
-" Function: VimOpenTerminal()
-" Description: Function to open a terminal on the left side and
-" set its width to 45 columns
-" Parameters: None
-" Returns: None
-" ------------------------------------------------------------------  
-function! VimOpenTerminal()
-  vertical terminal
-  vertical resize 45
-  call feedkeys("pwd\<CR>")
-  call feedkeys("ls --level=6\<CR>")
-  " call feedkeys("jshell -v\<CR>")
-endfunction
-
-noremap <leader>e :call VimOpenTerminal()<CR>
 
 " ------------------------------------------------------------------  
 " Function: VimOpenTodo()
@@ -80,3 +63,6 @@ vnoremap <leader>' <esc>`<i'<esc>`>la'<esc>lel
 nnoremap H 0
 " move to the end current line
 nnoremap L $
+
+" open terminal below
+nnoremap <leader>e :belowright terminal<CR><C-\><C-n>:resize 10<CR>
