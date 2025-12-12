@@ -5,7 +5,7 @@
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.13](https://img.shields.io/badge/Version-0.1.13-orange.svg)
+  ![Version 0.1.14](https://img.shields.io/badge/Version-0.1.14-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -86,6 +86,7 @@ rm -rf .vim
 ├── autocomplete.vim
 ├── boilerplates.vim
 ├── colorscheme.vim
+├── comment-maps.vim
 ├── maps.vim
 ├── pack
 ├── README.md
@@ -130,6 +131,10 @@ into language-specific dictionaries:
 * Changes color scheme evening to remind me to end work and go to bed.
 * Sets a gray bar at the 80th character, limiting line length.
 
+[comment-maps.vim](comment-maps.vim) - Vim mappings to comments code lines 
+in various languages 
+  - \<leader\>\/ - to comment a line 
+
 [maps.vim](maps.vim) - Vim mappings
 * Space is used as \<leader\> 
 * Window management:
@@ -144,12 +149,12 @@ into language-specific dictionaries:
   - \<leader\>\<Tab\> - buffer navigation mappings 
   - \<leader\>\<Esc\> - terminal to normal mode
 * Text Operations:
-  - \<leader\>\/ - to comment a line 
   - \<leader\>u - word to upper case
   - \<leader\>" - wrap word by "quotes" 
   - \<leader\>' - wrap word by 'quotes'
   - \<leader\>" - wrap visually selected text by "quotes"
   - \<leader\>' - wrap visually selected text by 'quotes'
+  - \<leader\>f - file autoformat  
 * Configuration:
   - \<leader\>ev - open vimrc file
   - \<leader\>sv - source change vimrc
@@ -182,7 +187,7 @@ into language-specific dictionaries:
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.13](https://img.shields.io/badge/Version-0.1.13-orange.svg)
+  ![Version 0.1.14](https://img.shields.io/badge/Version-0.1.14-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -263,6 +268,7 @@ rm -rf .vim
 ├── autocomplete.vim
 ├── boilerplates.vim
 ├── colorscheme.vim
+├── comment-maps.vim
 ├── maps.vim
 ├── pack
 ├── README.md
@@ -270,7 +276,7 @@ rm -rf .vim
 └── vimrc
 ```
  
-[autocomplete.vim](autocomplete.vim) - Простое Vim автодополнение с подсказаками
+[autocomplete.vim](autocomplete.vim) - Простое Vim автодополнение с подсказками
 
 При вводе слова всплывает меню с вариантами автодополнения. Слова для 
 автодополнения сгруппированы по языкам в словари:
@@ -308,6 +314,10 @@ rm -rf .vim
 напоминая о необходимости отдохнуть.
 * Также устанавливает серую полосу на 80 символе, ограничивая длину строки.
 
+[comment-maps.vim](comment-maps.vim) - Vim маппинг для закомментирования кода
+для различных языков программирования
+  - \<leader\>\/ - закомментировать строку 
+
 [maps.vim](maps.vim) - Vim mappings
 * В качестве \<leader\> используется пробел
 * Управление окнами:
@@ -322,15 +332,15 @@ rm -rf .vim
   - \<leader\>\<Tab\> - переключение между буферами 
   - \<leader\>\<Esc\> - терминал в нормальный режим
 * Работа с текстом:
-  - \<leader\>\/ - закомментировать строку 
   - \<leader\>u - перевести слово в верхний регистр
   - \<leader\>" - обернуть слово в "кавычки" 
   - \<leader\>' - обернуть слово в 'кавычки' 
   - \<leader\>" - обернуть выделенный текст в "кавычки" 
   - \<leader\>' - обернуть выделенный текст в 'кавычки'
+  - \<leader\>f - автоформатирование файла  
 * Конфигурация:
   - \<leader\>ev - открыть vimrc
-  - \<leader\>sv - загрузить измененый vimrc
+  - \<leader\>sv - загрузить измененный vimrc
 * Навигация:
   - H - к началу строки
   - L - в конец строки
