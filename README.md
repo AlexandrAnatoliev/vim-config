@@ -35,6 +35,9 @@
 
 * Code completion using dictionary sources
 * Java-written plugin modules
+* Java boilerplates
+* Custom key mappings
+* Color scheme with work-time reminder 
 
 ---
 
@@ -70,6 +73,7 @@ mv vim-config .vim
 ```
 rm -rf .vim
 ```
+
 ---
 
 <div align="center">
@@ -88,11 +92,17 @@ rm -rf .vim
 ├── spell
 └── vimrc
 ```
- 
-[autocomplete.vim](autocomplete.vim) - Simple Vim autocomplete with hint.
+
+ [autocomplete.vim](autocomplete.vim) - Simple Vim autocomplete with hint
 
 During word input, a suggestion menu appears. Autocomplete words are organized 
 into language-specific dictionaries:
+
+ Features:
+* set dictionaries for autocomplete 
+* autocomplete words while typing (from dictionaries)
+* autocomplete class methods (from thesaurus)
+  - \<leader\>n - add method after Java class
 
 ```
 .vim/ 
@@ -110,50 +120,42 @@ into language-specific dictionaries:
 └── vimrc
 ```
 
+[boilerplates.vim](boilerplates.vim) - Simple Vim Java boilerplates
+* `sout` - expands to `System.out.println();`
+* `souf` - expands to `System.out.printf();`
+* `psvm` - expands to `public static void main(String[] args) { }`
+* `fori` - expands to `for (int i = 0; i < ; i++) { }`
+
 [colorscheme.vim](colorscheme.vim) 
 * Changes color scheme evening to remind me to end work and go to bed.
 * Sets a gray bar at the 80th character, limiting line length.
 
 [maps.vim](maps.vim) - Vim mappings
 * Space is used as \<leader\> 
-
-* \<leader\>e - to open a terminal below
-* \<leader\>w - to open a todo list on the right side
-
-* Window navigation mappings:
+* Window management:
+  - \<leader\>e - open a terminal below
+  - \<leader\>w - open a todo list on the right side
   - \<leader\>h - to left 
   - \<leader\>l - to right 
   - \<leader\>j - down
   - \<leader\>k - up
-* \<leader\>o - close other windows  
-
-* \<leader\>\<Esc\> - terminal to normal mode
-* \<leader\>\<Tab\> - buffer navigation mappings 
-* \<leader\>\/ - to comment a line 
-* \<leader\>u - word to upper case
-
-* \<leader\>ev - open vimrc file
-* \<leader\>sv - source change vimrc
-
-* \<leader\>" - wrap word by "quotes" 
-* \<leader\>' - wrap word by 'quotes'
-* \<leader\>" - wrap visually selected text by "quotes"
-* \<leader\>' - wrap visually selected text by 'quotes'
-
-* H - move to the begin current line
-* L - move to the end current line
-
-[autocomplete.vim](autocomplete.vim) - Simple Vim autocomplete with hint
-* set dictionaries 
-* autocomplete if typing (from dictionaries)
-* autocomplete class methods (from thesaurus)
-  - \<leader\>n - add method after Java class
-
-[boilerplates.vim](boilerplates.vim) - Simple Vim Java boilerplates
-* sout - System.out.println();
-* souf - System.out.printf();
-* psvm - public static void main(String[] args) { }
-* fori - for (int i = 0; i < ; i++) { }
+  - \<leader\>o - close other windows  
+* Buffer and Mode:
+  - \<leader\>\<Tab\> - buffer navigation mappings 
+  - \<leader\>\<Esc\> - terminal to normal mode
+* Text Operations:
+  - \<leader\>\/ - to comment a line 
+  - \<leader\>u - word to upper case
+  - \<leader\>" - wrap word by "quotes" 
+  - \<leader\>' - wrap word by 'quotes'
+  - \<leader\>" - wrap visually selected text by "quotes"
+  - \<leader\>' - wrap visually selected text by 'quotes'
+* Configuration:
+  - \<leader\>ev - open vimrc file
+  - \<leader\>sv - source change vimrc
+* Navigation:
+  - H - move to the begin current line
+  - L - move to the end current line
 
 ---
 
@@ -211,6 +213,9 @@ into language-specific dictionaries:
 
 * Автодополнение кода с использованием словарей
 * Подключаемые плагины, написанные на Java
+* Java бойлерплэты
+* Кастомные маппинги
+* Цветовая схема с напоминанием об отдыхе 
 
 ---
 <div align="center">
@@ -256,6 +261,7 @@ rm -rf .vim
 ```
 .vim/ 
 ├── autocomplete.vim
+├── boilerplates.vim
 ├── colorscheme.vim
 ├── maps.vim
 ├── pack
@@ -264,10 +270,16 @@ rm -rf .vim
 └── vimrc
 ```
  
-[autocomplete.vim](autocomplete.vim) - Простое автодополнение Vim с подсказками.
+[autocomplete.vim](autocomplete.vim) - Простое Vim автодополнение с подсказаками
 
 При вводе слова всплывает меню с вариантами автодополнения. Слова для 
 автодополнения сгруппированы по языкам в словари:
+
+Особенности:
+* устанавливает словари 
+* автодополняет слова при вводе (из сдоварей)
+* автодополняет методы класса (из тезариуса)
+  - \<leader\>n - добавить метод к Java классу
 
 ```
 .vim/ 
@@ -285,6 +297,12 @@ rm -rf .vim
 └── vimrc
 ```
 
+[boilerplates.vim](boilerplates.vim) - Простые бойлерплэты для Java 
+* sout - System.out.println();
+* souf - System.out.printf();
+* psvm - public static void main(String[] args) { }
+* fori - for (int i = 0; i < ; i++) { }
+
 [colorscheme.vim](colorscheme.vim) 
 * Содержит функцию, которая меняет в вечернее время цветовую схему, 
 напоминая о необходимости отдохнуть.
@@ -292,39 +310,31 @@ rm -rf .vim
 
 [maps.vim](maps.vim) - Vim mappings
 * В качестве \<leader\> используется пробел
-
-* \<leader\>e - открыть терминал снизу
-* \<leader\>w - открыть **todo** лист с правой стороны
-
-* Перемещение между окнами:
+* Управление окнами:
+  - \<leader\>e - открыть терминал снизу
+  - \<leader\>w - открыть **todo** лист с правой стороны
   - \<leader\>h - влево 
   - \<leader\>l - вправо 
   - \<leader\>j - вниз   
   - \<leader\>k - вверх 
-* \<leader\>o - закрыть другие окна  
-
-* \<leader\>\<Esc\> - терминал в нормальный режим
-* \<leader\>\<Tab\> - переключение между буферами 
-* \<leader\>\/ - закомментировать строку 
-* \<leader\>u - перевести слово в верхний регистр
-
-* \<leader\>ev - открыть vimrc
-* \<leader\>sv - загрузить измененый vimrc
-
-* \<leader\>" - обернуть слово в "кавычки" 
-* \<leader\>' - обернуть слово в 'кавычки' 
-* \<leader\>" - обернуть выделенный текст в "кавычки" 
-* \<leader\>' - обернуть выделенный текст в 'кавычки'
-
-* H - к началу строки
-* L - в конец строки
-
-[autocomplete.vim](autocomplete.vim) - Простое Vim автодополнение с подсказаками
-* устанавливает словари 
-* автодополняет слова при вводе (из сдоварей)
-* автодополняет методы класса (из тезариуса)
-  - \<leader\>n - добавить метод к Java классу
-
+  - \<leader\>o - закрыть другие окна  
+* Буферы и режимы:
+  - \<leader\>\<Tab\> - переключение между буферами 
+  - \<leader\>\<Esc\> - терминал в нормальный режим
+* Работа с текстом:
+  - \<leader\>\/ - закомментировать строку 
+  - \<leader\>u - перевести слово в верхний регистр
+  - \<leader\>" - обернуть слово в "кавычки" 
+  - \<leader\>' - обернуть слово в 'кавычки' 
+  - \<leader\>" - обернуть выделенный текст в "кавычки" 
+  - \<leader\>' - обернуть выделенный текст в 'кавычки'
+* Конфигурация:
+  - \<leader\>ev - открыть vimrc
+  - \<leader\>sv - загрузить измененый vimrc
+* Навигация:
+  - H - к началу строки
+  - L - в конец строки
+  
 ---
 
 <div align="center">
