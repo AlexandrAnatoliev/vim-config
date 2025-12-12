@@ -2,8 +2,8 @@
 " File: maps.vim
 " Description: Vim mappings 
 " Autor: AlexandAnatoliev
-" Version: 0.1.13
-" Last Modified: 11.12.2025
+" Version: 0.1.14
+" Last Modified: 12.12.2025
 " ==================================================================
 
 " В качестве leader - пробел
@@ -17,9 +17,9 @@ let mapleader=" "
 " Returns: None
 " ------------------------------------------------------------------  
 function! VimOpenTodo()
-  rightbelow vertical split
-  vertical resize 45
-  e ~/.vim/.todo
+    rightbelow vertical split
+    vertical resize 45
+    e ~/.vim/.todo
 endfunction
 
 noremap <leader>w :call VimOpenTodo()<CR>
@@ -66,3 +66,6 @@ nnoremap L $
 
 " open terminal below
 nnoremap <leader>e :belowright terminal<CR><C-\><C-n>:resize 10<CR>
+
+" file autoformat 
+nnoremap <leader>f :normal gg=G<CR>
