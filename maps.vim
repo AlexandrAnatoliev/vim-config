@@ -8,14 +8,12 @@
 
 " ------------------------------------------------------------------  
 " Function: VimOpenTodo()
-" Description: Function to open a todo list on the right side and
-" set its width to 45 columns
+" Description: Function to open a todo list on the right side 
 " Parameters: None
 " Returns: None
 " ------------------------------------------------------------------  
 function! VimOpenTodo()
     rightbelow vertical split
-    vertical resize 45
     e ~/.vim/.todo
 endfunction
 
@@ -56,9 +54,6 @@ noremap <leader><Tab> :bnext<CR>
 " ------------------------------------------------------------------  
 " Text Operations:
 " ------------------------------------------------------------------  
-
-" comments
-map <leader>/ 0i// <esc>0 
 
 " word to upper case
 inoremap <leader>u <esc>viwU<esc>ea

@@ -2,8 +2,8 @@
 " File: vimrc
 " Description: my Vim configuration
 " Author: AlexandAnatoliev
-" Version: 0.1.11
-" Last Modified: 10.12.2025
+" Version: 0.1.14
+" Last Modified: 12.12.2025
 " ==================================================================
 
 " =======================BASIC SETTINGS========================================
@@ -99,3 +99,7 @@ if filereadable(expand("~/.vim/boilerplates.vim"))
   source ~/.vim/boilerplates.vim
 endif
 
+" Load line comment mappings  
+if filereadable(expand("~/.vim/comment-maps.vim"))
+  source ~/.vim/comment-maps.vim
+endif
