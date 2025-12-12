@@ -137,8 +137,8 @@ into language-specific dictionaries:
 
 * \<leader\>" - wrap word by "quotes" 
 * \<leader\>' - wrap word by 'quotes'
-* \<leader\>" - wrap visually selected text by 'quotes'
-* \<leader\>' - wrap visually selected text by "quotes"
+* \<leader\>" - wrap visually selected text by "quotes"
+* \<leader\>' - wrap visually selected text by 'quotes'
 
 * H - move to the begin current line
 * L - move to the end current line

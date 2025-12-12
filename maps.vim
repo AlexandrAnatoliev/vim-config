@@ -25,10 +25,10 @@ endfunction
 noremap <leader>w :call VimOpenTodo()<CR>
 
 " window navigation mappings
-noremap <leader>h :wincmd h<CR><Esc> 
-noremap <leader>l :wincmd l<CR><Esc>
-noremap <leader>j :wincmd j<CR><Esc>   
-noremap <leader>k :wincmd k<CR><Esc> 
+noremap <leader>h :wincmd h<CR>
+noremap <leader>l :wincmd l<CR>
+noremap <leader>j :wincmd j<CR>
+noremap <leader>k :wincmd k<CR>
 
 "close other windows
 noremap <leader>o :wincmd o<CR> 
@@ -37,13 +37,13 @@ noremap <leader>o :wincmd o<CR>
 tnoremap <leader><Esc> <C-\><C-n>
 
 " buffer navigation mappings
-noremap <leader><Tab> :bNext<CR> 
+noremap <leader><Tab> :bnext<CR> 
 
 " comments
-map <leader>/ 0i// 0 
+map <leader>/ 0i// <esc>0 
 
 " word to upper case
-inoremap <leader>u <esc>viwU<esc>i
+inoremap <leader>u <esc>viwU<esc>ea
 nnoremap <leader>u viwU<esc>
 
 " open vimrc file and source change vimrc
@@ -54,9 +54,9 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 " wrap word by 'quotes' 
 nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
-" wrap visually selected text by 'quotes' 
-vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>lel
 " wrap visually selected text by "quotes" 
+vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>lel
+" wrap visually selected text by 'quotes' 
 vnoremap <leader>' <esc>`<i'<esc>`>la'<esc>lel
 
 " move to the begin current line
