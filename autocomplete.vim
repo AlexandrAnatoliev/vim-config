@@ -1,9 +1,9 @@
 " ==================================================================
 " File: autocomplete.vim
 " Description: Simple Vim autocomplete with hint 
-" Autor: AlexandAnatoliev
-" Version: 0.1.9
-" Last Modified: 09.12.2025
+" Author: AlexandAnatoliev
+" Version: 0.1.15
+" Last Modified: 16.12.2025
 " ==================================================================
 
 " autocomplete if typing
@@ -43,10 +43,13 @@ autocmd FileType sh setlocal dictionary+=~/.vim/.bashdict
 autocmd FileType md setlocal dictionary+=~/.vim/.markdowndict
 autocmd FileType html setlocal dictionary+=~/.vim/.htmldict
 autocmd FileType css setlocal dictionary+=~/.vim/.cssdict
-autocmd FileType jsp setlocal dictionary+=~/.vim/.jspdict, ~/.vim/.htmldict
+autocmd FileType jsp setlocal dictionary+=~/.vim/.jspdict
+autocmd FileType jsp setlocal dictionary+=~/.vim/.htmldict
 autocmd FileType sql setlocal dictionary+=~/.vim/.postgresqldict
 
 set thesaurus=~/.vim/.thesaurus
 
 set complete+=k,s
 
+" brackets autocomplete 
+autocmd FileType java :iabbrev <buffer> { {<cr>}<esc>O

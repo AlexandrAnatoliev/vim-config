@@ -100,6 +100,11 @@ if filereadable(expand("~/.vim/boilerplates.vim"))
 endif
 
 " Load line comment mappings  
-if filereadable(expand("~/.vim/comment-maps.vim"))
-  source ~/.vim/comment-maps.vim
+if filereadable(expand("~/.vim/comment_maps.vim"))
+  source ~/.vim/comment_maps.vim
+endif
+
+" Load html tags autocomplete  
+if filereadable(expand("~/.vim/html_tags.vim"))
+  source ~/.vim/html_tags.vim
 endif
