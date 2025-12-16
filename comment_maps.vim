@@ -1,9 +1,9 @@
 " ============================================================================
-" File: comment-maps.vim
+" File: comment_maps.vim
 " Description: Vim mappings to comments code lines in various languages 
 " Author: AlexandAnatoliev
-" Version: 0.1.14
-" Last Modified: 12.12.2025
+" Version: 0.1.15
+" Last Modified: 16.12.2025
 " ============================================================================
 
 " line comments

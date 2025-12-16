@@ -86,11 +86,10 @@ rm -rf .vim
 ├── autocomplete.vim
 ├── boilerplates.vim
 ├── colorscheme.vim
-├── comment-maps.vim
+├── comment_maps.vim
+├── html_tags.vim
 ├── maps.vim
-├── pack
 ├── README.md
-├── spell
 └── vimrc
 ```
 
@@ -104,6 +103,7 @@ into language-specific dictionaries:
 * autocomplete words while typing (from dictionaries)
 * autocomplete class methods (from thesaurus)
   - \<leader\>n - add method after Java class
+* curl brackets autocomplete 
 
 ```
 .vim/ 
@@ -131,10 +131,13 @@ into language-specific dictionaries:
 * Changes color scheme evening to remind me to end work and go to bed.
 * Sets a gray bar at the 80th character, limiting line length.
 
-[comment-maps.vim](comment-maps.vim) - Vim mappings to comments code lines 
+[comment_maps.vim](comment_maps.vim) - Vim mappings to comments code lines 
 in various languages 
   - \<leader\>\/ - to comment a line 
 
+[html_tags.vim](html_tags.vim) - Simple Vim autocomplete html tags 
+
+Simple Vim autocomplete html tags 
 [maps.vim](maps.vim) - Vim mappings
 * Space is used as \<leader\> 
 * Window management:
@@ -268,11 +271,10 @@ rm -rf .vim
 ├── autocomplete.vim
 ├── boilerplates.vim
 ├── colorscheme.vim
-├── comment-maps.vim
+├── comment_maps.vim
+├── html_tags.vim
 ├── maps.vim
-├── pack
 ├── README.md
-├── spell
 └── vimrc
 ```
  
@@ -286,6 +288,7 @@ rm -rf .vim
 * автодополняет слова при вводе (из сдоварей)
 * автодополняет методы класса (из тезариуса)
   - \<leader\>n - добавить метод к Java классу
+* автозавершение фигурных скобок 
 
 ```
 .vim/ 
@@ -314,9 +317,11 @@ rm -rf .vim
 напоминая о необходимости отдохнуть.
 * Также устанавливает серую полосу на 80 символе, ограничивая длину строки.
 
-[comment-maps.vim](comment-maps.vim) - Vim маппинг для закомментирования кода
+[comment_maps.vim](comment_maps.vim) - Vim маппинг для закомментирования кода
 для различных языков программирования
   - \<leader\>\/ - закомментировать строку 
+
+[html_tags.vim](html_tags.vim) - Простое автодополнение html тегов в Vim 
 
 [maps.vim](maps.vim) - Vim mappings
 * В качестве \<leader\> используется пробел
