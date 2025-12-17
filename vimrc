@@ -2,8 +2,8 @@
 " File: vimrc
 " Description: my Vim configuration
 " Author: AlexandAnatoliev
-" Version: 0.1.14
-" Last Modified: 12.12.2025
+" Version: 0.1.16
+" Last Modified: 17.12.2025
 " ==================================================================
 
 " =======================BASIC SETTINGS========================================
@@ -25,10 +25,13 @@ set expandtab
 set autoindent
 set smartindent
 
-" Filetype-specific tab settings
-autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
-autocmd FileType markdown setlocal tabstop=2 softtabstop=2 shiftwidth=2
-autocmd FileType jsp setlocal tabstop=2 softtabstop=2 shiftwidth=2
+augroup Tabs
+    autocmd!
+    " Filetype-specific tab settings
+    autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd FileType markdown setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd FileType jsp setlocal tabstop=2 softtabstop=2 shiftwidth=2
+augroup END
 
 " Automatic indentation based on file type
 filetype indent on
@@ -81,30 +84,30 @@ let java_mark_braces_in_parens_as_errors = 1
 
 " Load key mappings
 if filereadable(expand("~/.vim/maps.vim"))
-  source ~/.vim/maps.vim
+    source ~/.vim/maps.vim
 endif
 
 " Load color scheme settings
 if filereadable(expand("~/.vim/colorscheme.vim"))
-  source ~/.vim/colorscheme.vim
+    source ~/.vim/colorscheme.vim
 endif
 
 " Load autocomplete setting  
 if filereadable(expand("~/.vim/autocomplete.vim"))
-  source ~/.vim/autocomplete.vim
+    source ~/.vim/autocomplete.vim
 endif
 
 " Load boilerplates setting  
 if filereadable(expand("~/.vim/boilerplates.vim"))
-  source ~/.vim/boilerplates.vim
+    source ~/.vim/boilerplates.vim
 endif
 
 " Load line comment mappings  
 if filereadable(expand("~/.vim/comment_maps.vim"))
-  source ~/.vim/comment_maps.vim
+    source ~/.vim/comment_maps.vim
 endif
 
 " Load html tags autocomplete  
 if filereadable(expand("~/.vim/html_tags.vim"))
-  source ~/.vim/html_tags.vim
+    source ~/.vim/html_tags.vim
 endif
