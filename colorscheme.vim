@@ -2,8 +2,8 @@
 " File: colorscheme.vim
 " Description: Vim mappings 
 " Autor: AlexandAnatoliev
-" Version: 0.1.4
-" Last Modified: 4.12.2025
+" Version: 0.1.16
+" Last Modified: 17.12.2025
 " ==================================================================
 
 " ------------------------------------------------------------------  
@@ -26,7 +26,10 @@ function SetColorscheme()
     endif
 endfunction
 
-autocmd VimEnter * call SetColorscheme()
+augroup Colorscheme
+    autocmd!
+    autocmd VimEnter * call SetColorscheme()
+augroup END
 
 " set grey column 
 set colorcolumn=80
