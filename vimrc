@@ -2,8 +2,8 @@
 " File: vimrc
 " Description: my Vim configuration
 " Author: AlexandAnatoliev
-" Version: 0.1.16
-" Last Modified: 17.12.2025
+" Version: 0.1.17
+" Last Modified: 21.12.2025
 " ==================================================================
 
 " =======================BASIC SETTINGS========================================
@@ -110,4 +110,9 @@ endif
 " Load html tags autocomplete  
 if filereadable(expand("~/.vim/html_tags.vim"))
     source ~/.vim/html_tags.vim
+endif
+
+" Load statusline settings  
+if filereadable(expand("~/.vim/statusline.vim"))
+    source ~/.vim/statusline.vim
 endif
