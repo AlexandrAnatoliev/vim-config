@@ -5,7 +5,7 @@
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.16](https://img.shields.io/badge/Version-0.1.16-orange.svg)
+  ![Version 0.1.17](https://img.shields.io/badge/Version-0.1.17-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -90,6 +90,7 @@ rm -rf .vim
 ├── html_tags.vim
 ├── maps.vim
 ├── README.md
+├── statusline.vim
 └── vimrc
 ```
 
@@ -165,6 +166,8 @@ Simple Vim autocomplete html tags
   - H - move to the begin current line
   - L - move to the end current line
 
+[statusline.vim](statusline.vim) - Simple Vim statusline settings 
+
 ---
 
 <div align="center">
@@ -190,7 +193,7 @@ Simple Vim autocomplete html tags
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.16](https://img.shields.io/badge/Version-0.1.16-orange.svg)
+  ![Version 0.1.17](https://img.shields.io/badge/Version-0.1.17-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -275,6 +278,7 @@ rm -rf .vim
 ├── html_tags.vim
 ├── maps.vim
 ├── README.md
+├── statusline.vim
 └── vimrc
 ```
  
@@ -350,6 +354,8 @@ rm -rf .vim
   - H - к началу строки
   - L - в конец строки
   
+[statusline.vim](statusline.vim) - Простые настройки для statusline Vim 
+
 ---
 
 <div align="center">
