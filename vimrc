@@ -57,6 +57,9 @@ set scrolloff=8
 
 " Search behavior
 set incsearch
+set hlsearch
+set ignorecase
+set smartcase
 set showmatch
 
 
