@@ -2,35 +2,38 @@
 " File: html_tags.vim
 " Description: Simple Vim autocomplete html tags 
 " Author: AlexandAnatoliev
-" Version: 0.1.15
-" Last Modified: 16.12.2025
+" Version: 0.1.18
+" Last Modified: 27.12.2025
 " ==================================================================
 
 augroup HtmlTags
     autocmd!
-    " document structure
+    " document structure {{{
     autocmd FileType html,jsp,markdown :iabbrev <buffer> 
                 \<html> <html></html><esc>0f>a
     autocmd FileType html,jsp,markdown :iabbrev <buffer> 
                 \<head> <head></head><esc>0f>a
     autocmd FileType html,jsp,markdown :iabbrev <buffer> 
                 \<body> <body></body><esc>0f>a
+    " }}}
 
-    " metadata 
+    " metadata {{{
     autocmd FileType html,jsp,markdown :iabbrev <buffer> 
                 \<title> <title></title><esc>0f>a
     autocmd FileType html,jsp,markdown :iabbrev <buffer> 
                 \<style> <style></style><esc>0f>a
+    " }}}
 
-    " headers 
+    " headers {{{
     autocmd FileType html,jsp,markdown :iabbrev <buffer> <h1> <h1></h1><esc>0f>a
     autocmd FileType html,jsp,markdown :iabbrev <buffer> <h2> <h2></h2><esc>0f>a
     autocmd FileType html,jsp,markdown :iabbrev <buffer> <h3> <h3></h3><esc>0f>a
     autocmd FileType html,jsp,markdown :iabbrev <buffer> <h4> <h4></h4><esc>0f>a
     autocmd FileType html,jsp,markdown :iabbrev <buffer> <h5> <h5></h5><esc>0f>a
     autocmd FileType html,jsp,markdown :iabbrev <buffer> <h6> <h6></h6><esc>0f>a
+    " }}}
 
-    " text and formatting 
+    " text and formatting {{{
     autocmd FileType html,jsp,markdown :iabbrev <buffer> <p> <p></p><esc>0f>a
     autocmd FileType html,jsp,markdown :iabbrev <buffer> 
                 \<span> <span></span><esc>0f>a
@@ -58,19 +61,22 @@ augroup HtmlTags
                 \<abbr> <abbr></abbr><esc>0f>a
     autocmd FileType html,jsp,markdown :iabbrev <buffer> 
                 \<time> <time></time><esc>0f>a
+    " }}}
 
-    " links 
+    " links {{{
     autocmd FileType html,jsp,markdown :iabbrev <buffer> <a> <a></a><esc>0f>a
+    " }}}
 
-    " lists
+    " lists {{{
     autocmd FileType html,jsp,markdown :iabbrev <buffer> <ul> <ul></ul><esc>0f>a
     autocmd FileType html,jsp,markdown :iabbrev <buffer> <ol> <ol></ol><esc>0f>a
     autocmd FileType html,jsp,markdown :iabbrev <buffer> <li> <li></li><esc>0f>a
     autocmd FileType html,jsp,markdown :iabbrev <buffer> <dl> <dl></dl><esc>0f>a
     autocmd FileType html,jsp,markdown :iabbrev <buffer> <dt> <dt></dt><esc>0f>a
     autocmd FileType html,jsp,markdown :iabbrev <buffer> <dd> <dd></dd><esc>0f>a
+    " }}}
 
-    " Tables
+    " Tables {{{
     autocmd FileType html,jsp,markdown :iabbrev <buffer> 
                 \<table> <table></table><esc>0f>a
     autocmd FileType html,jsp,markdown :iabbrev <buffer> 
@@ -87,8 +93,9 @@ augroup HtmlTags
     autocmd FileType html,jsp,markdown :iabbrev <buffer> 
                 \<colgroup> <colgroup></colgroup><esc>0f>a
     autocmd FileType html,jsp,markdown :iabbrev <buffer> <col> <col></col><esc>0f>a
+    " }}}
 
-    " Forms
+    " Forms {{{
     autocmd FileType html,jsp,markdown :iabbrev <buffer> 
                 \<form> <form></form><esc>0f>a
     autocmd FileType html,jsp,markdown :iabbrev <buffer> 
@@ -117,8 +124,9 @@ augroup HtmlTags
                 \<meter> <meter></meter><esc>0f>a
     autocmd FileType html,jsp,markdown :iabbrev <buffer> 
                 \<progress> <progress></progress><esc>0f>a
+    " }}}
 
-    " semantic tags
+    " semantic tags {{{
     autocmd FileType html,jsp,markdown :iabbrev <buffer> 
                 \<details> <details></details><esc>0f>a
     autocmd FileType html,jsp,markdown :iabbrev <buffer> 
@@ -129,8 +137,9 @@ augroup HtmlTags
                 \<menu> <menu></menu><esc>0f>a
     autocmd FileType html,jsp,markdown :iabbrev <buffer> 
                 \<menuitem> <menuitem></menuitem><esc>0f>a
+    " }}}
 
-    " content grouping
+    " content grouping {{{
     autocmd FileType html,jsp,markdown :iabbrev <buffer> <div> <div></div><esc>0f>a
     autocmd FileType html,jsp,markdown :iabbrev 
                 \<buffer> <main> <main></main><esc>0f>a
@@ -145,4 +154,5 @@ augroup HtmlTags
                 \<buffer> <article> <article></article><esc>0f>a
     autocmd FileType html,jsp,markdown :iabbrev 
                 \<buffer> <aside> <aside></aside><esc>0f>a
+    " }}}
 augroup END
