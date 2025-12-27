@@ -1,7 +1,7 @@
 " ==================================================================
 " File: boilerplates.vim
 " Description: Simple Vim Java boilerplates 
-" Autor: AlexandAnatoliev
+" Author: AlexandAnatoliev
 " Version: 0.1.18
 " Last Modified: 27.12.2025
 " ==================================================================

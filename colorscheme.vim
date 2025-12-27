@@ -1,9 +1,9 @@
 " ==================================================================
 " File: colorscheme.vim
 " Description: Vim mappings 
-" Autor: AlexandAnatoliev
-" Version: 0.1.16
-" Last Modified: 17.12.2025
+" Author: AlexandAnatoliev
+" Version: 0.1.18
+" Last Modified: 27.12.2025
 " ==================================================================
 
 " ------------------------------------------------------------------  
@@ -13,6 +13,7 @@
 " Parameters: None
 " Returns: None
 " ------------------------------------------------------------------  
+" SetColorscheme function {{{
 function SetColorscheme()
     if filereadable(expand($VIMRUNTIME . "/colors/habamax.vim"))
         colorscheme habamax
@@ -25,13 +26,17 @@ function SetColorscheme()
         endif
     endif
 endfunction
+" }}}
 
+" call SetColorscheme function {{{
 augroup Colorscheme
     autocmd!
     autocmd VimEnter * call SetColorscheme()
 augroup END
+" }}}
 
-" set grey column 
+" set grey column {{{
 set colorcolumn=80
 highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
+" }}}
 
