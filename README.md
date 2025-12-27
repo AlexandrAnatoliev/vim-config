@@ -5,7 +5,7 @@
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.17](https://img.shields.io/badge/Version-0.1.17-orange.svg)
+  ![Version 0.1.18](https://img.shields.io/badge/Version-0.1.18-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -101,10 +101,10 @@ into language-specific dictionaries:
 
  Features:
 * set dictionaries for autocomplete 
-* autocomplete words while typing (from dictionaries)
+* autocomplete while typing (from dictionaries)
 * autocomplete class methods (from thesaurus)
   - \<leader\>n - add method after Java class
-* curl brackets autocomplete 
+* curly brackets autocomplete 
 
 ```
 .vim/ 
@@ -138,12 +138,11 @@ in various languages
 
 [html_tags.vim](html_tags.vim) - Simple Vim autocomplete html tags 
 
-Simple Vim autocomplete html tags 
 [maps.vim](maps.vim) - Vim mappings
 * Space is used as \<leader\> 
 * Window management:
   - \<leader\>e - open a terminal below
-  - \<leader\>w - open a todo list on the right side
+  - \<leader\>w - open a **todo** list on the right side
   - \<leader\>h - to left 
   - \<leader\>l - to right 
   - \<leader\>j - down
@@ -154,8 +153,8 @@ Simple Vim autocomplete html tags
   - \<leader\>\<Esc\> - terminal to normal mode
 * Text Operations:
   - \<leader\>u - word to upper case
-  - \<leader\>" - wrap word by "quotes" 
-  - \<leader\>' - wrap word by 'quotes'
+  - \<leader\>" - wrap word in "quotes" 
+  - \<leader\>' - wrap word in 'quotes'
   - \<leader\>" - wrap visually selected text by "quotes"
   - \<leader\>' - wrap visually selected text by 'quotes'
   - \<leader\>f - file autoformat  
@@ -163,8 +162,8 @@ Simple Vim autocomplete html tags
   - \<leader\>ev - open vimrc file
   - \<leader\>sv - source change vimrc
 * Navigation:
-  - H - move to the begin current line
-  - L - move to the end current line
+  - H - move to the beginning of the current line
+  - L - move to the end of the current line
 
 [statusline.vim](statusline.vim) - Simple Vim statusline settings 
 
@@ -193,7 +192,7 @@ Simple Vim autocomplete html tags
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.17](https://img.shields.io/badge/Version-0.1.17-orange.svg)
+  ![Version 0.1.18](https://img.shields.io/badge/Version-0.1.18-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -289,7 +288,7 @@ rm -rf .vim
 
 Особенности:
 * устанавливает словари 
-* автодополняет слова при вводе (из сдоварей)
+* автодополняет слова при вводе (из словарей)
 * автодополняет методы класса (из тезариуса)
   - \<leader\>n - добавить метод к Java классу
 * автозавершение фигурных скобок 
