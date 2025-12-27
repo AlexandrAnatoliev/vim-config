@@ -37,7 +37,7 @@ function! AddMethodToClass()
 endfunction
 " }}}
 
-" set dictionaries, thesaurus and brackets autocomplete  {{{
+" set dictionaries, thesaurus and brackets autocomplete {{{
 set dictionary=~/.vim/.semverdict
 
 augroup Autocomplete
@@ -55,10 +55,10 @@ augroup Autocomplete
     autocmd FileType sql setlocal dictionary+=~/.vim/.postgresqldict
 
     " brackets autocomplete 
-    autocmd FileType java :iabbrev <buffer> { {<cr>}<esc>O
+    autocmd FileType java iabbrev <buffer> { {<cr>}<esc>O
 augroup END
 
 set thesaurus=~/.vim/.thesaurus
 
-set complete+=k,s
+set complete+=k,t
 " }}}
