@@ -15,13 +15,13 @@
 " ------------------------------------------------------------------  
 " SetColorscheme function {{{
 function SetColorscheme()
-    if filereadable(expand($VIMRUNTIME . "/colors/habamax.vim"))
+    if filereadable($VIMRUNTIME . "/colors/habamax.vim")
         colorscheme habamax
     endif
 
     let time = str2nr(strftime('%H'))
     if time > 21
-        if filereadable(expand($VIMRUNTIME . "/colors/blue.vim"))
+        if filereadable($VIMRUNTIME . "/colors/blue.vim")
             colorscheme blue
         endif
     endif
