@@ -82,7 +82,7 @@ set foldlevel=1
 augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
-    setlocal foldlevel=0
+    autocmd FileType vim setlocal foldlevel=0
 augroup END
 " }}}
 
