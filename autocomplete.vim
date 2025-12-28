@@ -2,8 +2,8 @@
 " File: autocomplete.vim
 " Description: Simple Vim autocomplete with hint 
 " Author: AlexandAnatoliev
-" Version: 0.1.18
-" Last Modified: 27.12.2025
+" Version: 0.1.19
+" Last Modified: 28.12.2025
 " ==================================================================
 
 " autocomplete if typing {{{
@@ -55,7 +55,7 @@ augroup Autocomplete
     autocmd FileType sql setlocal dictionary+=~/.vim/.postgresqldict
 
     " brackets autocomplete 
-    autocmd FileType java iabbrev <buffer> { {<cr>}<esc>O
+    autocmd FileType java iabbrev <buffer> { {}<esc>F{a
 augroup END
 
 set thesaurus=~/.vim/.thesaurus
