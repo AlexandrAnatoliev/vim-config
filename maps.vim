@@ -2,8 +2,8 @@
 " File: maps.vim
 " Description: Vim mappings 
 " Author: AlexandAnatoliev
-" Version: 0.1.20
-" Last Modified: 30.12.2025
+" Version: 0.1.22
+" Last Modified: 01.01.2026
 " ==================================================================
 
 " VimOpenTodo function {{{
@@ -78,6 +78,15 @@ vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>lel
 " }}}
 " wrap visually selected text by 'quotes' {{{
 vnoremap <leader>' <esc>`<i'<esc>`>la'<esc>lel
+" }}}
+" file autoformat {{{
+augroup Tabs
+    autocmd!
+    autocmd FileType *
+                \ if index(['markdown'], &ft) == -1 |
+                \ nnoremap <buffer> <leader>f :normal gg=G<cr> |
+                \ endif
+augroup END
 " }}}
 
 " ------------------------------------------------------------------  
