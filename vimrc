@@ -2,8 +2,8 @@
 " File: vimrc
 " Description: my Vim configuration
 " Author: AlexandAnatoliev
-" Version: 0.1.18
-" Last Modified: 27.12.2025
+" Version: 0.1.23
+" Last Modified: 03.01.2026
 " =============================================================================
 
 " =======================BASIC SETTINGS========================================
@@ -20,25 +20,23 @@ set termencoding=utf-8
 " =======================INDENTATION SETTINGS==================================
 
 " Basic tab settings {{{
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 set autoindent
 set smartindent
 " }}}
 
-" Filetype-specific tab settings {{{
-augroup Tabs
-    autocmd!
-    autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
-    autocmd FileType markdown setlocal tabstop=2 softtabstop=2 shiftwidth=2
-    autocmd FileType jsp setlocal tabstop=2 softtabstop=2 shiftwidth=2
-augroup END
-" }}}
-
 " Automatic indentation based on file type {{{
 filetype indent on
+" }}}
+
+" Filetype-specific tab settings {{{
+augroup TabSettings
+  autocmd!
+  autocmd FileType java setlocal tabstop=4 softtabstop=4 shiftwidth=4
+augroup END
 " }}}
 
 " =======================WINDOW SETTINGS=======================================
@@ -80,16 +78,16 @@ set foldlevel=1
 
 " Vimscript file settings {{{
 augroup filetype_vim
-    autocmd!
-    autocmd FileType vim setlocal foldmethod=marker
-    autocmd FileType vim setlocal foldlevel=0
+  autocmd!
+  autocmd FileType vim setlocal foldmethod=marker
+  autocmd FileType vim setlocal foldlevel=0
 augroup END
 " }}}
 
 " =======================SPELL CHECK AND SYNTAX================================
 
 " Set checking and syntax highlighting {{{
-set spell
+set spell spelllang=ru,en
 syntax on
 " }}}
 
@@ -106,42 +104,42 @@ let java_mark_braces_in_parens_as_errors = 1
 
 " Load key mappings {{{
 if filereadable(expand("~/.vim/maps.vim"))
-    source ~/.vim/maps.vim
+  source ~/.vim/maps.vim
 endif
 " }}}
 
 " Load color scheme settings {{{
 if filereadable(expand("~/.vim/colorscheme.vim"))
-    source ~/.vim/colorscheme.vim
+  source ~/.vim/colorscheme.vim
 endif
 " }}}
 
 " Load autocomplete setting {{{
 if filereadable(expand("~/.vim/autocomplete.vim"))
-    source ~/.vim/autocomplete.vim
+  source ~/.vim/autocomplete.vim
 endif
 " }}}
 
 " Load boilerplates setting {{{
 if filereadable(expand("~/.vim/boilerplates.vim"))
-    source ~/.vim/boilerplates.vim
+  source ~/.vim/boilerplates.vim
 endif
 " }}}
 
 " Load line comment mappings {{{
 if filereadable(expand("~/.vim/comment_maps.vim"))
-    source ~/.vim/comment_maps.vim
+  source ~/.vim/comment_maps.vim
 endif
 " }}}
 
 " Load html tags autocomplete {{{
 if filereadable(expand("~/.vim/html_tags.vim"))
-    source ~/.vim/html_tags.vim
+  source ~/.vim/html_tags.vim
 endif
 " }}}
 
 " Load statusline settings {{{
 if filereadable(expand("~/.vim/statusline.vim"))
-    source ~/.vim/statusline.vim
+  source ~/.vim/statusline.vim
 endif
 " }}}

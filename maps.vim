@@ -2,8 +2,8 @@
 " File: maps.vim
 " Description: Vim mappings 
 " Author: AlexandAnatoliev
-" Version: 0.1.22
-" Last Modified: 01.01.2026
+" Version: 0.1.23
+" Last Modified: 03.01.2026
 " ==================================================================
 
 " VimOpenTodo function {{{
@@ -14,8 +14,8 @@
 " Returns: None
 " ------------------------------------------------------------------  
 function! VimOpenTodo()
-    rightbelow vertical split
-    e ~/.vim/.todo
+  rightbelow vertical split
+  e ~/.vim/.todo
 endfunction
 " }}}
 
@@ -80,12 +80,12 @@ vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>lel
 vnoremap <leader>' <esc>`<i'<esc>`>la'<esc>lel
 " }}}
 " file autoformat {{{
-augroup Tabs
-    autocmd!
-    autocmd FileType *
-                \ if index(['markdown'], &ft) == -1 |
-                \ nnoremap <buffer> <leader>f :normal gg=G<cr> |
-                \ endif
+augroup Autoformat
+  autocmd!
+  autocmd FileType *
+        \ if index(['markdown'], &ft) == -1 |
+        \ nnoremap <buffer> <leader>f :normal gg=G<cr> |
+        \ endif
 augroup END
 " }}}
 
