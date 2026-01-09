@@ -2,8 +2,8 @@
 " File: maps.vim
 " Description: Vim mappings 
 " Author: AlexandAnatoliev
-" Version: 0.1.23
-" Last Modified: 03.01.2026
+" Version: 0.1.24
+" Last Modified: 09.01.2026
 " ==================================================================
 
 " VimOpenTodo function {{{
@@ -84,7 +84,7 @@ augroup Autoformat
   autocmd!
   autocmd FileType *
         \ if index(['markdown'], &ft) == -1 |
-        \ nnoremap <buffer> <leader>f :normal gg=G<cr> |
+        \ nnoremap <buffer> <leader>f :normal! gg=G<cr> |
         \ endif
 augroup END
 " }}}
