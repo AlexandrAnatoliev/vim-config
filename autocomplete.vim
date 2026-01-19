@@ -26,13 +26,16 @@ inoremap <leader>n <c-r>=AddMethodToClass()<CR>
 " Returns: None
 " ------------------------------------------------------------------  
 function! AddMethodToClass()
-  let line_text = getline('.')[0:col('.')-2]
-  let last_word = matchstr(line_text, '\v\S+$')
+  let line_text = getline('.')[0:col('.')-1]
 
-  if empty(last_word)
-    return '.'
+  if line_text =~ '\.$'
+    let word = matchstr(line_text, '\v\S+\.$')
+
+    if !empty(word)
+      return substitute(word, '\.$', '', '') . "\<C-x>\<C-t>"
+    endif
   else
-    return '.' . last_word . "\<C-n>\<C-p>"
+    return ''
   endif
 endfunction
 " }}}
