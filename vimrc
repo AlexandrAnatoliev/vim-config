@@ -2,8 +2,8 @@
 " File: vimrc
 " Description: my Vim configuration
 " Author: AlexandAnatoliev
-" Version: 0.1.23
-" Last Modified: 03.01.2026
+" Version: 0.1.25
+" Last Modified: 19.01.2026
 " =============================================================================
 
 " =======================BASIC SETTINGS========================================
@@ -64,8 +64,6 @@ set scrolloff=8
 " Search behavior {{{
 set incsearch
 set hlsearch
-set ignorecase
-set smartcase
 set showmatch
 " }}}
 
