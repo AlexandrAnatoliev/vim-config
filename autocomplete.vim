@@ -2,17 +2,17 @@
 " File: autocomplete.vim
 " Description: Simple Vim autocomplete with hint 
 " Author: AlexandAnatoliev
-" Version: 0.1.19
-" Last Modified: 28.12.2025
+" Version: 0.1.25
+" Last Modified: 19.01.2026
 " ==================================================================
 
 " autocomplete if typing {{{
 for char in range(char2nr('a'), char2nr('z'))
-    execute "inoremap " . nr2char(char) . " " . nr2char(char) . "\<C-n>\<C-p>"
+  execute "inoremap " . nr2char(char) . " " . nr2char(char) . "\<C-n>\<C-p>"
 endfor
 
 for char in range(char2nr('A'), char2nr('Z'))
-    execute "inoremap " . nr2char(char) . " " . nr2char(char) . "\<C-n>\<C-p>"
+  execute "inoremap " . nr2char(char) . " " . nr2char(char) . "\<C-n>\<C-p>"
 endfor
 " }}}
 
@@ -26,39 +26,39 @@ inoremap <leader>n <c-r>=AddMethodToClass()<CR>
 " Returns: None
 " ------------------------------------------------------------------  
 function! AddMethodToClass()
-    let line_text = getline('.')[0:col('.')-2]
-    let last_word = matchstr(line_text, '\v\S+$')
+  let line_text = getline('.')[0:col('.')-2]
+  let last_word = matchstr(line_text, '\v\S+$')
 
-    if empty(last_word)
-        return '.'
-    else
-        return '.' . last_word . "\<C-n>\<C-p>"
-    endif
+  if empty(last_word)
+    return '.'
+  else
+    return '.' . last_word . "\<C-n>\<C-p>"
+  endif
 endfunction
 " }}}
 
-" set dictionaries, thesaurus and brackets autocomplete {{{
 set dictionary=~/.vim/.semverdict
 
 augroup Autocomplete
-    autocmd!
+  autocmd!
 
-    " set dictionaries 
-    autocmd FileType java setlocal dictionary+=~/.vim/.javadict
-    autocmd FileType vim setlocal dictionary+=~/.vim/.vimscriptdict
-    autocmd FileType sh setlocal dictionary+=~/.vim/.bashdict
-    autocmd FileType md setlocal dictionary+=~/.vim/.markdowndict
-    autocmd FileType html setlocal dictionary+=~/.vim/.htmldict
-    autocmd FileType css setlocal dictionary+=~/.vim/.cssdict
-    autocmd FileType jsp setlocal dictionary+=~/.vim/.jspdict
-    autocmd FileType jsp setlocal dictionary+=~/.vim/.htmldict
-    autocmd FileType sql setlocal dictionary+=~/.vim/.postgresqldict
+  " set dictionaries, thesaurus and brackets autocomplete {{{
+  autocmd FileType java setlocal dictionary+=~/.vim/.javadict
+  autocmd FileType vim setlocal dictionary+=~/.vim/.vimscriptdict
+  autocmd FileType sh setlocal dictionary+=~/.vim/.bashdict
+  autocmd FileType md setlocal dictionary+=~/.vim/.markdowndict
+  autocmd FileType html setlocal dictionary+=~/.vim/.htmldict
+  autocmd FileType css setlocal dictionary+=~/.vim/.cssdict
+  autocmd FileType jsp setlocal dictionary+=~/.vim/.jspdict
+  autocmd FileType jsp setlocal dictionary+=~/.vim/.htmldict
+  autocmd FileType sql setlocal dictionary+=~/.vim/.postgresqldict
+  " }}}
 
-    " brackets autocomplete 
-    autocmd FileType java iabbrev <buffer> { {}<esc>F{a
+  " brackets autocomplete {{{
+  autocmd FileType java iabbrev <buffer> { {<cr>}<esc>
+  " }}}
 augroup END
 
 set thesaurus=~/.vim/.thesaurus
 
 set complete+=k,t
-" }}}
