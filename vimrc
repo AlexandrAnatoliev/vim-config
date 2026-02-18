@@ -2,8 +2,8 @@
 " File: vimrc
 " Description: my Vim configuration
 " Author: AlexandAnatoliev
-" Version: 0.1.25
-" Last Modified: 19.01.2026
+" Version: 0.1.26
+" Last Modified: 18.02.2026
 " =============================================================================
 
 " =======================BASIC SETTINGS========================================
@@ -139,5 +139,11 @@ endif
 " Load statusline settings {{{
 if filereadable(expand("~/.vim/statusline.vim"))
   source ~/.vim/statusline.vim
+endif
+" }}}
+
+" Load and set highlight trailing whitespace as error {{{
+if filereadable(expand("~/.vim/trail_spot.vim"))
+  source ~/.vim/trail_spot.vim
 endif
 " }}}
