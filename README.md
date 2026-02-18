@@ -5,7 +5,7 @@
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.26](https://img.shields.io/badge/Version-0.1.26-orange.svg)
+  ![Version 0.1.27](https://img.shields.io/badge/Version-0.1.27-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -131,7 +131,7 @@ into language-specific dictionaries:
 
 [colorscheme.vim](colorscheme.vim) 
 * Changes color scheme evening to remind me to end work and go to bed.
-* Sets a gray bar at the 80th character, limiting line length.
+* Highlights all characters in virtual column 80 and more, limiting line length.
 
 [comment_maps.vim](comment_maps.vim) - Vim mappings to comments code lines 
 in various languages 
@@ -194,7 +194,7 @@ in various languages
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.26](https://img.shields.io/badge/Version-0.1.26-orange.svg)
+  ![Version 0.1.27](https://img.shields.io/badge/Version-0.1.27-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -321,7 +321,7 @@ rm -rf .vim
 [colorscheme.vim](colorscheme.vim) 
 * Содержит функцию, которая меняет в вечернее время цветовую схему, 
 напоминая о необходимости отдохнуть.
-* Также устанавливает серую полосу на 80 символе, ограничивая длину строки.
+* Также окрашивает все символы за пределами 80, ограничивая длину строки.
 
 [comment_maps.vim](comment_maps.vim) - Vim маппинг для закомментирования кода
 для различных языков программирования

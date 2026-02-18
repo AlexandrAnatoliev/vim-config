@@ -2,8 +2,8 @@
 " File: colorscheme.vim
 " Description: Vim mappings 
 " Author: AlexandAnatoliev
-" Version: 0.1.21
-" Last Modified: 31.12.2025
+" Version: 0.1.27
+" Last Modified: 18.02.2026
 " ==================================================================
 
 " ------------------------------------------------------------------  
@@ -15,28 +15,31 @@
 " ------------------------------------------------------------------  
 " SetColorscheme function {{{
 function SetColorscheme()
-    if filereadable($VIMRUNTIME . "/colors/habamax.vim")
-        colorscheme habamax
-    endif
+  if filereadable($VIMRUNTIME . "/colors/habamax.vim")
+    colorscheme habamax
+  endif
 
-    let time = str2nr(strftime('%H'))
-    if time ># 21
-        if filereadable($VIMRUNTIME . "/colors/blue.vim")
-            colorscheme blue
-        endif
+  let time = str2nr(strftime('%H'))
+  if time ># 21
+    if filereadable($VIMRUNTIME . "/colors/blue.vim")
+      colorscheme blue
     endif
+  endif
 endfunction
 " }}}
 
 " call SetColorscheme function {{{
 augroup Colorscheme
-    autocmd!
-    autocmd VimEnter * call SetColorscheme()
+  autocmd!
+  autocmd VimEnter * call SetColorscheme()
 augroup END
 " }}}
 
-" set grey column {{{
-set colorcolumn=80
-highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
+" highlights all characters in virtual column 80 and more {{{
+highlight rightMargin term=bold ctermfg=blue guifg=blue
+augroup TrailingHightLight
+  autocmd!
+  autocmd BufEnter,Winenter,BufRead * match rightMargin /.\%>80v/
+augroup END
 " }}}
 
