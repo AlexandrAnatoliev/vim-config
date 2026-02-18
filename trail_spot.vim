@@ -8,7 +8,7 @@
 
 " highlight trailing whitespace as error {{{
 nnoremap <leader>w :match Error /\v\s+$/<cr>
-"}}}
+" }}}
 
 " clear the highlight {{{
 nnoremap <leader>W :match None<cr>
