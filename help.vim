@@ -6,6 +6,12 @@
 " Last Modified: 19.02.2026
 " ==================================================================
 
+" ------------------------------------------------------------------  
+" Function: ShowHotKeys()
+" Description: Function to create popup menu with hot keys 
+" Parameters: None
+" Returns: None
+" ------------------------------------------------------------------  
 function ShowHotKeys()
   " Vim hot keys {{{
   let keys = [
@@ -67,6 +73,12 @@ function ShowHotKeys()
   " }}}
 endfunction
 
+" ------------------------------------------------------------------  
+" Function: PopupFilter()
+" Description: Function for moving in popup menu 
+" Parameters: winid - popup menu, key - user input
+" Returns: None
+" ------------------------------------------------------------------  
 " Moving in popup menu {{{
 function PopupFilter(winid, key)
   if a:key == 'j' || a:key == '<Down>'
