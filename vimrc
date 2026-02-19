@@ -153,3 +153,9 @@ if filereadable(expand("~/.vim/todo.vim"))
   source ~/.vim/todo.vim
 endif
 " }}}
+
+" Load Display Vim hot keys {{{
+if filereadable(expand("~/.vim/help.vim"))
+  source ~/.vim/help.vim
+endif
+" }}}
