@@ -87,6 +87,7 @@ rm -rf .vim
 ├── boilerplates.vim
 ├── colorscheme.vim
 ├── comment_maps.vim
+├── help.vim
 ├── html_tags.vim
 ├── maps.vim
 ├── README.md
@@ -137,6 +138,12 @@ into language-specific dictionaries:
 [comment_maps.vim](comment_maps.vim) - Vim mappings to comments code lines 
 in various languages 
   - \<leader\>\/ - to comment a line 
+
+[help.vim](help.vim) - Display Vim hot keys 
+  - \<leader\>? - get help popup menu 
+  - q - close menu
+  - j - moving in menu
+  - k - moving in menu
 
 [html_tags.vim](html_tags.vim) - Simple Vim autocomplete html tags 
 
@@ -285,6 +292,7 @@ rm -rf .vim
 ├── boilerplates.vim
 ├── colorscheme.vim
 ├── comment_maps.vim
+├── help.vim
 ├── html_tags.vim
 ├── maps.vim
 ├── README.md
@@ -336,6 +344,12 @@ rm -rf .vim
 [comment_maps.vim](comment_maps.vim) - Vim маппинг для закомментирования кода
 для различных языков программирования
   - \<leader\>\/ - закомментировать строку 
+
+[help.vim](help.vim) - Выводит всплывающее меню с горячими клавишами 
+  - \<leader\>? - вывести меню 
+  - q - закрыть 
+  - j - вниз
+  - k - вверх
 
 [html_tags.vim](html_tags.vim) - Простое автодополнение html тегов в Vim 
 

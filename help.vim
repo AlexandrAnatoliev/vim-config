@@ -16,7 +16,12 @@ function ShowHotKeys()
   " Vim hot keys {{{
   let keys = [
         \ '======================Hot=keys======================',
+        \ '----------------------Help-menu---------------------',
         \ '<leader>? - get Help menu',
+        \ 'q - close',
+        \ 'j - down',
+        \ 'k - up',
+        \ '------------------------Other-----------------------',
         \ '<leader>n - add method after Java class',
         \ '<leader>/ - to comment a line', 
         \ '-----------------Window-management------------------',
