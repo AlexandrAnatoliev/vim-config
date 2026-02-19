@@ -91,6 +91,7 @@ rm -rf .vim
 ├── maps.vim
 ├── README.md
 ├── statusline.vim
+├── todo.vim
 ├── trail_spot.vim
 └── vimrc
 ```
@@ -167,6 +168,11 @@ in various languages
   - L - move to the end of the current line
 
 [statusline.vim](statusline.vim) - Simple Vim statusline settings 
+
+[todo.vim](todo.vim) - TODO Vim plugin 
+  - <leader>t - add TODO comments 
+  - ]t - moving between TODO comments
+  - [t - moving between TODO comments
 
 [trail_spot.vim](trail_spot.vim) - Highlight trailing whitespace as error 
   - <leader>s - highlight trailing whitespace 
@@ -283,6 +289,7 @@ rm -rf .vim
 ├── maps.vim
 ├── README.md
 ├── statusline.vim
+├── todo.vim
 ├── trail_spot.vim
 └── vimrc
 ```
@@ -360,6 +367,11 @@ rm -rf .vim
   - L - в конец строки
   
 [statusline.vim](statusline.vim) - Простые настройки для statusline Vim 
+
+[todo.vim](todo.vim) - TODO Vim плагин 
+  - <leader>t - добавить TODO комментарий 
+  - ]t - перемещение между TODO комментариями
+  - [t - перемещение между TODO комментариями
 
 [trail_spot.vim](trail_spot.vim) - Подсвечивает пробелы в конце строки как ошибку 
   - <leader>s - подсветить пробелы в конце строки 
