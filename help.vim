@@ -6,11 +6,11 @@
 " Last Modified: 19.02.2026
 " ==================================================================
 
-
 function ShowHotKeys()
   " Vim hot keys {{{
   let keys = [
         \ '======================Hot=keys======================',
+        \ '<leader>? - get Help menu',
         \ '<leader>n - add method after Java class',
         \ '<leader>/ - to comment a line', 
         \ '-----------------Window-management------------------',
@@ -67,6 +67,7 @@ function ShowHotKeys()
   " }}}
 endfunction
 
+" Moving in popup menu {{{
 function PopupFilter(winid, key)
   if a:key == 'j' || a:key == '<Down>'
     call win_execute(a:winid, "normal! \<C-e>")
@@ -80,6 +81,7 @@ function PopupFilter(winid, key)
   endif
   return 0
 endfunction
+" }}}
 
 " Help mapping {{{
 nnoremap <leader>? :call ShowHotKeys()<cr>
