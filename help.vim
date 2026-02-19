@@ -52,17 +52,33 @@ function ShowHotKeys()
         \ ]
   " }}} 
   " Popup settings {{{
-  call popup_create(keys, #{
+  let winid = popup_create(keys, #{
         \ title: 'Help',
         \ pos: 'center',
-        \ line: 10,
-        \ col: 20,
+        \ minwidth: 50,
+        \ maxheight: 20,
         \ highlight: 'WarningMsg',
         \ border: [],
         \ close: 'click',
-        \ time: 10000 
+        \ time: 10000,
+        \ mapping: 0,
+        \ filter: function('PopupFilter'),
         \ })
   " }}}
+endfunction
+
+function PopupFilter(winid, key)
+  if a:key == 'j' || a:key == '<Down>'
+    call win_execute(a:winid, "normal! \<C-e>")
+    return 1
+  elseif a:key == 'k' || a:key == 'Up'
+    call win_execute(a:winid, "normal! \<C-y>")
+    return 1
+  elseif a:key == 'q' || a:key == '<Esc>'
+    call popup_close(a:winid)
+    return 1
+  endif
+  return 0
 endfunction
 
 " Help mapping {{{
