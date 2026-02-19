@@ -170,13 +170,13 @@ in various languages
 [statusline.vim](statusline.vim) - Simple Vim statusline settings 
 
 [todo.vim](todo.vim) - TODO Vim plugin 
-  - <leader>t - add TODO comments 
+  - \<leader\>t - add TODO comments 
   - ]t - moving between TODO comments
   - [t - moving between TODO comments
 
 [trail_spot.vim](trail_spot.vim) - Highlight trailing whitespace as error 
-  - <leader>s - highlight trailing whitespace 
-  - <leader>S - clear the highlight
+  - \<leader\>s - highlight trailing whitespace 
+  - \<leader\>S - clear the highlight
 
 ---
 
@@ -369,13 +369,13 @@ rm -rf .vim
 [statusline.vim](statusline.vim) - Простые настройки для statusline Vim 
 
 [todo.vim](todo.vim) - TODO Vim плагин 
-  - <leader>t - добавить TODO комментарий 
+  - \<leader\>t - добавить TODO комментарий 
   - ]t - перемещение между TODO комментариями
   - [t - перемещение между TODO комментариями
 
 [trail_spot.vim](trail_spot.vim) - Подсвечивает пробелы в конце строки как ошибку 
-  - <leader>s - подсветить пробелы в конце строки 
-  - <leader>S - убрать подсветку
+  - \<leader\>s - подсветить пробелы в конце строки 
+  - \<leader\>S - убрать подсветку
 
 ---
 
