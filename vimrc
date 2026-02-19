@@ -147,3 +147,9 @@ if filereadable(expand("~/.vim/trail_spot.vim"))
   source ~/.vim/trail_spot.vim
 endif
 " }}}
+
+" Load TODO Vim plugin {{{
+if filereadable(expand("~/.vim/todo.vim"))
+  source ~/.vim/todo.vim
+endif
+" }}}
