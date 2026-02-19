@@ -2,8 +2,8 @@
 " File: vimrc
 " Description: my Vim configuration
 " Author: AlexandAnatoliev
-" Version: 0.1.26
-" Last Modified: 18.02.2026
+" Version: 0.1.28
+" Last Modified: 19.02.2026
 " =============================================================================
 
 " =======================BASIC SETTINGS========================================
@@ -145,5 +145,11 @@ endif
 " Load and set highlight trailing whitespace as error {{{
 if filereadable(expand("~/.vim/trail_spot.vim"))
   source ~/.vim/trail_spot.vim
+endif
+" }}}
+
+" Load TODO Vim plugin {{{
+if filereadable(expand("~/.vim/todo.vim"))
+  source ~/.vim/todo.vim
 endif
 " }}}
