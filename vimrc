@@ -2,7 +2,7 @@
 " File: vimrc
 " Description: my Vim configuration
 " Author: AlexandAnatoliev
-" Version: 0.1.28
+" Version: 0.1.30
 " Last Modified: 19.02.2026
 " =============================================================================
 
@@ -151,5 +151,11 @@ endif
 " Load TODO Vim plugin {{{
 if filereadable(expand("~/.vim/todo.vim"))
   source ~/.vim/todo.vim
+endif
+" }}}
+
+" Load Display Vim hot keys {{{
+if filereadable(expand("~/.vim/help.vim"))
+  source ~/.vim/help.vim
 endif
 " }}}
