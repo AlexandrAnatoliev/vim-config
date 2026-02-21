@@ -5,7 +5,7 @@
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.32](https://img.shields.io/badge/Version-0.1.32-orange.svg)
+  ![Version 0.1.33](https://img.shields.io/badge/Version-0.1.33-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -143,6 +143,8 @@ in various languages
 
 [grep_word.vim](grep_word.vim) - Simple Vim grep plugin 
   - \<leader\>g - to search word in project recursively 
+  - ]t - moving between TODO comments
+  - [t - moving between TODO comments
 
 [help.vim](help.vim) - Display Vim hot keys 
   - \<leader\>? - get help popup menu 
@@ -186,8 +188,8 @@ in various languages
 
 [todo.vim](todo.vim) - TODO Vim plugin 
   - \<leader\>t - add TODO comments 
-  - ]t - moving between TODO comments
-  - [t - moving between TODO comments
+  - ]t - moving between searched
+  - [t - moving between searched
 
 [trail_spot.vim](trail_spot.vim) - Highlight trailing whitespace as error 
   - \<leader\>s - highlight trailing whitespace 
@@ -218,7 +220,7 @@ in various languages
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.32](https://img.shields.io/badge/Version-0.1.32-orange.svg)
+  ![Version 0.1.33](https://img.shields.io/badge/Version-0.1.33-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -357,6 +359,8 @@ rm -rf .vim
 
 [grep_word.vim](grep_word.vim) - Простой grep vim плагин 
   - \<leader\>g - найти слово в проекте рекурсивно 
+  - ]t - перемещение между найденными словами
+  - [t - перемещение между найденными словами
 
 [help.vim](help.vim) - Выводит всплывающее меню с горячими клавишами 
   - \<leader\>? - вывести меню 

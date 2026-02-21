@@ -57,6 +57,8 @@ function ShowHotKeys()
         \ '<leader>S - clear the highlight',
         \ '------------------grep-word-plugin------------------', 
         \ '<leader>g - to search word in project recursively', 
+        \ ']g - moving between searched',
+        \ '[g - moving between searched',
         \ '-----------------jshell-word-plugin-----------------', 
         \ '<leader>js - to search word in jshell', 
         \ '--------------------Boilerplates--------------------',
