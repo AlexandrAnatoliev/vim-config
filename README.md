@@ -5,7 +5,7 @@
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.30](https://img.shields.io/badge/Version-0.1.30-orange.svg)
+  ![Version 0.1.31](https://img.shields.io/badge/Version-0.1.31-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -87,6 +87,7 @@ rm -rf .vim
 ├── boilerplates.vim
 ├── colorscheme.vim
 ├── comment_maps.vim
+├── grep_word.vim
 ├── help.vim
 ├── html_tags.vim
 ├── maps.vim
@@ -138,6 +139,9 @@ into language-specific dictionaries:
 [comment_maps.vim](comment_maps.vim) - Vim mappings to comments code lines 
 in various languages 
   - \<leader\>\/ - to comment a line 
+
+[grep_word.vim](grep_word.vim) - Simple Vim grep plugin 
+  - \<leader\>\g - to search word in project recursively 
 
 [help.vim](help.vim) - Display Vim hot keys 
   - \<leader\>? - get help popup menu 
@@ -210,7 +214,7 @@ in various languages
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.30](https://img.shields.io/badge/Version-0.1.30-orange.svg)
+  ![Version 0.1.31](https://img.shields.io/badge/Version-0.1.31-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -292,6 +296,7 @@ rm -rf .vim
 ├── boilerplates.vim
 ├── colorscheme.vim
 ├── comment_maps.vim
+├── grep_word.vim
 ├── help.vim
 ├── html_tags.vim
 ├── maps.vim
@@ -344,6 +349,9 @@ rm -rf .vim
 [comment_maps.vim](comment_maps.vim) - Vim маппинг для закомментирования кода
 для различных языков программирования
   - \<leader\>\/ - закомментировать строку 
+
+[grep_word.vim](grep_word.vim) - Простой grep vim плагин 
+  - \<leader\>\g - найти слово в проекте рекурсивно 
 
 [help.vim](help.vim) - Выводит всплывающее меню с горячими клавишами 
   - \<leader\>? - вывести меню 
