@@ -165,3 +165,9 @@ if filereadable(expand("~/.vim/grep_word.vim"))
   source ~/.vim/grep_word.vim
 endif
 " }}}
+
+" Load Search word in jshell plugin {{{
+if filereadable(expand("~/.vim/jshell_word.vim"))
+  source ~/.vim/jshell_word.vim
+endif
+" }}}
