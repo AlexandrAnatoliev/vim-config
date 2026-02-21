@@ -7,6 +7,6 @@
 " ==================================================================
 
 " search word in project recursively {{{
-nnoremap <leader>g :execute "grep! -R " . shellescape(expand("<cWORD>")) . " 
-      \."<cr>:copen<cr>
+nnoremap <leader>g :execute "grep! -R " . shellescape(expand("<cWORD>")) 
+      \. " ."<cr>:copen<cr>
 " }}}
