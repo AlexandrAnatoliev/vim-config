@@ -159,3 +159,9 @@ if filereadable(expand("~/.vim/help.vim"))
   source ~/.vim/help.vim
 endif
 " }}}
+
+" Load Simple Vim grep plugin {{{
+if filereadable(expand("~/.vim/grep_word.vim"))
+  source ~/.vim/grep_word.vim
+endif
+" }}}
