@@ -2,7 +2,7 @@
 " File: jshell_word.vim
 " Description: Search word in jshell 
 " Author: AlexandAnatoliev
-" Version: 0.1.32
+" Version: 0.1.34
 " Last Modified: 21.02.2026
 " ==================================================================
 
@@ -14,7 +14,7 @@
 " Returns: None
 " ------------------------------------------------------------------  
 function! SendWordToJshell()
-  let word = expand("<cword>")
+  let word = expand("<cWORD>")
   terminal jshell
   sleep 100m
   startinsert
