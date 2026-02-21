@@ -5,7 +5,7 @@
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.31](https://img.shields.io/badge/Version-0.1.31-orange.svg)
+  ![Version 0.1.32](https://img.shields.io/badge/Version-0.1.32-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -90,6 +90,7 @@ rm -rf .vim
 ├── grep_word.vim
 ├── help.vim
 ├── html_tags.vim
+├── jshell_word.vim
 ├── maps.vim
 ├── README.md
 ├── statusline.vim
@@ -141,7 +142,7 @@ in various languages
   - \<leader\>\/ - to comment a line 
 
 [grep_word.vim](grep_word.vim) - Simple Vim grep plugin 
-  - \<leader\>\g - to search word in project recursively 
+  - \<leader\>g - to search word in project recursively 
 
 [help.vim](help.vim) - Display Vim hot keys 
   - \<leader\>? - get help popup menu 
@@ -150,6 +151,9 @@ in various languages
   - k - moving in menu
 
 [html_tags.vim](html_tags.vim) - Simple Vim autocomplete html tags 
+
+[jshell_word.vim](jshell_word.vim) - Search word in jshell plugin 
+  - \<leader\>js - to search word in jshell 
 
 [maps.vim](maps.vim) - Vim mappings
 * Space is used as \<leader\> 
@@ -214,7 +218,7 @@ in various languages
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.31](https://img.shields.io/badge/Version-0.1.31-orange.svg)
+  ![Version 0.1.32](https://img.shields.io/badge/Version-0.1.32-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -299,6 +303,7 @@ rm -rf .vim
 ├── grep_word.vim
 ├── help.vim
 ├── html_tags.vim
+├── jshell_word.vim
 ├── maps.vim
 ├── README.md
 ├── statusline.vim
@@ -351,7 +356,7 @@ rm -rf .vim
   - \<leader\>\/ - закомментировать строку 
 
 [grep_word.vim](grep_word.vim) - Простой grep vim плагин 
-  - \<leader\>\g - найти слово в проекте рекурсивно 
+  - \<leader\>g - найти слово в проекте рекурсивно 
 
 [help.vim](help.vim) - Выводит всплывающее меню с горячими клавишами 
   - \<leader\>? - вывести меню 
@@ -360,6 +365,9 @@ rm -rf .vim
   - k - вверх
 
 [html_tags.vim](html_tags.vim) - Простое автодополнение html тегов в Vim 
+
+[jshell_word.vim](jshell_word.vim) - Плагин для поиска слова в jshell 
+  - \<leader\>js - найти слово в jshell 
 
 [maps.vim](maps.vim) - Vim mappings
 * В качестве \<leader\> используется пробел
