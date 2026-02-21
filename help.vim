@@ -55,6 +55,8 @@ function ShowHotKeys()
         \ '------------Highlight-trailing-whitespace-----------', 
         \ '<leader>s - highlight trailing whitespace', 
         \ '<leader>S - clear the highlight',
+        \ '--------------------grep-plugin---------------------', 
+        \ '<leader>g - to search word in project recursively', 
         \ '--------------------Boilerplates--------------------',
         \ 'sout - System.out.println();',
         \ 'souf - System.out.printf();',
