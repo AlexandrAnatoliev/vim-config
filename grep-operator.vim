@@ -2,7 +2,7 @@
 " File: grep-operator.vim
 " Description: Simple Vim grep plugin 
 " Author: AlexandAnatoliev
-" Version: 0.1.36
+" Version: 0.1.38
 " Last Modified: 22.02.2026
 " ==================================================================
 
@@ -13,7 +13,10 @@
 " Parameters: visual mode
 " Returns: None
 " ------------------------------------------------------------------  
-function! GrepOperator(type)
+function! s:GrepOperator(type)
+  let saved_unnamed_register =@@
+  let current_colorscheme = exists('g:colors_name') ? g:colors_name : 'default'
+
   if a:type ==# 'v'
     normal! `<v`>y
   elseif a:type ==# 'char'
@@ -22,18 +25,17 @@ function! GrepOperator(type)
     return
   endif
 
-  let current_colorscheme = exists('g:colors_name') ? g:colors_name : 'default'
-
   silent execute "grep! -R " . shellescape(@@) . " ."
   copen
 
+  let @@ = saved_unnamed_register
   execute "colorscheme " . current_colorscheme
 endfunction
 " }}}
 
 " GrepOperator mapping {{{
-nnoremap <leader>g :set operatorfunc=GrepOperator<cr>g@
-vnoremap <leader>g :<c-u>call GrepOperator(visualmode())<cr>
+nnoremap <leader>g :set operatorfunc=<SID>GrepOperator<cr>g@
+vnoremap <leader>g :<c-u>call <SID>GrepOperator(visualmode())<cr>
 " }}}
 
 " Moving between matches {{{
