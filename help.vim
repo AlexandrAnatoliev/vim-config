@@ -2,7 +2,7 @@
 " File: help.vim
 " Description: Display Vim hot keys 
 " Author: AlexandAnatoliev
-" Version: 0.1.36
+" Version: 0.1.39
 " Last Modified: 22.02.2026
 " ==================================================================
 
@@ -12,7 +12,7 @@
 " Parameters: None
 " Returns: None
 " ------------------------------------------------------------------  
-function ShowHotKeys()
+function s:ShowHotKeys()
   " Vim hot keys {{{
   let keys = [
         \ '======================Hot=keys======================',
@@ -79,7 +79,7 @@ function ShowHotKeys()
         \ close: 'click',
         \ time: 10000,
         \ mapping: 0,
-        \ filter: function('PopupFilter'),
+        \ filter: function('<SID>PopupFilter'),
         \ })
   " }}}
 endfunction
@@ -91,7 +91,7 @@ endfunction
 " Parameters: winid - popup menu, key - user input
 " Returns: None
 " ------------------------------------------------------------------  
-function PopupFilter(winid, key)
+function s:PopupFilter(winid, key)
   if a:key == 'j' || a:key == '<Down>'
     call win_execute(a:winid, "normal! \<C-e>")
     return 1
@@ -107,5 +107,5 @@ endfunction
 " }}}
 
 " Help mapping {{{
-nnoremap <leader>? :call ShowHotKeys()<cr>
+nnoremap <leader>? :call <SID>ShowHotKeys()<cr>
 " }}}
