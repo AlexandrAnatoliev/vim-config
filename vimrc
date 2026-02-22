@@ -2,8 +2,8 @@
 " File: vimrc
 " Description: my Vim configuration
 " Author: AlexandAnatoliev
-" Version: 0.1.30
-" Last Modified: 19.02.2026
+" Version: 0.1.36
+" Last Modified: 22.02.2026
 " =============================================================================
 
 " =======================BASIC SETTINGS========================================
@@ -160,14 +160,14 @@ if filereadable(expand("~/.vim/help.vim"))
 endif
 " }}}
 
-" Load Simple Vim grep plugin {{{
-if filereadable(expand("~/.vim/grep_word.vim"))
-  source ~/.vim/grep_word.vim
-endif
-" }}}
-
 " Load Search word in jshell plugin {{{
 if filereadable(expand("~/.vim/jshell_word.vim"))
   source ~/.vim/jshell_word.vim
+endif
+" }}}
+
+" Load Simple Vim grep plugin {{{
+if filereadable(expand("~/.vim/grep-operator.vim"))
+  source ~/.vim/grep-operator.vim
 endif
 " }}}

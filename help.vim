@@ -2,8 +2,8 @@
 " File: help.vim
 " Description: Display Vim hot keys 
 " Author: AlexandAnatoliev
-" Version: 0.1.35
-" Last Modified: 21.02.2026
+" Version: 0.1.36
+" Last Modified: 22.02.2026
 " ==================================================================
 
 " ------------------------------------------------------------------  
@@ -55,7 +55,7 @@ function ShowHotKeys()
         \ '------------Highlight-trailing-whitespace-----------', 
         \ '<leader>s - highlight trailing whitespace', 
         \ '<leader>S - clear the highlight',
-        \ '------------------grep-word-plugin------------------', 
+        \ '----------------grep-operator-plugin----------------', 
         \ '<leader>g - to search word in project recursively', 
         \ ']g - moving between matches',
         \ '[g - moving between matches',
@@ -84,13 +84,13 @@ function ShowHotKeys()
   " }}}
 endfunction
 
+" Moving in popup menu {{{
 " ------------------------------------------------------------------  
 " Function: PopupFilter()
 " Description: Function for moving in popup menu 
 " Parameters: winid - popup menu, key - user input
 " Returns: None
 " ------------------------------------------------------------------  
-" Moving in popup menu {{{
 function PopupFilter(winid, key)
   if a:key == 'j' || a:key == '<Down>'
     call win_execute(a:winid, "normal! \<C-e>")

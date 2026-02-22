@@ -5,7 +5,7 @@
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.35](https://img.shields.io/badge/Version-0.1.35-orange.svg)
+  ![Version 0.1.36](https://img.shields.io/badge/Version-0.1.36-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -87,7 +87,7 @@ rm -rf .vim
 ├── boilerplates.vim
 ├── colorscheme.vim
 ├── comment_maps.vim
-├── grep_word.vim
+├── grep-operator.vim
 ├── help.vim
 ├── html_tags.vim
 ├── jshell_word.vim
@@ -141,7 +141,7 @@ into language-specific dictionaries:
 in various languages 
   - \<leader\>\/ - to comment a line 
 
-[grep_word.vim](grep_word.vim) - Simple Vim grep plugin 
+[grep-operator.vim](grep-operator.vim) - Simple Vim grep plugin 
   - \<leader\>g - to search word in project recursively 
   - ]t - moving between matches 
   - [t - moving between matches
@@ -220,7 +220,7 @@ in various languages
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.35](https://img.shields.io/badge/Version-0.1.35-orange.svg)
+  ![Version 0.1.36](https://img.shields.io/badge/Version-0.1.36-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -302,7 +302,7 @@ rm -rf .vim
 ├── boilerplates.vim
 ├── colorscheme.vim
 ├── comment_maps.vim
-├── grep_word.vim
+├── grep-operator.vim
 ├── help.vim
 ├── html_tags.vim
 ├── jshell_word.vim
@@ -357,7 +357,7 @@ rm -rf .vim
 для различных языков программирования
   - \<leader\>\/ - закомментировать строку 
 
-[grep_word.vim](grep_word.vim) - Простой grep vim плагин 
+[grep-operator.vim](grep-operator.vim) - Простой grep vim плагин 
   - \<leader\>g - найти слово в проекте рекурсивно 
   - ]g - перемещение между совпадениями
   - [g - перемещение между совпадениями
