@@ -6,10 +6,8 @@
 " Last Modified: 21.02.2026
 " ==================================================================
 
-" search word in project recursively {{{
 nnoremap <leader>g :execute "grep! -R " . shellescape(expand("<cWORD>")) 
       \. " ."<cr>:copen<cr>
-" }}}
 
 " Moving between matches {{{
 nnoremap ]g :cnext<cr> 

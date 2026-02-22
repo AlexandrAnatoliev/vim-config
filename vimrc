@@ -161,13 +161,19 @@ endif
 " }}}
 
 " Load Simple Vim grep plugin {{{
-if filereadable(expand("~/.vim/grep_word.vim"))
-  source ~/.vim/grep_word.vim
-endif
+" if filereadable(expand("~/.vim/grep_word.vim"))
+  " source ~/.vim/grep_word.vim
+" endif
 " }}}
 
 " Load Search word in jshell plugin {{{
 if filereadable(expand("~/.vim/jshell_word.vim"))
   source ~/.vim/jshell_word.vim
+endif
+" }}}
+
+" Load grep-operator plugin {{{
+if filereadable(expand("~/.vim/grep-operator.vim"))
+  source ~/.vim/grep-operator.vim
 endif
 " }}}
