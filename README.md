@@ -87,7 +87,7 @@ rm -rf .vim
 ├── boilerplates.vim
 ├── colorscheme.vim
 ├── comment_maps.vim
-├── grep_word.vim
+├── grep-operator.vim
 ├── help.vim
 ├── html_tags.vim
 ├── jshell_word.vim
@@ -141,7 +141,7 @@ into language-specific dictionaries:
 in various languages 
   - \<leader\>\/ - to comment a line 
 
-[grep_word.vim](grep_word.vim) - Simple Vim grep plugin 
+[grep-operator.vim](grep-operator.vim) - Simple Vim grep plugin 
   - \<leader\>g - to search word in project recursively 
   - ]t - moving between matches 
   - [t - moving between matches
@@ -302,7 +302,7 @@ rm -rf .vim
 ├── boilerplates.vim
 ├── colorscheme.vim
 ├── comment_maps.vim
-├── grep_word.vim
+├── grep-operator.vim
 ├── help.vim
 ├── html_tags.vim
 ├── jshell_word.vim
@@ -357,7 +357,7 @@ rm -rf .vim
 для различных языков программирования
   - \<leader\>\/ - закомментировать строку 
 
-[grep_word.vim](grep_word.vim) - Простой grep vim плагин 
+[grep-operator.vim](grep-operator.vim) - Простой grep vim плагин 
   - \<leader\>g - найти слово в проекте рекурсивно 
   - ]g - перемещение между совпадениями
   - [g - перемещение между совпадениями
