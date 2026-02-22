@@ -2,8 +2,8 @@
 " File: maps.vim
 " Description: Vim mappings 
 " Author: AlexandAnatoliev
-" Version: 0.1.24
-" Last Modified: 09.01.2026
+" Version: 0.1.39
+" Last Modified: 22.02.2026
 " ==================================================================
 
 " VimOpenTodo function {{{
@@ -13,7 +13,7 @@
 " Parameters: None
 " Returns: None
 " ------------------------------------------------------------------  
-function! VimOpenTodo()
+function! s:VimOpenTodo()
   rightbelow vertical split
   e ~/.vim/.todo
 endfunction
@@ -28,7 +28,7 @@ let mapleader=" "
 " ------------------------------------------------------------------  
 
 " open a todo list on the right side {{{
-noremap <leader>w :call VimOpenTodo()<CR>
+noremap <leader>w :call <SID>VimOpenTodo()<CR>
 " }}}
 
 " open terminal below {{{
