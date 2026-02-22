@@ -2,7 +2,7 @@
 " File: jshell_word.vim
 " Description: Search word in jshell 
 " Author: AlexandAnatoliev
-" Version: 0.1.37
+" Version: 0.1.39
 " Last Modified: 22.02.2026
 " ==================================================================
 
@@ -13,7 +13,9 @@
 " Parameters: None
 " Returns: None
 " ------------------------------------------------------------------  
-function! SendWordToJshell(type)
+function! s:SendWordToJshell(type)
+  let saved_unnamed_register =@@
+
   if a:type ==# 'v'
     normal! `<v`>y
   elseif a:type ==# 'char'
@@ -27,10 +29,11 @@ function! SendWordToJshell(type)
   startinsert
   call feedkeys(@@ . "\<Tab>", 't')
 
+  let @@ = saved_unnamed_register
 endfunction
 " }}}
 
 " SendWordToJshell mapping {{{
-nnoremap <leader>js :set operatorfunc=SendWordToJshell<cr>g@
-vnoremap <leader>js :<c-u>call SendWordToJshell(visualmode())<cr>
+nnoremap <leader>js :set operatorfunc=<SID>SendWordToJshell<cr>g@
+vnoremap <leader>js :<c-u>call <SID>SendWordToJshell(visualmode())<cr>
 " }}}
