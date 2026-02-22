@@ -2,10 +2,11 @@
 " File: colorscheme.vim
 " Description: Vim mappings 
 " Author: AlexandAnatoliev
-" Version: 0.1.27
-" Last Modified: 18.02.2026
+" Version: 0.1.39
+" Last Modified: 22.02.2026
 " ==================================================================
 
+" SetColorscheme function {{{
 " ------------------------------------------------------------------  
 " Function: SetColorscheme()
 " Description: Function to change colorscheme evening to remind me 
@@ -13,8 +14,7 @@
 " Parameters: None
 " Returns: None
 " ------------------------------------------------------------------  
-" SetColorscheme function {{{
-function SetColorscheme()
+function s:SetColorscheme()
   if filereadable($VIMRUNTIME . "/colors/habamax.vim")
     colorscheme habamax
   endif
@@ -31,7 +31,7 @@ endfunction
 " call SetColorscheme function {{{
 augroup Colorscheme
   autocmd!
-  autocmd VimEnter * call SetColorscheme()
+  autocmd VimEnter * call <SID>SetColorscheme()
 augroup END
 " }}}
 
