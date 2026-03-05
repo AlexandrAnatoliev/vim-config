@@ -2,8 +2,8 @@
 " File: vimrc
 " Description: my Vim configuration
 " Author: AlexandAnatoliev
-" Version: 0.1.36
-" Last Modified: 22.02.2026
+" Version: 0.1.40
+" Last Modified: 05.03.2026
 " =============================================================================
 
 " =======================BASIC SETTINGS========================================
@@ -169,5 +169,11 @@ endif
 " Load Simple Vim grep plugin {{{
 if filereadable(expand("~/.vim/grep-operator.vim"))
   source ~/.vim/grep-operator.vim
+endif
+" }}}
+
+" Load Open / close quickfix window plugin {{{
+if filereadable(expand("~/.vim/quickfix_toggle.vim"))
+  source ~/.vim/quickfix_toggle.vim
 endif
 " }}}
