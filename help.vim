@@ -2,8 +2,8 @@
 " File: help.vim
 " Description: Display Vim hot keys 
 " Author: AlexandAnatoliev
-" Version: 0.1.39
-" Last Modified: 22.02.2026
+" Version: 0.1.40
+" Last Modified: 05.03.2026
 " ==================================================================
 
 " ------------------------------------------------------------------  
@@ -15,16 +15,16 @@
 function s:ShowHotKeys()
   " Vim hot keys {{{
   let keys = [
-        \ '======================Hot=keys======================',
-        \ '----------------------Help-menu---------------------',
+        \ '======================HOT=KEYS======================',
+        \ '----------------------HELP-MENU---------------------',
         \ '<leader>? - get Help menu',
         \ 'q - close',
         \ 'j - down',
         \ 'k - up',
-        \ '------------------------Other-----------------------',
+        \ '------------------------OTHER-----------------------',
         \ '<leader>n - add method after Java class',
         \ '<leader>/ - to comment a line', 
-        \ '-----------------Window-management------------------',
+        \ '-----------------WINDOW-MANAGEMENT------------------',
         \ '<leader>e - open a terminal below',
         \ '<leader>w - open a todo list on the right side',
         \ '<leader>h - to left', 
@@ -32,36 +32,38 @@ function s:ShowHotKeys()
         \ '<leader>j - down',
         \ '<leader>k - up',
         \ '<leader>o - close other windows',  
-        \ '------------------Buffer-and-Mode-------------------',
+        \ '------------------BUFFER-AND-MODE-------------------',
         \ '<leader><Tab> - buffer navigation mappings', 
         \ '<leader><Esc> - terminal to normal mode',
-        \ '------------------Text-Operations-------------------',
+        \ '------------------TEXT-OPERATIONS-------------------',
         \ '<leader>u - word to upper case',
         \ '<leader>" - wrap word in \"quotes\"', 
         \ '<leader>'' - wrap word in ''quotes''',
         \ '<leader>" - wrap visually selected text by "quotes"',
         \ '<leader>'' - wrap visually selected text by ''quotes''',
         \ '<leader>f - file autoformat',
-        \ '-------------------Configuration--------------------',
+        \ '-------------------CONFIGURATION--------------------',
         \ '<leader>ev - open vimrc file',
         \ '<leader>sv - source change vimrc',
-        \ '---------------------Navigation---------------------',
+        \ '---------------------NAVIGATION---------------------',
         \ 'H - move to the beginning of the current line',
         \ 'L - move to the end of the current line',
-        \ '------------------TODO-Vim-plugin-------------------',
+        \ '---------------QUICKFIX_TOGGLE-PLUGIN---------------',
+        \ '<leader>q - open / close quickfix window', 
+        \ '------------------TODO-VIM-PLUGIN-------------------',
         \ '<leader>t - add TODO comments', 
         \ ']t - moving between TODO comments',
         \ '[t - moving between TODO comments',
-        \ '------------Highlight-trailing-whitespace-----------', 
+        \ '------------HIGHLIGHT-TRAILING-WHITESPACE-----------', 
         \ '<leader>s - highlight trailing whitespace', 
         \ '<leader>S - clear the highlight',
-        \ '----------------grep-operator-plugin----------------', 
+        \ '----------------GREP-OPERATOR-PLUGIN----------------', 
         \ '<leader>g - to search word in project recursively', 
         \ ']g - moving between matches',
         \ '[g - moving between matches',
-        \ '-----------------jshell-word-plugin-----------------', 
+        \ '-----------------JSHELL-WORD-PLUGIN-----------------', 
         \ '<leader>js - to search word in jshell', 
-        \ '--------------------Boilerplates--------------------',
+        \ '--------------------BOILERPLATES--------------------',
         \ 'sout - System.out.println();',
         \ 'souf - System.out.printf();',
         \ 'psvm - public static void main(String[] args) { }',

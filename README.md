@@ -5,7 +5,7 @@
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.39](https://img.shields.io/badge/Version-0.1.39-orange.svg)
+  ![Version 0.1.40](https://img.shields.io/badge/Version-0.1.40-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -92,6 +92,7 @@ rm -rf .vim
 ├── html_tags.vim
 ├── jshell_word.vim
 ├── maps.vim
+├── quickfix_toggle.vim
 ├── README.md
 ├── statusline.vim
 ├── todo.vim
@@ -184,6 +185,9 @@ in various languages
   - H - move to the beginning of the current line
   - L - move to the end of the current line
 
+[quickfix_toggle.vim](quickfix_toggle.vim) - Open / close quickfix window plugin 
+  - \<leader\>q - open / close quickfix window
+
 [statusline.vim](statusline.vim) - Simple Vim statusline settings 
 
 [todo.vim](todo.vim) - TODO Vim plugin 
@@ -220,7 +224,7 @@ in various languages
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.39](https://img.shields.io/badge/Version-0.1.39-orange.svg)
+  ![Version 0.1.40](https://img.shields.io/badge/Version-0.1.40-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -307,6 +311,7 @@ rm -rf .vim
 ├── html_tags.vim
 ├── jshell_word.vim
 ├── maps.vim
+├── quickfix_toggle.vim
 ├── README.md
 ├── statusline.vim
 ├── todo.vim
@@ -400,6 +405,9 @@ rm -rf .vim
   - H - к началу строки
   - L - в конец строки
   
+[quickfix_toggle.vim](quickfix_toggle.vim) - Плагин для открытия / закрытия quickfix окна 
+  - \<leader\>q - открыть / закрыть
+
 [statusline.vim](statusline.vim) - Простые настройки для statusline Vim 
 
 [todo.vim](todo.vim) - TODO Vim плагин 
