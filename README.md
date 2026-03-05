@@ -92,6 +92,7 @@ rm -rf .vim
 ├── html_tags.vim
 ├── jshell_word.vim
 ├── maps.vim
+├── quickfix_toggle.vim
 ├── README.md
 ├── statusline.vim
 ├── todo.vim
@@ -183,6 +184,9 @@ in various languages
 * Navigation:
   - H - move to the beginning of the current line
   - L - move to the end of the current line
+
+[quickfix_toggle.vim](quickfix_toggle.vim) - Open / close quickfix window plugin 
+  - \<leader\>q - open / close quickfix window
 
 [statusline.vim](statusline.vim) - Simple Vim statusline settings 
 
@@ -307,6 +311,7 @@ rm -rf .vim
 ├── html_tags.vim
 ├── jshell_word.vim
 ├── maps.vim
+├── quickfix_toggle.vim
 ├── README.md
 ├── statusline.vim
 ├── todo.vim
@@ -400,6 +405,9 @@ rm -rf .vim
   - H - к началу строки
   - L - в конец строки
   
+[quickfix_toggle.vim](quickfix_toggle.vim) - Плагин для открытия / закрытия quickfix окна 
+  - \<leader\>q - открыть / закрыть
+
 [statusline.vim](statusline.vim) - Простые настройки для statusline Vim 
 
 [todo.vim](todo.vim) - TODO Vim плагин 
