@@ -7,6 +7,7 @@
 " ============================================================================
 
 " line comments {{{
+" TODO нужна ли автогруппа для одной команды?
 augroup CommentMaps
   autocmd!
   autocmd FileType vim nnoremap <buffer> <leader>/ :call ToCommentOut()<cr>
@@ -16,7 +17,6 @@ augroup CommentMaps
 augroup END
 " }}}
 
-" let g:line_is_comment_out=0
 " TODO для разных типов файлов
 " TODO вернуть курсор на место 
 " TODO закомментрировать выделенный блок кода
@@ -28,10 +28,12 @@ augroup END
 " Returns: None
 " ------------------------------------------------------------------  
 function! ToCommentOut()
-  if getline('.')[0] == '"'
-    execute "normal" "0xx"
-  else
-    execute "normal" "0i\" "
+  if &filetype == 'vim'
+    if getline('.')[0] == '"'
+      execute "normal" "0xx"
+    else
+      execute "normal" "0i\" "
+    endif
   endif
 endfunction
 " }}}
