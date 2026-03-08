@@ -2,7 +2,7 @@
 " File: help.vim
 " Description: Display Vim hot keys 
 " Author: AlexandAnatoliev
-" Version: 0.1.40
+" Version: 0.1.42
 " Last Modified: 05.03.2026
 " ==================================================================
 
@@ -23,7 +23,7 @@ function s:ShowHotKeys()
         \ 'k - up',
         \ '------------------------OTHER-----------------------',
         \ '<leader>n - add method after Java class',
-        \ '<leader>/ - to comment a line', 
+        \ '<leader>/ - to comment-out / uncomment line', 
         \ '-----------------WINDOW-MANAGEMENT------------------',
         \ '<leader>e - open a terminal below',
         \ '<leader>w - open a todo list on the right side',

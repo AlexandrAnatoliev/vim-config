@@ -5,7 +5,7 @@
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.41](https://img.shields.io/badge/Version-0.1.41-orange.svg)
+  ![Version 0.1.42](https://img.shields.io/badge/Version-0.1.42-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -138,9 +138,9 @@ into language-specific dictionaries:
 * Changes color scheme evening to remind me to end work and go to bed.
 * Highlights all characters in virtual column 80 and more, limiting line length.
 
-[comment_maps.vim](comment_maps.vim) - Vim mappings to comments code lines 
+[comment_maps.vim](comment_maps.vim) - Vim mappings to comment-out code lines 
 in various languages 
-  - \<leader\>\/ - to comment a line 
+  - \<leader\>\/ - to comment-out or uncomment a line 
 
 [grep-operator.vim](grep-operator.vim) - Simple Vim grep plugin 
   - \<leader\>g - to search word in project recursively 
@@ -224,7 +224,7 @@ in various languages
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.41](https://img.shields.io/badge/Version-0.1.41-orange.svg)
+  ![Version 0.1.42](https://img.shields.io/badge/Version-0.1.42-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -360,7 +360,7 @@ rm -rf .vim
 
 [comment_maps.vim](comment_maps.vim) - Vim маппинг для закомментирования кода
 для различных языков программирования
-  - \<leader\>\/ - закомментировать строку 
+  - \<leader\>\/ - закомментировать / раскомментировать строку 
 
 [grep-operator.vim](grep-operator.vim) - Простой grep vim плагин 
   - \<leader\>g - найти слово в проекте рекурсивно 
