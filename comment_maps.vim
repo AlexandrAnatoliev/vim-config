@@ -10,9 +10,7 @@
 " line comments {{{
 augroup CommentMaps
   autocmd!
-  autocmd FileType vim,sh nnoremap <buffer> <leader>/ :call ToCommentOut()<cr>
-"   autocmd FileType sh nnoremap <buffer> <leader>/ :call ToCommentOut()<cr>
-  autocmd FileType sql nnoremap <buffer> <leader>/ I-- <esc>
+  autocmd FileType vim,sh,sql nnoremap <buffer> <leader>/ :call ToCommentOut()<cr>
   autocmd FileType java nnoremap <buffer> <leader>/ I// <esc>
 augroup END
 " }}}
@@ -42,6 +40,15 @@ function! ToCommentOut()
       execute "normal" "0xx"
     else
       execute "normal" "0i\# "
+    endif
+  endif
+" }}}
+" comment-out sql files {{{
+  if &filetype == 'sql'
+    if getline('.')[0] == '-'
+      execute "normal" "0xxx"
+    else
+      execute "normal" "0i\-- "
     endif
   endif
 " }}}
