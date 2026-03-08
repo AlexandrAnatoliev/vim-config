@@ -2,20 +2,30 @@
 " File: maps.vim
 " Description: Vim mappings 
 " Author: AlexandAnatoliev
-" Version: 0.1.39
-" Last Modified: 22.02.2026
+" Version: 0.1.42
+" Last Modified: 08.03.2026
 " ==================================================================
 
-" VimOpenTodo function {{{
+let g:todo_list_is_open=0
+
+" VimOpenTodoList function {{{
 " ------------------------------------------------------------------  
-" Function: VimOpenTodo()
+" Function: VimOpenTodoList()
 " Description: Function to open a todo list on the right side 
 " Parameters: None
 " Returns: None
 " ------------------------------------------------------------------  
-function! s:VimOpenTodo()
-  rightbelow vertical split
-  e ~/.vim/.todo
+function! s:VimOpenTodoList()
+  if g:todo_list_is_open
+    execute g:todo_list_return_to_window . "wincmd w" 
+    execute "q"
+    let g:todo_list_is_open=0
+  else
+    rightbelow vertical split
+    e ~/.vim/.todo
+    let g:todo_list_return_to_window = winnr()
+    let g:todo_list_is_open=1
+  endif
 endfunction
 " }}}
 
@@ -28,7 +38,7 @@ let mapleader=" "
 " ------------------------------------------------------------------  
 
 " open a todo list on the right side {{{
-noremap <leader>w :call <SID>VimOpenTodo()<CR>
+noremap <leader>w :call <SID>VimOpenTodoList()<CR>
 " }}}
 
 " open terminal below {{{
