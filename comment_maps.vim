@@ -6,10 +6,9 @@
 " Last Modified: 08.03.2026
 " ============================================================================
 
-autocmd FileType vim,sh,sql,java nnoremap <buffer> <leader>/ :call <SID>ToCommentOut()<cr>
+autocmd FileType vim,sh,sql,java 
+      \ nnoremap <buffer> <leader>/ ma :call <SID>ToCommentOut()<cr>`a
 
-" TODO вернуть курсор на место 
-" TODO закомментрировать выделенный блок кода
 " ------------------------------------------------------------------  
 " Function: ToCommentOut()
 " Description: Function to comment-out line of code   
