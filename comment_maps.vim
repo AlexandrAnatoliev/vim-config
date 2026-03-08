@@ -6,7 +6,7 @@
 " Last Modified: 08.03.2026
 " ============================================================================
 
-autocmd FileType vim,sh,sql,java nnoremap <buffer> <leader>/ :call ToCommentOut()<cr>
+autocmd FileType vim,sh,sql,java nnoremap <buffer> <leader>/ :call <SID>ToCommentOut()<cr>
 
 " TODO вернуть курсор на место 
 " TODO закомментрировать выделенный блок кода
@@ -16,7 +16,7 @@ autocmd FileType vim,sh,sql,java nnoremap <buffer> <leader>/ :call ToCommentOut(
 " Parameters: None
 " Returns: None
 " ------------------------------------------------------------------  
-function! ToCommentOut()
+function! s:ToCommentOut()
   " comment-out vim files {{{
   if &filetype == 'vim'
     if getline('.')[0] == '"'
