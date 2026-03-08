@@ -6,16 +6,8 @@
 " Last Modified: 08.03.2026
 " ============================================================================
 
-" TODO нужна ли автогруппа для одной команды?
-" line comments {{{
-augroup CommentMaps
-  autocmd!
-  autocmd FileType vim,sh,sql nnoremap <buffer> <leader>/ :call ToCommentOut()<cr>
-  autocmd FileType java nnoremap <buffer> <leader>/ I// <esc>
-augroup END
-" }}}
+autocmd FileType vim,sh,sql,java nnoremap <buffer> <leader>/ :call ToCommentOut()<cr>
 
-" TODO для разных типов файлов
 " TODO вернуть курсор на место 
 " TODO закомментрировать выделенный блок кода
 " ------------------------------------------------------------------  
@@ -25,7 +17,7 @@ augroup END
 " Returns: None
 " ------------------------------------------------------------------  
 function! ToCommentOut()
-" comment-out vim files {{{
+  " comment-out vim files {{{
   if &filetype == 'vim'
     if getline('.')[0] == '"'
       execute "normal" "0xx"
@@ -33,8 +25,8 @@ function! ToCommentOut()
       execute "normal" "0i\" "
     endif
   endif
-" }}}
-" comment-out bash files {{{
+  " }}}
+  " comment-out bash files {{{
   if &filetype == 'sh'
     if getline('.')[0] == '#'
       execute "normal" "0xx"
@@ -42,8 +34,8 @@ function! ToCommentOut()
       execute "normal" "0i\# "
     endif
   endif
-" }}}
-" comment-out sql files {{{
+  " }}}
+  " comment-out sql files {{{
   if &filetype == 'sql'
     if getline('.')[0] == '-'
       execute "normal" "0xxx"
@@ -51,6 +43,15 @@ function! ToCommentOut()
       execute "normal" "0i\-- "
     endif
   endif
-" }}}
+  " }}}
+  " comment-out java files {{{
+  if &filetype == 'java'
+    if getline('.')[0] == '/'
+      execute "normal" "0xxx"
+    else
+      execute "normal" "0i\// "
+    endif
+  endif
+  " }}}
 endfunction
 
