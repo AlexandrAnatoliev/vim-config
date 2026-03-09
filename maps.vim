@@ -56,6 +56,23 @@ function! s:OpenTerminal()
 endfunction
 " }}}
 
+" ToUpperCase function {{{
+" ------------------------------------------------------------------  
+" Function: ToUpperCase()
+" Description: Function to change word case   
+" Parameters: None
+" Returns: None
+" ------------------------------------------------------------------  
+function! s:ToUpperCase()
+  let myChar = getline('.')[col('.')-1]
+  if myChar =~ '[A-Z]' 
+    execute "normal" "viwu"
+  else
+    execute "normal" "viwU"
+  endif
+endfunction
+" }}}
+
 " ------------------------------------------------------------------  
 " Window management:
 " ------------------------------------------------------------------  
@@ -95,9 +112,9 @@ noremap <leader><Tab> :bnext<CR>
 " ------------------------------------------------------------------  
 " Text Operations:
 " ------------------------------------------------------------------  
-
+" TODO вернуть в исходное место курсор
 " word to upper case {{{
-nnoremap <leader>u viwU<esc>
+nnoremap <leader>u :call <SID>ToUpperCase()<CR>
 " }}}
 
 " wrap word by "quotes" {{{
