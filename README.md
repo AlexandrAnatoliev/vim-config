@@ -172,7 +172,7 @@ in various languages
   - \<leader\>\<Tab\> - buffer navigation mappings 
   - \<leader\>\<Esc\> - terminal to normal mode
 * Text Operations:
-  - \<leader\>u - word to upper case
+  - \<leader\>u - word to upper / lower case
   - \<leader\>" - wrap word in "quotes" 
   - \<leader\>' - wrap word in 'quotes'
   - \<leader\>" - wrap visually selected text by "quotes"
@@ -392,7 +392,7 @@ rm -rf .vim
   - \<leader\>\<Tab\> - переключение между буферами 
   - \<leader\>\<Esc\> - терминал в нормальный режим
 * Работа с текстом:
-  - \<leader\>u - перевести слово в верхний регистр
+  - \<leader\>u - перевести слово в верхний / нижний регистр
   - \<leader\>" - обернуть слово в "кавычки" 
   - \<leader\>' - обернуть слово в 'кавычки' 
   - \<leader\>" - обернуть выделенный текст в "кавычки" 

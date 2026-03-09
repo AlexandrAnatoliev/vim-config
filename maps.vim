@@ -112,9 +112,8 @@ noremap <leader><Tab> :bnext<CR>
 " ------------------------------------------------------------------  
 " Text Operations:
 " ------------------------------------------------------------------  
-" TODO вернуть в исходное место курсор
-" word to upper case {{{
-nnoremap <leader>u :call <SID>ToUpperCase()<CR>
+" word to upper / lower case {{{
+nnoremap <leader>u ma :call <SID>ToUpperCase()<CR>`a
 " }}}
 
 " wrap word by "quotes" {{{
