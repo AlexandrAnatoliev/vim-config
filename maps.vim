@@ -116,7 +116,9 @@ noremap <leader><Tab> :bnext<CR>
 " word to upper / lower case {{{
 nnoremap <leader>u ma :call <SID>ToUpperCase()<CR>`a
 " }}}
-
+" TODO add toggle
+" TODO add возвращение в исходную точку
+" TODO docs
 " wrap word by "quotes" {{{
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 " }}}
