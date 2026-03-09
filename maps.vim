@@ -10,6 +10,10 @@
 let mapleader=" "
 " }}}
 
+" ------------------------------------------------------------------  
+" Window management:
+" ------------------------------------------------------------------  
+
 let g:todo_list_is_open=0
 
 " VimOpenTodoList function {{{
@@ -74,10 +78,6 @@ function! s:ToUpperCase()
 endfunction
 " }}}
 
-" ------------------------------------------------------------------  
-" Window management:
-" ------------------------------------------------------------------  
-
 " open a todo list on the right side {{{
 noremap <leader>w :call <SID>VimOpenTodoList()<CR>
 " }}}
@@ -113,6 +113,34 @@ noremap <leader><Tab> :bnext<CR>
 " ------------------------------------------------------------------  
 " Text Operations:
 " ------------------------------------------------------------------  
+
+" WrapWordByQuotes function {{{
+" ------------------------------------------------------------------  
+" Function: WrapWordByQuotes()
+" Description: Function to wrap / unwrap word by quotes   
+" Parameters: None
+" Returns: None
+" ------------------------------------------------------------------  
+function! s:WrapWordByQuotes()
+  execute "normal viw\<ESC>"
+  let finish = getline('.')[col('.')]
+  execute "normal `<"
+  let start = getline('.')[col('.')-2]
+
+  if start != '"'
+    execute "normal i\"\<ESC>"
+    if finish != '"'
+      execute "normal `>la\""
+    endif
+  elseif start == '"'
+    execute "normal hx"
+    if finish == '"'
+      execute "normal `>x"
+    endif
+  endif
+endfunction
+" }}}
+
 " word to upper / lower case {{{
 nnoremap <leader>u ma :call <SID>ToUpperCase()<CR>`a
 " }}}
@@ -120,7 +148,8 @@ nnoremap <leader>u ma :call <SID>ToUpperCase()<CR>`a
 " TODO add возвращение в исходную точку
 " TODO docs
 " wrap word by "quotes" {{{
-nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+nnoremap <leader>" :call <SID>WrapWordByQuotes()<CR>
+" nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 " }}}
 " wrap word by 'quotes' {{{
 nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
