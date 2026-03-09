@@ -26,7 +26,7 @@ function s:ShowHotKeys()
         \ '<leader>/ - to comment-out / uncomment line', 
         \ '-----------------WINDOW-MANAGEMENT------------------',
         \ '<leader>e - open a terminal below',
-        \ '<leader>w - open a todo list on the right side',
+        \ '<leader>w - open / close todo list on the right side',
         \ '<leader>h - to left', 
         \ '<leader>l - to right', 
         \ '<leader>j - down',

@@ -162,7 +162,7 @@ in various languages
 * Space is used as \<leader\> 
 * Window management:
   - \<leader\>e - open a terminal below
-  - \<leader\>w - open a **todo** list on the right side
+  - \<leader\>w - open / close a **todo** list on the right side
   - \<leader\>h - to left 
   - \<leader\>l - to right 
   - \<leader\>j - down
@@ -382,7 +382,7 @@ rm -rf .vim
 * В качестве \<leader\> используется пробел
 * Управление окнами:
   - \<leader\>e - открыть терминал снизу
-  - \<leader\>w - открыть **todo** лист с правой стороны
+  - \<leader\>w - открыть / закрыть **todo** лист с правой стороны
   - \<leader\>h - влево 
   - \<leader\>l - вправо 
   - \<leader\>j - вниз   

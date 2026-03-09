@@ -6,6 +6,10 @@
 " Last Modified: 08.03.2026
 " ==================================================================
 
+" В качестве leader - пробел {{{
+let mapleader=" "
+" }}}
+
 let g:todo_list_is_open=0
 
 " VimOpenTodoList function {{{
@@ -29,8 +33,26 @@ function! s:VimOpenTodoList()
 endfunction
 " }}}
 
-" В качестве leader - пробел {{{
-let mapleader=" "
+let g:terminal_is_open=0
+
+" OpenTerminal function {{{
+" ------------------------------------------------------------------  
+" Function: OpenTerminal()
+" Description: Function to open a terminal on the left side 
+" Parameters: None
+" Returns: None
+" ------------------------------------------------------------------  
+function! s:OpenTerminal()
+  if g:terminal_is_open
+    execute g:terminal_return_to_window . "wincmd w"
+    execute "q!"
+    let g:terminal_is_open=0
+  else
+    leftabove vertical terminal
+    let g:terminal_return_to_window = winnr()
+    let g:terminal_is_open=1
+  endif
+endfunction
 " }}}
 
 " ------------------------------------------------------------------  
@@ -41,8 +63,8 @@ let mapleader=" "
 noremap <leader>w :call <SID>VimOpenTodoList()<CR>
 " }}}
 
-" open terminal below {{{
-nnoremap <leader>e :belowright terminal<CR><C-\><C-n>:resize 10<CR>
+" open terminal left {{{
+noremap <leader>e :call <SID>OpenTerminal()<CR>
 " }}}
 
 " window navigation mappings {{{
