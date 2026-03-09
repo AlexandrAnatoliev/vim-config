@@ -97,7 +97,6 @@ noremap <leader><Tab> :bnext<CR>
 " ------------------------------------------------------------------  
 
 " word to upper case {{{
-inoremap <leader>u <esc>viwU<esc>ea
 nnoremap <leader>u viwU<esc>
 " }}}
 
