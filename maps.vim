@@ -118,23 +118,23 @@ noremap <leader><Tab> :bnext<CR>
 " ------------------------------------------------------------------  
 " Function: WrapWordByQuotes()
 " Description: Function to wrap / unwrap word by quotes   
-" Parameters: None
+" Parameters: quote type
 " Returns: None
 " ------------------------------------------------------------------  
-function! s:WrapWordByQuotes()
+function! s:WrapWordByQuotes(quote)
   execute "normal viw\<ESC>"
   let finish = getline('.')[col('.')]
   execute "normal `<"
   let start = getline('.')[col('.')-2]
 
-  if start != '"'
+  if start != a:quote
     execute "normal i\"\<ESC>"
-    if finish != '"'
+    if finish != a:quote
       execute "normal `>la\""
     endif
-  elseif start == '"'
+  elseif start == a:quote
     execute "normal hx"
-    if finish == '"'
+    if finish == a:quote
       execute "normal `>x"
     endif
   endif
@@ -144,13 +144,12 @@ endfunction
 " word to upper / lower case {{{
 nnoremap <leader>u ma :call <SID>ToUpperCase()<CR>`a
 " }}}
-" TODO add toggle
-" TODO add возвращение в исходную точку
 " TODO docs
 " wrap word by "quotes" {{{
-nnoremap <leader>" :call <SID>WrapWordByQuotes()<CR>
-" nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+nnoremap <leader>" ma :call <SID>WrapWordByQuotes("\"")<CR>`a
 " }}}
+" TODO add возвращение в исходную точку
+" TODO add toggle
 " wrap word by 'quotes' {{{
 nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 " }}}
