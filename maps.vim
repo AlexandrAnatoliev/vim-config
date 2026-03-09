@@ -50,6 +50,7 @@ function! s:OpenTerminal()
   else
     leftabove vertical terminal
     call term_sendkeys(bufnr('%'), "ls\r")
+    call term_sendkeys(bufnr('%'), "git status\r")
     let g:terminal_return_to_window = winnr()
     let g:terminal_is_open=1
   endif
