@@ -116,7 +116,7 @@ noremap <leader><Tab> :bnext<CR>
 
 " WrapWordByQuotes function {{{
 " ------------------------------------------------------------------  
-" Function: WrapWordByQuotes()
+" Function: WrapWordByQuotes(type)
 " Description: Function to wrap / unwrap word by quotes   
 " Parameters: quote type
 " Returns: None
@@ -128,9 +128,9 @@ function! s:WrapWordByQuotes(quote)
   let start = getline('.')[col('.')-2]
 
   if start != a:quote
-    execute "normal i\"\<ESC>"
+    execute "normal i" . a:quote . "\<ESC>"
     if finish != a:quote
-      execute "normal `>la\""
+      execute "normal `>la" . a:quote 
     endif
   elseif start == a:quote
     execute "normal hx"
@@ -144,20 +144,20 @@ endfunction
 " word to upper / lower case {{{
 nnoremap <leader>u ma :call <SID>ToUpperCase()<CR>`a
 " }}}
-" TODO docs
 " wrap word by "quotes" {{{
 nnoremap <leader>" ma :call <SID>WrapWordByQuotes("\"")<CR>`a
 " }}}
-" TODO add возвращение в исходную точку
-" TODO add toggle
 " wrap word by 'quotes' {{{
-nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
+nnoremap <leader>' ma :call <SID>WrapWordByQuotes("'")<CR>`a
 " }}}
+" TODO add toggle
+" TODO add возвращение в исходную точку
 " wrap visually selected text by "quotes" {{{
 vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>lel
 " }}}
 " wrap visually selected text by 'quotes' {{{
 vnoremap <leader>' <esc>`<i'<esc>`>la'<esc>lel
+" TODO docs
 " }}}
 " file autoformat {{{
 augroup Autoformat
