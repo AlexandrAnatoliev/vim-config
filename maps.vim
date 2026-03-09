@@ -3,7 +3,7 @@
 " Description: Vim mappings 
 " Author: AlexandAnatoliev
 " Version: 0.1.42
-" Last Modified: 08.03.2026
+" Last Modified: 09.03.2026
 " ==================================================================
 
 " В качестве leader - пробел {{{
@@ -38,7 +38,7 @@ let g:terminal_is_open=0
 " OpenTerminal function {{{
 " ------------------------------------------------------------------  
 " Function: OpenTerminal()
-" Description: Function to open a terminal on the left side 
+" Description: Function to open / close a terminal on the left side 
 " Parameters: None
 " Returns: None
 " ------------------------------------------------------------------  
@@ -49,6 +49,7 @@ function! s:OpenTerminal()
     let g:terminal_is_open=0
   else
     leftabove vertical terminal
+    call term_sendkeys(bufnr('%'), "ls\r")
     let g:terminal_return_to_window = winnr()
     let g:terminal_is_open=1
   endif
@@ -63,7 +64,8 @@ endfunction
 noremap <leader>w :call <SID>VimOpenTodoList()<CR>
 " }}}
 
-" open terminal left {{{
+" open /close terminal left {{{
+tnoremap <leader>e <C-\><C-n> :call <SID>OpenTerminal()<CR>
 noremap <leader>e :call <SID>OpenTerminal()<CR>
 " }}}
 
