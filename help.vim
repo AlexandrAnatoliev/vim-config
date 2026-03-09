@@ -3,7 +3,7 @@
 " Description: Display Vim hot keys 
 " Author: AlexandAnatoliev
 " Version: 0.1.42
-" Last Modified: 05.03.2026
+" Last Modified: 09.03.2026
 " ==================================================================
 
 " ------------------------------------------------------------------  
@@ -25,7 +25,7 @@ function s:ShowHotKeys()
         \ '<leader>n - add method after Java class',
         \ '<leader>/ - to comment-out / uncomment line', 
         \ '-----------------WINDOW-MANAGEMENT------------------',
-        \ '<leader>e - open a terminal below',
+        \ '<leader>e - open /close terminal left',
         \ '<leader>w - open / close todo list on the right side',
         \ '<leader>h - to left', 
         \ '<leader>l - to right', 

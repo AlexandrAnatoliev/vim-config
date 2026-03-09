@@ -161,7 +161,7 @@ in various languages
 [maps.vim](maps.vim) - Vim mappings
 * Space is used as \<leader\> 
 * Window management:
-  - \<leader\>e - open a terminal below
+  - \<leader\>e - open /close terminal left
   - \<leader\>w - open / close a **todo** list on the right side
   - \<leader\>h - to left 
   - \<leader\>l - to right 
@@ -381,7 +381,7 @@ rm -rf .vim
 [maps.vim](maps.vim) - Vim mappings
 * В качестве \<leader\> используется пробел
 * Управление окнами:
-  - \<leader\>e - открыть терминал снизу
+  - \<leader\>e - открыть / закрыть терминал слева
   - \<leader\>w - открыть / закрыть **todo** лист с правой стороны
   - \<leader\>h - влево 
   - \<leader\>l - вправо 
