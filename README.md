@@ -173,10 +173,10 @@ in various languages
   - \<leader\>\<Esc\> - terminal to normal mode
 * Text Operations:
   - \<leader\>u - word to upper / lower case
-  - \<leader\>" - wrap word in "quotes" 
-  - \<leader\>' - wrap word in 'quotes'
-  - \<leader\>" - wrap visually selected text by "quotes"
-  - \<leader\>' - wrap visually selected text by 'quotes'
+  - \<leader\>" - wrap / unwrap word in "quotes" 
+  - \<leader\>' - wrap / unwrap word in 'quotes'
+  - \<leader\>" - wrap / unwrap visually selected text by "quotes"
+  - \<leader\>' - wrap / unwrap visually selected text by 'quotes'
   - \<leader\>f - file autoformat
 * Configuration:
   - \<leader\>ev - open vimrc file
@@ -393,10 +393,10 @@ rm -rf .vim
   - \<leader\>\<Esc\> - терминал в нормальный режим
 * Работа с текстом:
   - \<leader\>u - перевести слово в верхний / нижний регистр
-  - \<leader\>" - обернуть слово в "кавычки" 
-  - \<leader\>' - обернуть слово в 'кавычки' 
-  - \<leader\>" - обернуть выделенный текст в "кавычки" 
-  - \<leader\>' - обернуть выделенный текст в 'кавычки'
+  - \<leader\>" - обернуть слово в "кавычки" / убрать
+  - \<leader\>' - обернуть слово в 'кавычки' / убрать 
+  - \<leader\>" - обернуть выделенный текст в "кавычки" / убрать
+  - \<leader\>' - обернуть выделенный текст в 'кавычки' / убрать
   - \<leader\>f - автоформатирование файла
 * Конфигурация:
   - \<leader\>ev - открыть vimrc
