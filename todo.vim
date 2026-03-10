@@ -2,10 +2,11 @@
 " File: todo.vim
 " Description: TODO Vim plugin
 " Author: AlexandAnatoliev
-" Version: 0.1.29
-" Last Modified: 19.02.2026
+" Version: 0.1.42
+" Last Modified: 09.09.2026
 " ==================================================================
-
+" TODO todo function - создать тоду комментарий не в этой строке, 
+" TODO а создавать новую снизу (т), сверху (Т)
 " Add TODO comments {{{
 augroup TODOMaps
   autocmd!

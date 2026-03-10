@@ -2,22 +2,9 @@
 " File: maps.vim
 " Description: Vim mappings 
 " Author: AlexandAnatoliev
-" Version: 0.1.39
-" Last Modified: 22.02.2026
+" Version: 0.1.42
+" Last Modified: 10.03.2026
 " ==================================================================
-
-" VimOpenTodo function {{{
-" ------------------------------------------------------------------  
-" Function: VimOpenTodo()
-" Description: Function to open a todo list on the right side 
-" Parameters: None
-" Returns: None
-" ------------------------------------------------------------------  
-function! s:VimOpenTodo()
-  rightbelow vertical split
-  e ~/.vim/.todo
-endfunction
-" }}}
 
 " В качестве leader - пробел {{{
 let mapleader=" "
@@ -27,12 +14,77 @@ let mapleader=" "
 " Window management:
 " ------------------------------------------------------------------  
 
-" open a todo list on the right side {{{
-noremap <leader>w :call <SID>VimOpenTodo()<CR>
+let g:todo_list_is_open=0
+
+" VimOpenTodoList function {{{
+" ------------------------------------------------------------------  
+" Function: VimOpenTodoList()
+" Description: Function to open a todo list on the right side 
+" Parameters: None
+" Returns: None
+" ------------------------------------------------------------------  
+function! s:VimOpenTodoList()
+  if g:todo_list_is_open
+    execute g:todo_list_return_to_window . "wincmd w" 
+    execute "q"
+    let g:todo_list_is_open=0
+  else
+    rightbelow vertical split
+    e ~/.vim/.todo
+    let g:todo_list_return_to_window = winnr()
+    let g:todo_list_is_open=1
+  endif
+endfunction
 " }}}
 
-" open terminal below {{{
-nnoremap <leader>e :belowright terminal<CR><C-\><C-n>:resize 10<CR>
+let g:terminal_is_open=0
+
+" OpenTerminal function {{{
+" ------------------------------------------------------------------  
+" Function: OpenTerminal()
+" Description: Function to open / close a terminal on the left side 
+" Parameters: None
+" Returns: None
+" ------------------------------------------------------------------  
+function! s:OpenTerminal()
+  if g:terminal_is_open
+    execute g:terminal_return_to_window . "wincmd w"
+    execute "q!"
+    let g:terminal_is_open=0
+  else
+    leftabove vertical terminal
+    call term_sendkeys(bufnr('%'), "ls\r")
+    call term_sendkeys(bufnr('%'), "git status\r")
+    let g:terminal_return_to_window = winnr()
+    let g:terminal_is_open=1
+  endif
+endfunction
+" }}}
+
+" ToUpperCase function {{{
+" ------------------------------------------------------------------  
+" Function: ToUpperCase()
+" Description: Function to change word case   
+" Parameters: None
+" Returns: None
+" ------------------------------------------------------------------  
+function! s:ToUpperCase()
+  let myChar = getline('.')[col('.')-1]
+  if myChar =~ '[A-Z]' 
+    execute "normal" "viwu"
+  else
+    execute "normal" "viwU"
+  endif
+endfunction
+" }}}
+
+" open a todo list on the right side {{{
+noremap <leader>w :call <SID>VimOpenTodoList()<CR>
+" }}}
+
+" open /close terminal left {{{
+tnoremap <leader>e <C-\><C-n> :call <SID>OpenTerminal()<CR>
+noremap <leader>e :call <SID>OpenTerminal()<CR>
 " }}}
 
 " window navigation mappings {{{
@@ -62,22 +114,56 @@ noremap <leader><Tab> :bnext<CR>
 " Text Operations:
 " ------------------------------------------------------------------  
 
-" word to upper case {{{
-inoremap <leader>u <esc>viwU<esc>ea
-nnoremap <leader>u viwU<esc>
+" WrapWordsByQuotes function {{{
+" ------------------------------------------------------------------  
+" Function: WrapWordsByQuotes(type)
+" Description: Function to wrap / unwrap words by quotes
+" Parameters: quote type
+" Returns: None
+" ------------------------------------------------------------------  
+function! s:WrapWordsByQuotes(quote)
+  let start_pos = getpos("'<")
+  let end_pos = getpos("'>")
+
+  let start = getline(start_pos[1])[start_pos[2]-2]
+  let end = getline(end_pos[1])[end_pos[2]-1]
+  echom start
+  echom end
+
+  if start == a:quote && end == a:quote
+    call setpos('.', end_pos)
+    normal! x
+    call setpos('.', start_pos)
+    normal! hx
+  elseif start == a:quote
+    call setpos('.', start_pos)
+    normal! hx
+  elseif end == a:quote
+    call setpos('.', end_pos)
+    normal! x
+  else
+    call setpos('.', end_pos)
+    execute "normal! i" . a:quote 
+    call setpos('.', start_pos)
+    execute "normal! i" . a:quote 
+  endif
+endfunction
 " }}}
 
+" word to upper / lower case {{{
+nnoremap <leader>u ma :call <SID>ToUpperCase()<CR>`a
+" }}}
 " wrap word by "quotes" {{{
-nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+nnoremap <leader>" ma viw :call <SID>WrapWordsByQuotes("\"")<CR>`a
 " }}}
 " wrap word by 'quotes' {{{
-nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
+nnoremap <leader>' ma viw :call <SID>WrapWordsByQuotes("'")<CR>`a
 " }}}
 " wrap visually selected text by "quotes" {{{
-vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>lel
+vnoremap <leader>" ma :call <SID>WrapWordsByQuotes("\"")<CR>`a
 " }}}
 " wrap visually selected text by 'quotes' {{{
-vnoremap <leader>' <esc>`<i'<esc>`>la'<esc>lel
+vnoremap <leader>' ma :call <SID>WrapWordsByQuotes("'")<CR>`a
 " }}}
 " file autoformat {{{
 augroup Autoformat

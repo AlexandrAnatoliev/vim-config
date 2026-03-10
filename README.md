@@ -5,7 +5,7 @@
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.41](https://img.shields.io/badge/Version-0.1.41-orange.svg)
+  ![Version 0.1.42](https://img.shields.io/badge/Version-0.1.42-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -138,9 +138,9 @@ into language-specific dictionaries:
 * Changes color scheme evening to remind me to end work and go to bed.
 * Highlights all characters in virtual column 80 and more, limiting line length.
 
-[comment_maps.vim](comment_maps.vim) - Vim mappings to comments code lines 
+[comment_maps.vim](comment_maps.vim) - Vim mappings to comment-out code lines 
 in various languages 
-  - \<leader\>\/ - to comment a line 
+  - \<leader\>\/ - to comment-out or uncomment a line 
 
 [grep-operator.vim](grep-operator.vim) - Simple Vim grep plugin 
   - \<leader\>g - to search word in project recursively 
@@ -161,8 +161,8 @@ in various languages
 [maps.vim](maps.vim) - Vim mappings
 * Space is used as \<leader\> 
 * Window management:
-  - \<leader\>e - open a terminal below
-  - \<leader\>w - open a **todo** list on the right side
+  - \<leader\>e - open /close terminal left
+  - \<leader\>w - open / close a **todo** list on the right side
   - \<leader\>h - to left 
   - \<leader\>l - to right 
   - \<leader\>j - down
@@ -172,11 +172,11 @@ in various languages
   - \<leader\>\<Tab\> - buffer navigation mappings 
   - \<leader\>\<Esc\> - terminal to normal mode
 * Text Operations:
-  - \<leader\>u - word to upper case
-  - \<leader\>" - wrap word in "quotes" 
-  - \<leader\>' - wrap word in 'quotes'
-  - \<leader\>" - wrap visually selected text by "quotes"
-  - \<leader\>' - wrap visually selected text by 'quotes'
+  - \<leader\>u - word to upper / lower case
+  - \<leader\>" - wrap / unwrap word in "quotes" 
+  - \<leader\>' - wrap / unwrap word in 'quotes'
+  - \<leader\>" - wrap / unwrap visually selected text by "quotes"
+  - \<leader\>' - wrap / unwrap visually selected text by 'quotes'
   - \<leader\>f - file autoformat
 * Configuration:
   - \<leader\>ev - open vimrc file
@@ -224,7 +224,7 @@ in various languages
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.41](https://img.shields.io/badge/Version-0.1.41-orange.svg)
+  ![Version 0.1.42](https://img.shields.io/badge/Version-0.1.42-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -360,7 +360,7 @@ rm -rf .vim
 
 [comment_maps.vim](comment_maps.vim) - Vim маппинг для закомментирования кода
 для различных языков программирования
-  - \<leader\>\/ - закомментировать строку 
+  - \<leader\>\/ - закомментировать / раскомментировать строку 
 
 [grep-operator.vim](grep-operator.vim) - Простой grep vim плагин 
   - \<leader\>g - найти слово в проекте рекурсивно 
@@ -381,8 +381,8 @@ rm -rf .vim
 [maps.vim](maps.vim) - Vim mappings
 * В качестве \<leader\> используется пробел
 * Управление окнами:
-  - \<leader\>e - открыть терминал снизу
-  - \<leader\>w - открыть **todo** лист с правой стороны
+  - \<leader\>e - открыть / закрыть терминал слева
+  - \<leader\>w - открыть / закрыть **todo** лист с правой стороны
   - \<leader\>h - влево 
   - \<leader\>l - вправо 
   - \<leader\>j - вниз   
@@ -392,11 +392,11 @@ rm -rf .vim
   - \<leader\>\<Tab\> - переключение между буферами 
   - \<leader\>\<Esc\> - терминал в нормальный режим
 * Работа с текстом:
-  - \<leader\>u - перевести слово в верхний регистр
-  - \<leader\>" - обернуть слово в "кавычки" 
-  - \<leader\>' - обернуть слово в 'кавычки' 
-  - \<leader\>" - обернуть выделенный текст в "кавычки" 
-  - \<leader\>' - обернуть выделенный текст в 'кавычки'
+  - \<leader\>u - перевести слово в верхний / нижний регистр
+  - \<leader\>" - обернуть слово в "кавычки" / убрать
+  - \<leader\>' - обернуть слово в 'кавычки' / убрать 
+  - \<leader\>" - обернуть выделенный текст в "кавычки" / убрать
+  - \<leader\>' - обернуть выделенный текст в 'кавычки' / убрать
   - \<leader\>f - автоформатирование файла
 * Конфигурация:
   - \<leader\>ev - открыть vimrc

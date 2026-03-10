@@ -2,8 +2,8 @@
 " File: help.vim
 " Description: Display Vim hot keys 
 " Author: AlexandAnatoliev
-" Version: 0.1.40
-" Last Modified: 05.03.2026
+" Version: 0.1.42
+" Last Modified: 10.03.2026
 " ==================================================================
 
 " ------------------------------------------------------------------  
@@ -23,10 +23,10 @@ function s:ShowHotKeys()
         \ 'k - up',
         \ '------------------------OTHER-----------------------',
         \ '<leader>n - add method after Java class',
-        \ '<leader>/ - to comment a line', 
+        \ '<leader>/ - to comment-out / uncomment line', 
         \ '-----------------WINDOW-MANAGEMENT------------------',
-        \ '<leader>e - open a terminal below',
-        \ '<leader>w - open a todo list on the right side',
+        \ '<leader>e - open /close terminal left',
+        \ '<leader>w - open / close todo list on the right side',
         \ '<leader>h - to left', 
         \ '<leader>l - to right', 
         \ '<leader>j - down',
@@ -36,11 +36,11 @@ function s:ShowHotKeys()
         \ '<leader><Tab> - buffer navigation mappings', 
         \ '<leader><Esc> - terminal to normal mode',
         \ '------------------TEXT-OPERATIONS-------------------',
-        \ '<leader>u - word to upper case',
-        \ '<leader>" - wrap word in \"quotes\"', 
-        \ '<leader>'' - wrap word in ''quotes''',
-        \ '<leader>" - wrap visually selected text by "quotes"',
-        \ '<leader>'' - wrap visually selected text by ''quotes''',
+        \ '<leader>u - word to upper / lower case',
+        \ '<leader>" - wrap / unwrap word in "quotes"', 
+        \ '<leader>'' - wrap / unwrap word in ''quotes''',
+        \ '<leader>" - wrap / unwrap "visually selected text"',
+        \ '<leader>'' - wrap / unwrap ''visually selected text''', 
         \ '<leader>f - file autoformat',
         \ '-------------------CONFIGURATION--------------------',
         \ '<leader>ev - open vimrc file',

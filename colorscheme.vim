@@ -2,8 +2,8 @@
 " File: colorscheme.vim
 " Description: Vim mappings 
 " Author: AlexandAnatoliev
-" Version: 0.1.39
-" Last Modified: 22.02.2026
+" Version: 0.1.42
+" Last Modified: 10.03.2026
 " ==================================================================
 
 " SetColorscheme function {{{
@@ -20,7 +20,7 @@ function s:SetColorscheme()
   endif
 
   let time = str2nr(strftime('%H'))
-  if time ># 21
+  if time ># 22
     if filereadable($VIMRUNTIME . "/colors/blue.vim")
       colorscheme blue
     endif
