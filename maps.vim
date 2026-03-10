@@ -114,33 +114,6 @@ noremap <leader><Tab> :bnext<CR>
 " Text Operations:
 " ------------------------------------------------------------------  
 
-" WrapWordByQuotes function {{{
-" ------------------------------------------------------------------  
-" Function: WrapWordByQuotes(type)
-" Description: Function to wrap / unwrap word by quotes   
-" Parameters: quote type
-" Returns: None
-" ------------------------------------------------------------------  
-function! s:WrapWordByQuotes(quote)
-  execute "normal viw\<ESC>"
-  let finish = getline('.')[col('.')]
-  execute "normal `<"
-  let start = getline('.')[col('.')-2]
-
-  if start != a:quote
-    execute "normal i" . a:quote . "\<ESC>"
-    if finish != a:quote
-      execute "normal `>la" . a:quote 
-    endif
-  elseif start == a:quote
-    execute "normal hx"
-    if finish == a:quote
-      execute "normal `>x"
-    endif
-  endif
-endfunction
-" }}}
-
 " WrapWordsByQuotes function {{{
 " ------------------------------------------------------------------  
 " Function: WrapWordsByQuotes(type)
@@ -181,21 +154,16 @@ endfunction
 nnoremap <leader>u ma :call <SID>ToUpperCase()<CR>`a
 " }}}
 " wrap word by "quotes" {{{
-" TODO использовать функцию выделения
-nnoremap <leader>" ma :call <SID>WrapWordByQuotes("\"")<CR>`a
+nnoremap <leader>" ma viw :call <SID>WrapWordsByQuotes("\"")<CR>`a
 " }}}
 " wrap word by 'quotes' {{{
-nnoremap <leader>' ma :call <SID>WrapWordByQuotes("'")<CR>`a
+nnoremap <leader>' ma viw :call <SID>WrapWordsByQuotes("'")<CR>`a
 " }}}
-" TODO add toggle
-" TODO add возвращение в исходную точку"
 " wrap visually selected text by "quotes" {{{
 vnoremap <leader>" ma :call <SID>WrapWordsByQuotes("\"")<CR>`a
 " }}}
 " wrap visually selected text by 'quotes' {{{
-" vnoremap <leader>' <esc>`<i'<esc>`>la'<esc>lel
 vnoremap <leader>' ma :call <SID>WrapWordsByQuotes("'")<CR>`a
-" TODO docs
 " }}}
 " file autoformat {{{
 augroup Autoformat
