@@ -141,19 +141,57 @@ function! s:WrapWordByQuotes(quote)
 endfunction
 " }}}
 
+" WrapWordsByQuotes function {{{
+" ------------------------------------------------------------------  
+" Function: WrapWordsByQuotes(type)
+" Description: Function to wrap / unwrap words by quotes
+" Parameters: quote type
+" Returns: None
+" ------------------------------------------------------------------  
+function! s:WrapWordsByQuotes(quote)
+  let start_pos = getpos("'<")
+  let end_pos = getpos("'>")
+
+  let start = getline(start_pos[1])[start_pos[2]-2]
+  let end = getline(end_pos[1])[end_pos[2]-1]
+  echom start
+  echom end
+
+  if start == a:quote && end == a:quote
+    call setpos('.', end_pos)
+    normal! x
+    call setpos('.', start_pos)
+    normal! hx
+  elseif start == a:quote
+    call setpos('.', start_pos)
+    normal! hx
+  elseif end == a:quote
+    call setpos('.', end_pos)
+    normal! x
+  else
+    call setpos('.', end_pos)
+    execute "normal! a" . a:quote 
+    call setpos('.', start_pos)
+    execute "normal! i" . a:quote 
+  endif
+endfunction
+" }}}
+
 " word to upper / lower case {{{
 nnoremap <leader>u ma :call <SID>ToUpperCase()<CR>`a
 " }}}
 " wrap word by "quotes" {{{
+" TODO использовать функцию выделения
 nnoremap <leader>" ma :call <SID>WrapWordByQuotes("\"")<CR>`a
 " }}}
 " wrap word by 'quotes' {{{
 nnoremap <leader>' ma :call <SID>WrapWordByQuotes("'")<CR>`a
 " }}}
 " TODO add toggle
-" TODO add возвращение в исходную точку
+" TODO add возвращение в исходную точку"
 " wrap visually selected text by "quotes" {{{
-vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>lel
+" vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>lel
+vnoremap <leader>" ma :call <SID>WrapWordsByQuotes("\"")<CR>`a
 " }}}
 " wrap visually selected text by 'quotes' {{{
 vnoremap <leader>' <esc>`<i'<esc>`>la'<esc>lel
