@@ -170,7 +170,7 @@ function! s:WrapWordsByQuotes(quote)
     normal! x
   else
     call setpos('.', end_pos)
-    execute "normal! a" . a:quote 
+    execute "normal! i" . a:quote 
     call setpos('.', start_pos)
     execute "normal! i" . a:quote 
   endif
@@ -190,11 +190,11 @@ nnoremap <leader>' ma :call <SID>WrapWordByQuotes("'")<CR>`a
 " TODO add toggle
 " TODO add возвращение в исходную точку"
 " wrap visually selected text by "quotes" {{{
-" vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>lel
 vnoremap <leader>" ma :call <SID>WrapWordsByQuotes("\"")<CR>`a
 " }}}
 " wrap visually selected text by 'quotes' {{{
-vnoremap <leader>' <esc>`<i'<esc>`>la'<esc>lel
+" vnoremap <leader>' <esc>`<i'<esc>`>la'<esc>lel
+vnoremap <leader>' ma :call <SID>WrapWordsByQuotes("'")<CR>`a
 " TODO docs
 " }}}
 " file autoformat {{{
