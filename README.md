@@ -5,7 +5,7 @@
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.43](https://img.shields.io/badge/Version-0.1.43-orange.svg)
+  ![Version 0.1.44](https://img.shields.io/badge/Version-0.1.44-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -191,13 +191,13 @@ in various languages
 [statusline.vim](statusline.vim) - Simple Vim statusline settings 
 
 [todo.vim](todo.vim) - TODO Vim plugin 
-  - \<leader\>t - add TODO comments 
+  - \<leader\>t - add TODO comments below 
+  - \<leader\>T - add TODO comments above 
   - ]t - moving between TODO comments
   - [t - moving between TODO comments
 
 [trail_spot.vim](trail_spot.vim) - Highlight trailing whitespace as error 
-  - \<leader\>s - highlight trailing whitespace 
-  - \<leader\>S - clear the highlight
+  - \<leader\>s - highlight trailing whitespace /clear highlight
 
 ---
 
@@ -224,7 +224,7 @@ in various languages
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.43](https://img.shields.io/badge/Version-0.1.43-orange.svg)
+  ![Version 0.1.44](https://img.shields.io/badge/Version-0.1.44-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -411,13 +411,13 @@ rm -rf .vim
 [statusline.vim](statusline.vim) - Простые настройки для statusline Vim 
 
 [todo.vim](todo.vim) - TODO Vim плагин 
-  - \<leader\>t - добавить TODO комментарий 
+  - \<leader\>t - добавить TODO комментарий снизу 
+  - \<leader\>T - добавить TODO комментарий сверху 
   - ]t - перемещение между TODO комментариями
   - [t - перемещение между TODO комментариями
 
 [trail_spot.vim](trail_spot.vim) - Подсвечивает пробелы в конце строки как ошибку 
-  - \<leader\>s - подсветить пробелы в конце строки 
-  - \<leader\>S - убрать подсветку
+  - \<leader\>s - подсветить пробелы в конце строки / убрать подсветку
 
 ---
 
