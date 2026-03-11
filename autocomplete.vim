@@ -2,8 +2,8 @@
 " File: autocomplete.vim
 " Description: Simple Vim autocomplete with hint 
 " Author: AlexandAnatoliev
-" Version: 0.1.39
-" Last Modified: 22.02.2026
+" Version: 0.1.46
+" Last Modified: 11.03.2026
 " ==================================================================
 
 " autocomplete if typing {{{
@@ -17,7 +17,7 @@ endfor
 " }}}
 
 " autocomplete class methods {{{
-inoremap <leader>n <c-r>=<SID>AddMethodToClass()<CR>
+" inoremap <leader>n <c-r>=<SID>AddMethodToClass()<CR>
 
 " ------------------------------------------------------------------  
 " Function: AddMethodToClass()
