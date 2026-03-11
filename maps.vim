@@ -2,8 +2,8 @@
 " File: maps.vim
 " Description: Vim mappings 
 " Author: AlexandAnatoliev
-" Version: 0.1.42
-" Last Modified: 10.03.2026
+" Version: 0.1.43
+" Last Modified: 11.03.2026
 " ==================================================================
 
 " В качестве leader - пробел {{{
@@ -79,7 +79,7 @@ endfunction
 " }}}
 
 " open a todo list on the right side {{{
-noremap <leader>w :call <SID>VimOpenTodoList()<CR>
+noremap <leader>w ma :call <SID>VimOpenTodoList()<CR>`a
 " }}}
 
 " open /close terminal left {{{
