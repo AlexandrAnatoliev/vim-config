@@ -2,10 +2,10 @@
 " File: vimrc
 " Description: my Vim configuration
 " Author: AlexandAnatoliev
-" Version: 0.1.45
+" Version: 0.1.46
 " Last Modified: 11.03.2026
 " =============================================================================
-
+inoremap
 " =======================BASIC SETTINGS========================================
 " Line numbering {{{
 set number
@@ -78,7 +78,6 @@ set foldlevel=0
 augroup filetype_vim
   autocmd!
   autocmd FileType vim setlocal foldmethod=marker
-  autocmd FileType vim setlocal foldlevel=0
 augroup END
 " }}}
 
