@@ -2,7 +2,7 @@
 " File: maps.vim
 " Description: Vim mappings 
 " Author: AlexandAnatoliev
-" Version: 0.1.43
+" Version: 0.1.45
 " Last Modified: 11.03.2026
 " ==================================================================
 
@@ -170,7 +170,7 @@ augroup Autoformat
   autocmd!
   autocmd FileType *
         \ if index(['markdown'], &ft) == -1 |
-        \ nnoremap <buffer> <leader>f :normal! gg=G<cr> |
+        \ nnoremap <buffer> <leader>f ma :normal! gg=G<CR>`a |
         \ endif
 augroup END
 " }}}
