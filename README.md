@@ -178,6 +178,7 @@ in various languages
   - \<leader\>" - wrap / unwrap visually selected text by "quotes"
   - \<leader\>' - wrap / unwrap visually selected text by 'quotes'
   - \<leader\>f - file autoformat
+  - \<leader\>z - code folding toggle
 * Configuration:
   - \<leader\>ev - open vimrc file
   - \<leader\>sv - source change vimrc
@@ -398,6 +399,7 @@ rm -rf .vim
   - \<leader\>" - обернуть выделенный текст в "кавычки" / убрать
   - \<leader\>' - обернуть выделенный текст в 'кавычки' / убрать
   - \<leader\>f - автоформатирование файла
+  - \<leader\>z - сворачивает / разворачивает отступы кода
 * Конфигурация:
   - \<leader\>ev - открыть vimrc
   - \<leader\>sv - загрузить измененный vimrc

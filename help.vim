@@ -42,6 +42,7 @@ function s:ShowHotKeys()
         \ '<leader>" - wrap / unwrap "visually selected text"',
         \ '<leader>'' - wrap / unwrap ''visually selected text''', 
         \ '<leader>f - file autoformat',
+        \ '<leader>z - code folding toggle',
         \ '-------------------CONFIGURATION--------------------',
         \ '<leader>ev - open vimrc file',
         \ '<leader>sv - source change vimrc',
