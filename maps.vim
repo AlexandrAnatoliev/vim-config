@@ -48,7 +48,7 @@ let g:terminal_is_open=0
 " OpenTerminal function {{{
 " ------------------------------------------------------------------  
 " Function: OpenTerminal()
-" Description: Function to open / close a terminal on the left side 
+" Description: Function to open / close a terminal 
 " Parameters: None
 " Returns: None
 " ------------------------------------------------------------------  
@@ -58,9 +58,17 @@ function! s:OpenTerminal()
     execute "q!"
     let g:terminal_is_open=0
   else
-    leftabove vertical terminal
-    call term_sendkeys(bufnr('%'), "ls\r")
-    call term_sendkeys(bufnr('%'), "git status\r")
+    let screen_type = GetScreenType()
+    if screen_type ==# ['phone']
+      aboveleft terminal
+      resize 10
+      call term_sendkeys(bufnr('%'), "ls\r")
+      call term_sendkeys(bufnr('%'), "git status\r")
+    else
+      leftabove vertical terminal
+      call term_sendkeys(bufnr('%'), "ls\r")
+      call term_sendkeys(bufnr('%'), "git status\r")
+    endif
     let g:terminal_return_to_window = winnr()
     let g:terminal_is_open=1
   endif
@@ -88,7 +96,7 @@ endfunction
 noremap <leader>w ma :call <SID>VimOpenTodoList()<CR>`a
 " }}}
 
-" open /close terminal left {{{
+" open /close terminal {{{
 tnoremap <leader>e <C-\><C-n> :call <SID>OpenTerminal()<CR>
 noremap <leader>e :call <SID>OpenTerminal()<CR>
 " }}}
