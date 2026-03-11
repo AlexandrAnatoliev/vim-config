@@ -150,6 +150,26 @@ function! s:WrapWordsByQuotes(quote)
 endfunction
 " }}}
 
+let g:code_folding_is_done=0
+
+" CodeFolding function {{{
+" ------------------------------------------------------------------  
+" Function: CodeFolding()
+" Description: Function to folding code   
+" Parameters: None
+" Returns: None
+" ------------------------------------------------------------------  
+function! s:CodeFolding()
+  if g:code_folding_is_done
+    execute ":%foldclose!"
+    let g:code_folding_is_done=0
+  else
+    execute ":%foldopen!"
+    let g:code_folding_is_done=1
+  endif
+endfunction
+" }}}
+
 " word to upper / lower case {{{
 nnoremap <leader>u ma :call <SID>ToUpperCase()<CR>`a
 " }}}
@@ -173,6 +193,9 @@ augroup Autoformat
         \ nnoremap <buffer> <leader>f ma :normal! gg=G<CR>`a |
         \ endif
 augroup END
+" }}}
+" folding code in buffer {{{
+nnoremap <leader>z ma :call <SID>CodeFolding()<CR>`a
 " }}}
 
 " ------------------------------------------------------------------  

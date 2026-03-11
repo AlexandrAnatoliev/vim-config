@@ -71,7 +71,7 @@ set showmatch
 
 " Code folding {{{
 set foldmethod=indent
-set foldlevel=1
+set foldlevel=0
 " }}}
 
 " Vimscript file settings {{{
