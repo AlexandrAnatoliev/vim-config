@@ -14,6 +14,6 @@
 " Returns: Screen type
 " ----------------------------------------------------------------------------  
 function! GetScreenType()
-  return "test"
+  return readfile('.screen-type')
 endfunction
 " }}}
