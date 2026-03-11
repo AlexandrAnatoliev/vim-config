@@ -2,7 +2,7 @@
 " File: screen-type.vim
 " Description: Get and set screen type functions 
 " Author: AlexandAnatoliev
-" Version: 0.1.46
+" Version: 0.1.47
 " Last Modified: 11.03.2026
 " ============================================================================
 
@@ -15,7 +15,7 @@
 " Returns: Screen type
 " ----------------------------------------------------------------------------  
 function! GetScreenType()
-  return readfile('.screen-type')
+  return readfile(expand('~/.vim/.screen-type'))
 endfunction
 " }}}
 
@@ -28,6 +28,6 @@ endfunction
 " Returns: None
 " ----------------------------------------------------------------------------  
 function! SetScreenType(type)
-  execute ":! echo " . a:type . "> .screen-type" 
+  execute ":! echo " . a:type . expand("> ~/.vim/.screen-type")
 endfunction
 " }}}
