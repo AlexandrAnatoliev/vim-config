@@ -2,7 +2,7 @@
 " File: maps.vim
 " Description: Vim mappings 
 " Author: AlexandAnatoliev
-" Version: 0.1.43
+" Version: 0.1.45
 " Last Modified: 11.03.2026
 " ==================================================================
 
@@ -150,6 +150,26 @@ function! s:WrapWordsByQuotes(quote)
 endfunction
 " }}}
 
+let g:code_folding_is_done=0
+
+" CodeFolding function {{{
+" ------------------------------------------------------------------  
+" Function: CodeFolding()
+" Description: Function to folding code   
+" Parameters: None
+" Returns: None
+" ------------------------------------------------------------------  
+function! s:CodeFolding()
+  if g:code_folding_is_done
+    execute ":%foldclose!"
+    let g:code_folding_is_done=0
+  else
+    execute ":%foldopen!"
+    let g:code_folding_is_done=1
+  endif
+endfunction
+" }}}
+
 " word to upper / lower case {{{
 nnoremap <leader>u ma :call <SID>ToUpperCase()<CR>`a
 " }}}
@@ -170,9 +190,12 @@ augroup Autoformat
   autocmd!
   autocmd FileType *
         \ if index(['markdown'], &ft) == -1 |
-        \ nnoremap <buffer> <leader>f :normal! gg=G<cr> |
+        \ nnoremap <buffer> <leader>f ma :normal! gg=G<CR>`a |
         \ endif
 augroup END
+" }}}
+" folding code in buffer {{{
+nnoremap <leader>z ma :call <SID>CodeFolding()<CR>`a
 " }}}
 
 " ------------------------------------------------------------------  

@@ -2,8 +2,8 @@
 " File: vimrc
 " Description: my Vim configuration
 " Author: AlexandAnatoliev
-" Version: 0.1.40
-" Last Modified: 05.03.2026
+" Version: 0.1.45
+" Last Modified: 11.03.2026
 " =============================================================================
 
 " =======================BASIC SETTINGS========================================
@@ -71,7 +71,7 @@ set showmatch
 
 " Code folding {{{
 set foldmethod=indent
-set foldlevel=1
+set foldlevel=0
 " }}}
 
 " Vimscript file settings {{{

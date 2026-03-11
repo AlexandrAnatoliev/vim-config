@@ -5,7 +5,7 @@
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.44](https://img.shields.io/badge/Version-0.1.44-orange.svg)
+  ![Version 0.1.45](https://img.shields.io/badge/Version-0.1.45-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -178,6 +178,7 @@ in various languages
   - \<leader\>" - wrap / unwrap visually selected text by "quotes"
   - \<leader\>' - wrap / unwrap visually selected text by 'quotes'
   - \<leader\>f - file autoformat
+  - \<leader\>z - code folding toggle
 * Configuration:
   - \<leader\>ev - open vimrc file
   - \<leader\>sv - source change vimrc
@@ -224,7 +225,7 @@ in various languages
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.44](https://img.shields.io/badge/Version-0.1.44-orange.svg)
+  ![Version 0.1.45](https://img.shields.io/badge/Version-0.1.45-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -398,6 +399,7 @@ rm -rf .vim
   - \<leader\>" - обернуть выделенный текст в "кавычки" / убрать
   - \<leader\>' - обернуть выделенный текст в 'кавычки' / убрать
   - \<leader\>f - автоформатирование файла
+  - \<leader\>z - сворачивает / разворачивает отступы кода
 * Конфигурация:
   - \<leader\>ev - открыть vimrc
   - \<leader\>sv - загрузить измененный vimrc
