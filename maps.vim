@@ -2,7 +2,7 @@
 " File: maps.vim
 " Description: Vim mappings 
 " Author: AlexandAnatoliev
-" Version: 0.1.45
+" Version: 0.1.46
 " Last Modified: 11.03.2026
 " ==================================================================
 
@@ -19,7 +19,7 @@ let g:todo_list_is_open=0
 " VimOpenTodoList function {{{
 " ------------------------------------------------------------------  
 " Function: VimOpenTodoList()
-" Description: Function to open a todo list on the right side 
+" Description: Function to open a todo list  
 " Parameters: None
 " Returns: None
 " ------------------------------------------------------------------  
@@ -29,7 +29,13 @@ function! s:VimOpenTodoList()
     execute "q"
     let g:todo_list_is_open=0
   else
-    rightbelow vertical split
+    let screen_type = GetScreenType()
+    if screen_type ==# ['phone']
+      below split
+      resize 10
+    else
+      rightbelow vertical split
+    endif
     e ~/.vim/.todo
     let g:todo_list_return_to_window = winnr()
     let g:todo_list_is_open=1
@@ -78,7 +84,7 @@ function! s:ToUpperCase()
 endfunction
 " }}}
 
-" open a todo list on the right side {{{
+" open a todo list {{{
 noremap <leader>w ma :call <SID>VimOpenTodoList()<CR>`a
 " }}}
 

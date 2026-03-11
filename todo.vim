@@ -2,8 +2,8 @@
 " File: todo.vim
 " Description: TODO Vim plugin
 " Author: AlexandAnatoliev
-" Version: 0.1.43
-" Last Modified: 09.09.2026
+" Version: 0.1.46
+" Last Modified: 11.03.2026
 " ==================================================================
 " Add TODO comments {{{
 augroup TODOMaps
