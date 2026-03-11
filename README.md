@@ -93,7 +93,7 @@ rm -rf .vim
 ├── jshell_word.vim
 ├── maps.vim
 ├── quickfix_toggle.vim
-├── README.md
+├── screen-type.vim
 ├── statusline.vim
 ├── todo.vim
 ├── trail_spot.vim
@@ -161,8 +161,8 @@ in various languages
 [maps.vim](maps.vim) - Vim mappings
 * Space is used as \<leader\> 
 * Window management:
-  - \<leader\>e - open /close terminal left
-  - \<leader\>w - open / close a **todo** list on the right side
+  - \<leader\>e - open /close terminal 
+  - \<leader\>w - open / close a **todo** list 
   - \<leader\>h - to left 
   - \<leader\>l - to right 
   - \<leader\>j - down
@@ -188,6 +188,8 @@ in various languages
 
 [quickfix_toggle.vim](quickfix_toggle.vim) - Open / close quickfix window plugin 
   - \<leader\>q - open / close quickfix window
+
+[screen-type.vim](screen-type.vim) - Get and set screen type functions 
 
 [statusline.vim](statusline.vim) - Simple Vim statusline settings 
 
@@ -313,7 +315,7 @@ rm -rf .vim
 ├── jshell_word.vim
 ├── maps.vim
 ├── quickfix_toggle.vim
-├── README.md
+├── screen-type.vim
 ├── statusline.vim
 ├── todo.vim
 ├── trail_spot.vim
@@ -382,8 +384,8 @@ rm -rf .vim
 [maps.vim](maps.vim) - Vim mappings
 * В качестве \<leader\> используется пробел
 * Управление окнами:
-  - \<leader\>e - открыть / закрыть терминал слева
-  - \<leader\>w - открыть / закрыть **todo** лист с правой стороны
+  - \<leader\>e - открыть / закрыть терминал 
+  - \<leader\>w - открыть / закрыть **todo** лист
   - \<leader\>h - влево 
   - \<leader\>l - вправо 
   - \<leader\>j - вниз   
@@ -409,6 +411,8 @@ rm -rf .vim
   
 [quickfix_toggle.vim](quickfix_toggle.vim) - Плагин для открытия / закрытия quickfix окна 
   - \<leader\>q - открыть / закрыть
+
+[screen-type.vim](screen-type.vim) - Скрипт с функциями возвращающими тип экрана из файла настроек 
 
 [statusline.vim](statusline.vim) - Простые настройки для statusline Vim 
 
