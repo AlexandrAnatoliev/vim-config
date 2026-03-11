@@ -177,3 +177,9 @@ if filereadable(expand("~/.vim/quickfix_toggle.vim"))
   source ~/.vim/quickfix_toggle.vim
 endif
 " }}}
+
+" Load get and set screen type functions {{{
+if filereadable(expand("~/.vim/screen-type.vim"))
+  source ~/.vim/screen-type.vim
+endif
+" }}}
