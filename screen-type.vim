@@ -6,6 +6,7 @@
 " Last Modified: 11.03.2026
 " ============================================================================
 
+" ----------------------------------------------------------------------------  
 " GetScreenType function {{{
 " ----------------------------------------------------------------------------  
 " Function: GetScreenType()
@@ -15,5 +16,18 @@
 " ----------------------------------------------------------------------------  
 function! GetScreenType()
   return readfile('.screen-type')
+endfunction
+" }}}
+
+" ----------------------------------------------------------------------------  
+" SetScreenType function {{{
+" ----------------------------------------------------------------------------  
+" Function: SetScreenType(type)
+" Description: Function to set screen type to setting file  
+" Parameters: Type screen
+" Returns: None
+" ----------------------------------------------------------------------------  
+function! SetScreenType(type)
+  execute ":! echo " . a:type . "> .screen-type" 
 endfunction
 " }}}
