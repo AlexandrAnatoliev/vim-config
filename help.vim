@@ -2,7 +2,7 @@
 " File: help.vim
 " Description: Display Vim hot keys 
 " Author: AlexandAnatoliev
-" Version: 0.1.44
+" Version: 0.1.46
 " Last Modified: 11.03.2026
 " ==================================================================
 
@@ -25,8 +25,8 @@ function s:ShowHotKeys()
         \ '<leader>n - add method after Java class',
         \ '<leader>/ - to comment-out / uncomment line', 
         \ '-----------------WINDOW-MANAGEMENT------------------',
-        \ '<leader>e - open /close terminal left',
-        \ '<leader>w - open / close todo list on the right side',
+        \ '<leader>e - open /close terminal',
+        \ '<leader>w - open / close todo list',
         \ '<leader>h - to left', 
         \ '<leader>l - to right', 
         \ '<leader>j - down',
