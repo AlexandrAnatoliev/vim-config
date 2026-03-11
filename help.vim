@@ -2,8 +2,8 @@
 " File: help.vim
 " Description: Display Vim hot keys 
 " Author: AlexandAnatoliev
-" Version: 0.1.42
-" Last Modified: 10.03.2026
+" Version: 0.1.44
+" Last Modified: 11.03.2026
 " ==================================================================
 
 " ------------------------------------------------------------------  
@@ -51,12 +51,12 @@ function s:ShowHotKeys()
         \ '---------------QUICKFIX_TOGGLE-PLUGIN---------------',
         \ '<leader>q - open / close quickfix window', 
         \ '------------------TODO-VIM-PLUGIN-------------------',
-        \ '<leader>t - add TODO comments', 
+        \ '<leader>t - add TODO comments below', 
+        \ '<leader>T - add TODO comments above', 
         \ ']t - moving between TODO comments',
         \ '[t - moving between TODO comments',
         \ '------------HIGHLIGHT-TRAILING-WHITESPACE-----------', 
-        \ '<leader>s - highlight trailing whitespace', 
-        \ '<leader>S - clear the highlight',
+        \ '<leader>s - highlight / clear trailing whitespace', 
         \ '----------------GREP-OPERATOR-PLUGIN----------------', 
         \ '<leader>g - to search word in project recursively', 
         \ ']g - moving between matches',
@@ -79,7 +79,7 @@ function s:ShowHotKeys()
         \ highlight: 'WarningMsg',
         \ border: [],
         \ close: 'click',
-        \ time: 10000,
+        \ time: 30000,
         \ mapping: 0,
         \ filter: function('<SID>PopupFilter'),
         \ })
