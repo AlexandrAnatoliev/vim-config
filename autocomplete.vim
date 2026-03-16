@@ -2,8 +2,8 @@
 " File: autocomplete.vim
 " Description: Simple Vim autocomplete with hint 
 " Author: AlexandAnatoliev
-" Version: 0.1.39
-" Last Modified: 22.02.2026
+" Version: 0.1.48
+" Last Modified: 16.03.2026
 " ==================================================================
 
 " autocomplete if typing {{{
@@ -16,36 +16,12 @@ for char in range(char2nr('A'), char2nr('Z'))
 endfor
 " }}}
 
-" autocomplete class methods {{{
-inoremap <leader>n <c-r>=<SID>AddMethodToClass()<CR>
-
-" ------------------------------------------------------------------  
-" Function: AddMethodToClass()
-" Description: Function to add  methods after java classes 
-" Parameters: None
-" Returns: None
-" ------------------------------------------------------------------  
-function! s:AddMethodToClass()
-  let line_text = getline('.')[0:col('.')-1]
-
-  if line_text =~ '\.$'
-    let word = matchstr(line_text, '\v\S+\.$')
-
-    if !empty(word)
-      return substitute(word, '\.$', '', '') . "\<C-x>\<C-t>"
-    endif
-  else
-    return ''
-  endif
-endfunction
-" }}}
-
 set dictionary=~/.vim/.semverdict
 
 augroup Autocomplete
   autocmd!
 
-  " set dictionaries, thesaurus and brackets autocomplete {{{
+  " set dictionaries and brackets autocomplete {{{
   autocmd FileType java setlocal dictionary+=~/.vim/.javadict
   autocmd FileType vim setlocal dictionary+=~/.vim/.vimscriptdict
   autocmd FileType sh setlocal dictionary+=~/.vim/.bashdict
@@ -61,7 +37,5 @@ augroup Autocomplete
   autocmd FileType java iabbrev <buffer> { {<cr>}<esc>
   " }}}
 augroup END
-
-set thesaurus=~/.vim/.thesaurus
 
 set complete+=k,t
