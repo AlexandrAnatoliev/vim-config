@@ -108,8 +108,6 @@ into language-specific dictionaries:
  Features:
 * set dictionaries for autocomplete 
 * autocomplete while typing (from dictionaries)
-* autocomplete class methods (from thesaurus)
-  - \<leader\>n - add method after Java class
 * curly brackets autocomplete 
 
 ```
@@ -122,7 +120,6 @@ into language-specific dictionaries:
 ├── .markdowndict     // markdown
 ├── .postgresqldict   // sql
 ├── .semverdict       // SemVer keywords
-├── .thesaurus        // Java classes methods
 ├── .vimscriptdict    // vimscript
 ├── autocomplete.vim
 └── vimrc
@@ -330,8 +327,6 @@ rm -rf .vim
 Особенности:
 * устанавливает словари 
 * автодополняет слова при вводе (из словарей)
-* автодополняет методы класса (из тезариуса)
-  - \<leader\>n - добавить метод к Java классу
 * автозавершение фигурных скобок 
 
 ```
@@ -344,7 +339,6 @@ rm -rf .vim
 ├── .markdowndict     // markdown
 ├── .postgresqldict   // sql
 ├── .semverdict       // SemVer keywords
-├── .thesaurus        // Java classes methods
 ├── .vimscriptdict    // vimscript
 ├── autocomplete.vim
 └── vimrc
