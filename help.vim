@@ -2,8 +2,8 @@
 " File: help.vim
 " Description: Display Vim hot keys 
 " Author: AlexandAnatoliev
-" Version: 0.1.46
-" Last Modified: 11.03.2026
+" Version: 0.1.48
+" Last Modified: 16.03.2026
 " ==================================================================
 
 " ------------------------------------------------------------------  
@@ -22,7 +22,6 @@ function s:ShowHotKeys()
         \ 'j - down',
         \ 'k - up',
         \ '------------------------OTHER-----------------------',
-        \ '<leader>n - add method after Java class',
         \ '<leader>/ - to comment-out / uncomment line', 
         \ '-----------------WINDOW-MANAGEMENT------------------',
         \ '<leader>e - open /close terminal',

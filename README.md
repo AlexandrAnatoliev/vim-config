@@ -5,7 +5,7 @@
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.47](https://img.shields.io/badge/Version-0.1.47-orange.svg)
+  ![Version 0.1.48](https://img.shields.io/badge/Version-0.1.48-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -108,8 +108,6 @@ into language-specific dictionaries:
  Features:
 * set dictionaries for autocomplete 
 * autocomplete while typing (from dictionaries)
-* autocomplete class methods (from thesaurus)
-  - \<leader\>n - add method after Java class
 * curly brackets autocomplete 
 
 ```
@@ -122,7 +120,6 @@ into language-specific dictionaries:
 ├── .markdowndict     // markdown
 ├── .postgresqldict   // sql
 ├── .semverdict       // SemVer keywords
-├── .thesaurus        // Java classes methods
 ├── .vimscriptdict    // vimscript
 ├── autocomplete.vim
 └── vimrc
@@ -227,7 +224,7 @@ in various languages
 
   [![EN](https://img.shields.io/badge/English-🇬🇧-blue)](#english)
   [![RU](https://img.shields.io/badge/Русский-🇷🇺-red)](#russian)
-  ![Version 0.1.47](https://img.shields.io/badge/Version-0.1.47-orange.svg)
+  ![Version 0.1.48](https://img.shields.io/badge/Version-0.1.48-orange.svg)
   ![Stars](https://img.shields.io/github/stars/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![Forks](https://img.shields.io/github/forks/AlexandrAnatoliev/vim-config.svg?style=flat)
   ![GitHub repo size](https://img.shields.io/github/repo-size/AlexandrAnatoliev/vim-config)
@@ -330,8 +327,6 @@ rm -rf .vim
 Особенности:
 * устанавливает словари 
 * автодополняет слова при вводе (из словарей)
-* автодополняет методы класса (из тезариуса)
-  - \<leader\>n - добавить метод к Java классу
 * автозавершение фигурных скобок 
 
 ```
@@ -344,7 +339,6 @@ rm -rf .vim
 ├── .markdowndict     // markdown
 ├── .postgresqldict   // sql
 ├── .semverdict       // SemVer keywords
-├── .thesaurus        // Java classes methods
 ├── .vimscriptdict    // vimscript
 ├── autocomplete.vim
 └── vimrc
