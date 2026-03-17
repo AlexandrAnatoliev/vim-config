@@ -2,7 +2,7 @@
 " File: maps.vim
 " Description: Vim mappings 
 " Author: AlexandAnatoliev
-" Version: 0.1.50
+" Version: 0.1.51
 " Last Modified: 17.03.2026
 " ==================================================================
 
@@ -31,10 +31,10 @@ function! s:VimOpenTodoList()
   else
     let screen_type = GetScreenType()
     if screen_type ==# ['phone']
-      below split
+      split
       resize 10
     else
-      rightbelow vertical split
+      vertical split
     endif
     e ~/.vim/.todo
     let g:todo_list_return_to_window = winnr()
