@@ -2,13 +2,14 @@
 " File: comment_maps.vim
 " Description: Vim mappings to comments code lines in various languages 
 " Author: AlexandAnatoliev
-" Version: 0.1.49
+" Version: 0.1.50
 " Last Modified: 17.03.2026
 " ============================================================================
 
 autocmd FileType vim,sh,sql,java 
       \ nnoremap <buffer> <leader>/ ma :call <SID>ToCommentOut()<cr>`a
 
+" ToCommentOut function {{{
 " ------------------------------------------------------------------  
 " Function: ToCommentOut()
 " Description: Function to comment-out line of code   
@@ -26,7 +27,9 @@ function! s:ToCommentOut()
     call <SID>ToCommentOutLine('//')
   endif
 endfunction
+" }}}
 
+" ToCommentOutLine function {{{
 " ------------------------------------------------------------------  
 " Function: ToCommentOutLine()
 " Description: Function to comment-out line of code   
@@ -44,5 +47,5 @@ function! s:ToCommentOutLine(comment_mark)
     execute "normal" "0i" . a:comment_mark . " "
   endif
 endfunction
-
+" }}}
 
