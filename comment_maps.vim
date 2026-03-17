@@ -2,8 +2,8 @@
 " File: comment_maps.vim
 " Description: Vim mappings to comments code lines in various languages 
 " Author: AlexandAnatoliev
-" Version: 0.1.41
-" Last Modified: 08.03.2026
+" Version: 0.1.49
+" Last Modified: 17.03.2026
 " ============================================================================
 
 autocmd FileType vim,sh,sql,java 
@@ -22,16 +22,9 @@ function! s:ToCommentOut()
     call <SID>ToCommentOutLine('#')
   elseif &filetype == 'sql'
     call <SID>ToCommentOutLine('--')
+  elseif &filetype == 'java'
+    call <SID>ToCommentOutLine('//')
   endif
-  " comment-out java files {{{
-  if &filetype == 'java'
-    if getline('.')[0] == '/'
-      execute "normal" "0xxx"
-    else
-      execute "normal" "0i\// "
-    endif
-  endif
-  " }}}
 endfunction
 
 " ------------------------------------------------------------------  
