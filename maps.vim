@@ -2,8 +2,8 @@
 " File: maps.vim
 " Description: Vim mappings 
 " Author: AlexandAnatoliev
-" Version: 0.1.46
-" Last Modified: 11.03.2026
+" Version: 0.1.50
+" Last Modified: 17.03.2026
 " ==================================================================
 
 " В качестве leader - пробел {{{
@@ -96,7 +96,7 @@ endfunction
 noremap <leader>w ma :call <SID>VimOpenTodoList()<CR>`a
 " }}}
 
-" open /close terminal {{{
+" open / close terminal {{{
 tnoremap <leader>e <C-\><C-n> :call <SID>OpenTerminal()<CR>
 noremap <leader>e :call <SID>OpenTerminal()<CR>
 " }}}
