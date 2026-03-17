@@ -18,25 +18,11 @@ autocmd FileType vim,sh,sql,java
 function! s:ToCommentOut()
   if &filetype == 'vim'
     call <SID>ToCommentOutLine('"')
+  elseif &filetype == 'sh'
+    call <SID>ToCommentOutLine('#')
+  elseif &filetype == 'sql'
+    call <SID>ToCommentOutLine('--')
   endif
-  " comment-out bash files {{{
-  if &filetype == 'sh'
-    if getline('.')[0] == '#'
-      execute "normal" "0xx"
-    else
-      execute "normal" "0i\# "
-    endif
-  endif
-  " }}}
-  " comment-out sql files {{{
-  if &filetype == 'sql'
-    if getline('.')[0] == '-'
-      execute "normal" "0xxx"
-    else
-      execute "normal" "0i\-- "
-    endif
-  endif
-  " }}}
   " comment-out java files {{{
   if &filetype == 'java'
     if getline('.')[0] == '/'
@@ -56,7 +42,11 @@ endfunction
 " ------------------------------------------------------------------  
 function! s:ToCommentOutLine(comment_mark)
   if getline('.')[0] == a:comment_mark[0]
-    execute "normal" "0xx"
+    if len(a:comment_mark) == 2
+      execute "normal" "0xxx"
+    else
+      execute "normal" "0xx"
+    endif
   else
     execute "normal" "0i" . a:comment_mark . " "
   endif
