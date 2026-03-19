@@ -2,8 +2,8 @@
 " File: vimrc
 " Description: my Vim configuration
 " Author: AlexandAnatoliev
-" Version: 0.1.45
-" Last Modified: 11.03.2026
+" Version: 0.1.52
+" Last Modified: 19.03.2026
 " =============================================================================
 
 " =======================BASIC SETTINGS========================================
@@ -182,4 +182,9 @@ endif
 if filereadable(expand("~/.vim/screen-type.vim"))
   source ~/.vim/screen-type.vim
 endif
-" }}}
+
+"" Load file tree plugin {{{
+if filereadable(expand("~/.vim/file_tree.vim"))
+  source ~/.vim/file_tree.vim
+endif
+" }}} }}}
