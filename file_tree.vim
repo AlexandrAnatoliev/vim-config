@@ -67,7 +67,12 @@ endfunction
 " ------------------------------------------------------------------  
 function! s:OpenFile()
   let file_name = expand('<cfile>')
-  execute ":wincmd l"
+  let screen_type = GetScreenType()
+  if screen_type ==# ['phone']
+    execute ":wincmd k"
+  else
+    execute ":wincmd l"
+  endif
   execute "e " . file_name
 endfunction
 " }}}
