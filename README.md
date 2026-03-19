@@ -87,12 +87,14 @@ rm -rf .vim
 ├── boilerplates.vim
 ├── colorscheme.vim
 ├── comment_maps.vim
+├── file_tree.vim
 ├── grep-operator.vim
 ├── help.vim
 ├── html_tags.vim
 ├── jshell_word.vim
 ├── maps.vim
 ├── quickfix_toggle.vim
+├── README.md
 ├── screen-type.vim
 ├── statusline.vim
 ├── todo.vim
@@ -138,6 +140,10 @@ into language-specific dictionaries:
 [comment_maps.vim](comment_maps.vim) - Vim mappings to comment-out code lines 
 in various languages 
   - \<leader\>\/ - to comment-out or uncomment a line 
+
+[file_treevim](file_tree.vim) - Display project file tree plugin 
+  - \<leader\>y - to display project file tree 
+  - \<leader\>yy - to open file 
 
 [grep-operator.vim](grep-operator.vim) - Simple Vim grep plugin 
   - \<leader\>g - to search word in project recursively 
@@ -306,12 +312,14 @@ rm -rf .vim
 ├── boilerplates.vim
 ├── colorscheme.vim
 ├── comment_maps.vim
+├── file_tree.vim
 ├── grep-operator.vim
 ├── help.vim
 ├── html_tags.vim
 ├── jshell_word.vim
 ├── maps.vim
 ├── quickfix_toggle.vim
+├── README.md
 ├── screen-type.vim
 ├── statusline.vim
 ├── todo.vim
@@ -358,6 +366,10 @@ rm -rf .vim
 [comment_maps.vim](comment_maps.vim) - Vim маппинг для закомментирования кода
 для различных языков программирования
   - \<leader\>\/ - закомментировать / раскомментировать строку 
+
+[file_treevim](file_tree.vim) - Плагин выводящий дерево файлов проекта 
+  - \<leader\>y - вывести дерево файлов
+  - \<leader\>yy - открыть файл 
 
 [grep-operator.vim](grep-operator.vim) - Простой grep vim плагин 
   - \<leader\>g - найти слово в проекте рекурсивно 
