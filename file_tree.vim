@@ -21,11 +21,32 @@ function! s:DisplayFileTree()
     let g:file_tree_is_display=0
   else
     let file_tree = glob('{.,}*', 0, 1)
+    let file_and_directory_tree = <SID>SearchDirectoiesInList(file_tree)
     execute "vertical new"
     execute "setlocal buftype=nofile bufhidden=wipe nobuflisted"
-    call append(0, file_tree)
+    call append(0, file_and_directory_tree)
     let g:file_tree_is_display=1
   endif
+endfunction
+" }}}
+
+" SearchDirectoiesInList function {{{
+" ------------------------------------------------------------------  
+" Function: SearchDirectoiesInList(list)
+" Description: Function to search directories in the list  
+" Parameters: list of files
+" Returns: list of files and directories
+" ------------------------------------------------------------------  
+function! s:SearchDirectoiesInList(list)
+  let file_and_directories_list = []
+  for item in a:list
+    if isdirectory(item)
+      call add(file_and_directories_list, item)
+    else
+      call add(file_and_directories_list, item)
+    endif
+  endfor
+  return file_and_directories_list
 endfunction
 " }}}
 
