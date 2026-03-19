@@ -20,7 +20,7 @@ function! s:DisplayFileTree()
     execute "q"
     let g:file_tree_is_display=0
   else
-    let file_tree = split(globpath('.', '*'), '\n')
+    let file_tree = glob('*', 0, 1)
     execute "vertical new"
     execute "setlocal buftype=nofile bufhidden=wipe nobuflisted"
     call append(0, file_tree)
