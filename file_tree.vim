@@ -17,14 +17,22 @@ let g:file_tree_is_display=0
 " ------------------------------------------------------------------  
 function! s:DisplayFileTree()
   if g:file_tree_is_display
+    execute g:file_tree_return_to_window . "wincmd w"
     execute "q"
     let g:file_tree_is_display=0
   else
     let file_tree = glob('{.,}*', 0, 1)
     let file_and_directory_tree = <SID>SearchDirectoiesInList(file_tree)
-    execute "vertical new"
+    let screen_type = GetScreenType()
+    if screen_type ==# ['phone']
+      rightbelow new
+      resize 10
+    else
+      vertical new
+    endif
     execute "setlocal buftype=nofile bufhidden=wipe nobuflisted"
     call append(0, file_and_directory_tree)
+    let g:file_tree_return_to_window = winnr()
     let g:file_tree_is_display=1
   endif
 endfunction
@@ -65,4 +73,4 @@ endfunction
 " }}}
 
 nnoremap <leader>y :call<SID>DisplayFileTree()<CR>
-nnoremap <leader>]y :call<SID>OpenFile()<CR>
+nnoremap <leader>yy :call<SID>OpenFile()<CR>
