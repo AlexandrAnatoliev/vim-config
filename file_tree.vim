@@ -3,7 +3,7 @@
 " Description: Display project file tree 
 " Author: AlexandAnatoliev
 " Version: 0.1.52
-" Last Modified: 18.03.2026
+" Last Modified: 19.03.2026
 " ============================================================================
 
 let g:file_tree_is_display=0
@@ -50,4 +50,19 @@ function! s:SearchDirectoiesInList(list)
 endfunction
 " }}}
 
+" OpenFile function {{{
+" ------------------------------------------------------------------  
+" Function: OpenFile()
+" Description: Function to open file on which cursor is located  
+" Parameters: None
+" Returns: None
+" ------------------------------------------------------------------  
+function! s:OpenFile()
+  let file_name = expand('<cfile>')
+  execute ":wincmd l"
+  execute "e " . file_name
+endfunction
+" }}}
+
 nnoremap <leader>y :call<SID>DisplayFileTree()<CR>
+nnoremap <leader>]y :call<SID>OpenFile()<CR>
