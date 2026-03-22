@@ -43,8 +43,8 @@ augroup END
 " =======================WINDOW SETTINGS=======================================
 
 " Window size {{{
-set winwidth=100
-set winminwidth=45
+" set winwidth=100
+" set winminwidth=45
 " }}}
 
 " Status line {{{
