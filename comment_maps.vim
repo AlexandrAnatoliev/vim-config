@@ -2,11 +2,11 @@
 " File: comment_maps.vim
 " Description: Vim mappings to comments code lines in various languages 
 " Author: AlexandAnatoliev
-" Version: 0.1.50
-" Last Modified: 17.03.2026
+" Version: 0.1.53
+" Last Modified: 22.03.2026
 " ============================================================================
 
-autocmd FileType vim,sh,sql,java 
+autocmd FileType vim,sh,sql,java,php 
       \ nnoremap <buffer> <leader>/ ma :call <SID>ToCommentOut()<cr>`a
 
 " ToCommentOut function {{{
@@ -24,6 +24,8 @@ function! s:ToCommentOut()
   elseif &filetype == 'sql'
     call <SID>ToCommentOutLine('--')
   elseif &filetype == 'java'
+    call <SID>ToCommentOutLine('//')
+  elseif &filetype == 'php'
     call <SID>ToCommentOutLine('//')
   endif
 endfunction
