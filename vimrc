@@ -108,9 +108,9 @@ endif
 " }}}
 
 " Load color scheme settings {{{
-if filereadable(expand("~/.vim/colorscheme.vim"))
-  source ~/.vim/colorscheme.vim
-endif
+" if filereadable(expand("~/.vim/colorscheme.vim"))
+"   source ~/.vim/colorscheme.vim
+" endif
 " }}}
 
 " Load autocomplete setting {{{
