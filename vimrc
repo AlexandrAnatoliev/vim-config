@@ -2,8 +2,8 @@
 " File: vimrc
 " Description: my Vim configuration
 " Author: AlexandAnatoliev
-" Version: 0.1.52
-" Last Modified: 19.03.2026
+" Version: 0.1.53
+" Last Modified: 22.03.2026
 " =============================================================================
 
 " =======================BASIC SETTINGS========================================
@@ -36,14 +36,15 @@ filetype indent on
 augroup TabSettings
   autocmd!
   autocmd FileType java setlocal tabstop=4 softtabstop=4 shiftwidth=4
+  autocmd FileType php setlocal tabstop=4 softtabstop=4 shiftwidth=4
 augroup END
 " }}}
 
 " =======================WINDOW SETTINGS=======================================
 
 " Window size {{{
-set winwidth=100
-set winminwidth=45
+" set winwidth=100
+" set winminwidth=45
 " }}}
 
 " Status line {{{
@@ -107,9 +108,9 @@ endif
 " }}}
 
 " Load color scheme settings {{{
-if filereadable(expand("~/.vim/colorscheme.vim"))
-  source ~/.vim/colorscheme.vim
-endif
+" if filereadable(expand("~/.vim/colorscheme.vim"))
+"   source ~/.vim/colorscheme.vim
+" endif
 " }}}
 
 " Load autocomplete setting {{{
@@ -143,9 +144,9 @@ endif
 " }}}
 
 " Load and set highlight trailing whitespace as error {{{
-if filereadable(expand("~/.vim/trail_spot.vim"))
-  source ~/.vim/trail_spot.vim
-endif
+" if filereadable(expand("~/.vim/trail_spot.vim"))
+"   source ~/.vim/trail_spot.vim
+" endif
 " }}}
 
 " Load TODO Vim plugin {{{
@@ -161,9 +162,9 @@ endif
 " }}}
 
 " Load Search word in jshell plugin {{{
-if filereadable(expand("~/.vim/jshell_word.vim"))
-  source ~/.vim/jshell_word.vim
-endif
+" if filereadable(expand("~/.vim/jshell_word.vim"))
+"   source ~/.vim/jshell_word.vim
+" endif
 " }}}
 
 " Load Simple Vim grep plugin {{{
@@ -184,7 +185,7 @@ if filereadable(expand("~/.vim/screen-type.vim"))
 endif
 
 "" Load file tree plugin {{{
-if filereadable(expand("~/.vim/file_tree.vim"))
-  source ~/.vim/file_tree.vim
-endif
+" if filereadable(expand("~/.vim/file_tree.vim"))
+"   source ~/.vim/file_tree.vim
+" endif
 " }}} }}}

@@ -2,8 +2,8 @@
 " File: todo.vim
 " Description: TODO Vim plugin
 " Author: AlexandAnatoliev
-" Version: 0.1.46
-" Last Modified: 11.03.2026
+" Version: 0.1.53
+" Last Modified: 22.03.2026
 " ==================================================================
 " Add TODO comments {{{
 augroup TODOMaps
@@ -22,6 +22,8 @@ augroup TODOMaps
   autocmd FileType sql nnoremap <buffer> <leader>T O-- TODO 
   autocmd FileType java nnoremap <buffer> <leader>t o// TODO 
   autocmd FileType java nnoremap <buffer> <leader>T O// TODO 
+  autocmd FileType php nnoremap <buffer> <leader>t o// TODO 
+  autocmd FileType php nnoremap <buffer> <leader>T O// TODO 
 augroup END
 " }}} 
 
