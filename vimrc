@@ -162,9 +162,9 @@ endif
 " }}}
 
 " Load Search word in jshell plugin {{{
-if filereadable(expand("~/.vim/jshell_word.vim"))
-  source ~/.vim/jshell_word.vim
-endif
+" if filereadable(expand("~/.vim/jshell_word.vim"))
+"   source ~/.vim/jshell_word.vim
+" endif
 " }}}
 
 " Load Simple Vim grep plugin {{{
@@ -185,7 +185,7 @@ if filereadable(expand("~/.vim/screen-type.vim"))
 endif
 
 "" Load file tree plugin {{{
-if filereadable(expand("~/.vim/file_tree.vim"))
-  source ~/.vim/file_tree.vim
-endif
+" if filereadable(expand("~/.vim/file_tree.vim"))
+"   source ~/.vim/file_tree.vim
+" endif
 " }}} }}}
