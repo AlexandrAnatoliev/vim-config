@@ -144,9 +144,9 @@ endif
 " }}}
 
 " Load and set highlight trailing whitespace as error {{{
-if filereadable(expand("~/.vim/trail_spot.vim"))
-  source ~/.vim/trail_spot.vim
-endif
+" if filereadable(expand("~/.vim/trail_spot.vim"))
+"   source ~/.vim/trail_spot.vim
+" endif
 " }}}
 
 " Load TODO Vim plugin {{{
