@@ -20,9 +20,9 @@ set termencoding=utf-8
 " =======================INDENTATION SETTINGS==================================
 
 " Basic tab settings {{{
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 set autoindent
 set smartindent
@@ -36,6 +36,7 @@ filetype indent on
 augroup TabSettings
   autocmd!
   autocmd FileType java setlocal tabstop=4 softtabstop=4 shiftwidth=4
+  autocmd FileType php setlocal tabstop=4 softtabstop=4 shiftwidth=4
 augroup END
 " }}}
 
