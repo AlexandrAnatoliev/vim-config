@@ -40,4 +40,4 @@ augroup Autocomplete
   " }}}
 augroup END
 
-set complete+=k,t
+set complete=w,.,k,t
