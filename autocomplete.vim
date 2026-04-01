@@ -2,8 +2,8 @@
 " File: autocomplete.vim
 " Description: Simple Vim autocomplete with hint 
 " Author: AlexandAnatoliev
-" Version: 0.1.53 
-" Last Modified: 22.03.2026
+" Version: 0.1.54 
+" Last Modified: 01.04.2026
 " ==================================================================
 
 " autocomplete if typing {{{
@@ -32,6 +32,7 @@ augroup Autocomplete
   autocmd FileType jsp setlocal dictionary+=~/.vim/.htmldict
   autocmd FileType sql setlocal dictionary+=~/.vim/.postgresqldict
   autocmd FileType php setlocal dictionary+=~/.vim/.phpdict
+  autocmd FileType php setlocal dictionary+=~/.vim/.htmldict
   " }}}
 
   " brackets autocomplete {{{
@@ -39,4 +40,4 @@ augroup Autocomplete
   " }}}
 augroup END
 
-set complete+=k,t
+set complete=w,.,k,t
