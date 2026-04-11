@@ -2,8 +2,8 @@
 " File: vimrc
 " Description: my Vim configuration
 " Author: AlexandAnatoliev
-" Version: 0.1.53
-" Last Modified: 22.03.2026
+" Version: 0.1.55
+" Last Modified: 11.04.2026
 " =============================================================================
 
 " =======================BASIC SETTINGS========================================
@@ -36,7 +36,7 @@ filetype indent on
 augroup TabSettings
   autocmd!
   autocmd FileType java setlocal tabstop=4 softtabstop=4 shiftwidth=4
-  autocmd FileType php setlocal tabstop=4 softtabstop=4 shiftwidth=4
+"   autocmd FileType php setlocal tabstop=4 softtabstop=4 shiftwidth=4
 augroup END
 " }}}
 
