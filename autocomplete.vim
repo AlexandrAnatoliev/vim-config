@@ -2,8 +2,8 @@
 " File: autocomplete.vim
 " Description: Simple Vim autocomplete with hint 
 " Author: AlexandAnatoliev
-" Version: 0.1.54 
-" Last Modified: 01.04.2026
+" Version: 0.1.56 
+" Last Modified: 11.04.2026
 " ==================================================================
 
 " autocomplete if typing {{{
@@ -40,4 +40,4 @@ augroup Autocomplete
   " }}}
 augroup END
 
-set complete=w,.,k,t
+set complete=w,.,k,b,i 
