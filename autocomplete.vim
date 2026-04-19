@@ -2,7 +2,7 @@
 " File: autocomplete.vim
 " Description: Simple Vim autocomplete with hint 
 " Author: AlexandAnatoliev
-" Version: 0.1.57 
+" Version: 0.1.58 
 " Last Modified: 19.04.2026
 " ==================================================================
 
@@ -40,4 +40,5 @@ augroup Autocomplete
   " }}}
 augroup END
 
+set complete+=k
 " set complete=w,.,k,b,i 
