@@ -2,13 +2,13 @@
 " File: vimrc
 " Description: my Vim configuration
 " Author: AlexandAnatoliev
-" Version: 0.1.55
-" Last Modified: 11.04.2026
+" Version: 0.1.56
+" Last Modified: 24.04.2026
 " =============================================================================
 
 " =======================BASIC SETTINGS========================================
 " Line numbering {{{
-set number
+" set number
 " }}}
 
 " Encoding settings {{{
