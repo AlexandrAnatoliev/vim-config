@@ -2,8 +2,8 @@
 " File: vimrc
 " Description: my Vim configuration
 " Author: AlexandAnatoliev
-" Version: 0.1.56
-" Last Modified: 24.04.2026
+" Version: 0.1.59
+" Last Modified: 14.05.2026
 " =============================================================================
 
 " =======================BASIC SETTINGS========================================
@@ -49,6 +49,11 @@ augroup END
 
 " Status line {{{
 set laststatus=2
+" }}}
+
+" line on 70 {{{
+set colorcolumn=70
+highlight ColorColumn ctermbg=darkgrey guibg=#2c2c2c
 " }}}
 
 " =======================SCROLL SETTINGS=======================================
