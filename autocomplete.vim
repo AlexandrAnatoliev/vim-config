@@ -32,6 +32,9 @@ augroup Autocomplete
   autocmd FileType jsp setlocal dictionary+=~/.vim/.htmldict
   autocmd FileType sql setlocal dictionary+=~/.vim/.postgresqldict
   autocmd FileType php setlocal dictionary+=~/.vim/.phpdict
+  autocmd FileType php setlocal dictionary+=~/.vim/.php_arrays_dict
+  autocmd FileType php setlocal dictionary+=~/.vim/.php_classes_dict
+  autocmd FileType php setlocal dictionary+=~/.vim/.php_functions_dict
   autocmd FileType php setlocal dictionary+=~/.vim/.htmldict
   " }}}
 
