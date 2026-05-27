@@ -68,3 +68,6 @@ var
 while
 xor
 yield
+
+REQUEST_METHOD
+POST
