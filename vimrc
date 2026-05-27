@@ -5,6 +5,34 @@
 " Version: 0.1.60
 " Last Modified: 14.05.2026
 " =============================================================================
+" ---------- vim-plug ----------
+call plug#begin('~/.vim/plugged')
+
+" LSP-клиент
+Plug 'prabirshrestha/vim-lsp'
+" Автодополнение
+Plug 'prabirshrestha/asyncomplete.vim'
+" Источник автодополнения от LSP
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
+call plug#end()
+
+" ---------- Настройка vim-lsp для Phpactor ----------
+if executable('phpactor')
+    au User lsp_setup call lsp#register_server({
+            \ 'name': 'phpactor',
+            \ 'cmd': {server_info->['phpactor', 'language-server']},
+            \ 'whitelist': ['php'],
+            \ })
+  endif
+
+  " Включаем автоматическое отображение подсказок при вводе
+  let g:asyncomplete_auto_popup = 1
+  let g:asyncomplete_auto_completeopt = 0
+  set completeopt=menuone,noinsert,noselect
+
+  " Опционально: закрывать окно дополнения после выбора
+  autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " =======================BASIC SETTINGS========================================
 " Line numbering {{{
@@ -194,3 +222,4 @@ endif
 "   source ~/.vim/file_tree.vim
 " endif
 " }}} }}}
+

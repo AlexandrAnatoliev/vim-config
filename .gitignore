@@ -5,3 +5,5 @@
 pack/my-plugins/start/*
 .screen-type
 plugin/*
+autoload
+plugged
